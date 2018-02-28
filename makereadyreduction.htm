@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<html><head><title>Make Ready Reduction</title>
+<meta content="text/html; charset=Windows-1252" http-equiv="Content-Type" /><link rel="stylesheet" type="text/css" href="Theme/nav.css" /><link rel="stylesheet" type="text/css" href="Theme/lf.css" /><link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" /><link rel="stylesheet" type="text/css" href="LinksExt/NewPsa3.css" />
+<script type="text/javascript">
+//<![CDATA[
+
+
+
+var _needIndentation = true;
+
+
+
+
+//]]></script>
+
+<script language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2009.3.0.500" />
+<meta name="D2HTheme" content="(Default) v.28" />
+</head>
+<body style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px" relpart="">
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitMainThemeHandlers != "undefined")
+
+    d2hInitMainThemeHandlers();
+
+
+//]]></script>
+
+<div id="nsbanner" class="d2h_main_nsbanner" style="BORDER-TOP: #999999 1px solid; BORDER-BOTTOM: #999999 1px solid; POSITION: relative; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; LEFT: 0px; DISPLAY: none; PADDING-RIGHT: 0px; BACKGROUND-COLOR: transparent">
+<div id="TitleRow" class="d2h_main_titlerow" style="PADDING-BOTTOM: 4px; PADDING-TOP: 4px; PADDING-LEFT: 22px; DISPLAY: none; PADDING-RIGHT: 10px; WIDTH: 100%; BACKGROUND-COLOR: transparent">
+<div id="ienav" class="d2h_main_ienav" style="DISPLAY: none">
+<p class="d2h_main_linknav" align="left"><a id="D2HPrevious" class="D2HPreviousEnabled" href="processtypesholdreasonscreditcheckmessages.htm"></a>  <a id="D2HNext" class="D2HNextEnabled" href="workcentres.htm"></a></p></div></div></div>
+<div id="nstext" class="d2h_main_nstext" style="OVERFLOW: auto; PADDING-BOTTOM: 10px; PADDING-TOP: 5px; PADDING-LEFT: 22px; PADDING-RIGHT: 10px; BACKGROUND-COLOR: transparent" hasuserbackground="true" valign="bottom">
+<div id="d2h_breadcrumbs" class="d2h_breadcrumbs"><span class="d2h_breadcrumbsContentsOnly">Screen by screen descriptions</span><span class="d2h_breadcrumbsLinkSeparator"> &gt; </span><a class="d2h_breadcrumbsNormal" href="staticdatamaintenancetables.htm">Static Data Maintenance - 
+Tables</a></div>
+<h3 style="MARGIN-LEFT: 36pt; TEXT-INDENT: -36pt; tab-stops: 83.8pt"><a name="_Toc246402273" id="_Toc246402273"></a>Make Ready Reduction</h3>
+<p class="MsoNormal">A new feature introduced at the end of 2008 it enables 
+planning gains by running similar jobs together to calculated and evaluated in 
+the plan. It should make the old ‘follow on’ feature and reduced make ready 
+times on split or grouped tasks redundant.<br />Whenever any task is placed or 
+moved on the planning board the make ready reduction is recalculated for that 
+and any other affected tasks. The routine works by comparing one or more 
+attributes of the current task with the one scheduled immediately before it. 
+Matched inks, die numbers, sheet sizes etc can lead to a reduction being 
+calculated.<br />Set Up<br />First establish one or more ‘rules’ on the right side 
+of the screen<br /><img src="ImagesExt/image9_53.png" alt="" /><br />Give each rule a 
+meaningful name, select one or more attributes to compare. <br />If more than one 
+attribute is selected – typically inks – then the only valid comparison is ‘=’. 
+This is because the number of ‘matches’ is counted. Note that the sequence of 
+the attributes is not important – if one task has Red, Green and Yellow ink and 
+the following task has Blue, Red and Green ink then this will count as 2 matches 
+although the same attributes do not match at all.<br />For a single attribute you 
+can use &gt;, &lt;, &gt;=, &lt;= and &lt;&gt; comparisons – in some cases 
+increasing or decreasing size sequences lead to time savings.<br />Enter either a 
+time saving value in minutes or percentage</p>
+<p class="MsoNormal">For the ‘Applies to’ drop down<br />"All Jobs" is the most 
+common entry - it applies to all tasks and reduces make ready on the basis there 
+is some common element with the prior task on this work centre - same die, same 
+inks etc<br />"Not same job" only does the comparison with prior task on same work 
+centre if it is from a different job - this is because the estimate already 
+takes the common element into consideration<br />"Same Job" - requires that prior 
+task is from same job only before applying reduction<br />"W/C this task" is 
+interesting - you can create a technical attribute based on the dummy table - 
+pv_prior_wc - and specify a process type - this will return the work centre name 
+where the item was last produced (info from pv_jobcosts). There is often a lot 
+of time to be saved if a toll is 'known' to a work centre - once set up the 
+first time the work centre 'remembers' the settings so subsequent use on the 
+same work centre takes only a couple of minutes to set rather than much longer - 
+so this option reduces make ready based on the item having been run previously 
+on this work centre and is completely independent of the prior task.</p>
+<p class="MsoNormal">Having established some rules these can be applied at process 
+type or individual work centre level – An entry for a work centre overrides any 
+process type setting.<br />Checking the No Reduction option leaves the estimated 
+value in place – other option are then not relevant.<br />Putting a number of 
+minutes in the Start Value box will override the estimated value – this is 
+optional<br />Putting a number of minutes in the Minimum Value box sets the 
+minimum calculated value that will be used – this is optional. There is a fixed 
+lower limit of zero minutes – negative values are not allowed<br />Rules – select 
+one or more rules to be allied to this process type or work centre.</p>
+<p class="MsoNormal">In operation it will start with the estimated make ready, 
+this can be overridden by a start value. For each rule it calculates a time or 
+percentage reduction. These are added together and first the total percentage 
+reduction is applied followed by the time reduction. If the result is negative 
+it is set to zero. If the result is below a defined minimum then the minimum is 
+used. The reduction is then multiplied by the ‘cost rate’ applicable to the work 
+centre. This is repeated for all affected tasks and the ‘after’ time and value 
+compared with the ‘before’ values. Any change is reported.</p>
+<p class="MsoNormal">Note that dragging a task from one work centre to another 
+will change the estimated make ready time if they have different ‘default make 
+ready’ times.</p>
+<p class="MsoNormal">The ‘Calc’ button will recalculate all scheduled tasks – use 
+this if any rules or applicability of rules change.</p>
+<p class="MsoNormal">There is also a new report on the Reports menu that reports 
+total time and cost savings.</p>
+<p class="MsoNormal"> </p></div></body></html>
