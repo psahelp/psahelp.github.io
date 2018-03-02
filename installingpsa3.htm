@@ -36,48 +36,48 @@ if (typeof d2hInitMainThemeHandlers != "undefined")
 <div id="nstext" class="d2h_main_nstext" style="OVERFLOW: auto; PADDING-BOTTOM: 10px; PADDING-TOP: 5px; PADDING-LEFT: 22px; PADDING-RIGHT: 10px; BACKGROUND-COLOR: transparent" hasuserbackground="true" valign="bottom">
 <div id="d2h_breadcrumbs" class="d2h_breadcrumbs"><a class="d2h_breadcrumbsNormal" href="beforeyoustart.htm">Before you start</a></div>
 <h2 style="MARGIN-LEFT: 28.9pt; TEXT-INDENT: -28.9pt; tab-stops: 78.45pt"><a name="_Toc504681470" id="_Toc504681470"></a>Installing PSA3</h2>
-<p class="MsoNormal">PSA can be run as a local application with many users all
-accessing A central database or it may be run as a Terminal Services/Citrix
+<p class="MsoNormal">PSA can be run as a local application with many users all 
+accessing a central database or it may be run as a Terminal Services/Citrix 
 application. It may also be run in a mixture of both styles.</p>
-<p class="MsoNormal">The two essentials for any install are that each user has a
-defined ‘Working Directory’ that is private to them and a PSA3.INI file that is
-also private – usually in their Windows or Winnt directory. An alternative name
-and/or location may be specified by defining the full path and file name as a
-parameter on the command line (protected with double quotes if it contains
+<p class="MsoNormal">The two essentials for any install are that each user has a 
+defined ‘Working Directory’ that is private to them and a PSA3.INI file that is 
+also private – usually in their Windows or Winnt directory. An alternative name 
+and/or location may be specified by defining the full path and file name as a 
+parameter on the command line (protected with double quotes if it contains 
 spaces). This must still retain the INI extension.</p>
-<p class="MsoNormal">If creating custom versions of reports it may be desirable to
-locate the Custom Reports directory in a central network location. This is fine
+<p class="MsoNormal">If creating custom versions of reports it may be desirable to 
+locate the Custom Reports directory in a central network location. This is fine 
 – just use Configuration/System to point to this directory</p>
-<p class="MsoNormal">When installed locally the default paths will be all that is
-required. The user will require full permissions in the directory containing the
-INI file, the Working Directory and the network directory containing the shared
+<p class="MsoNormal">When installed locally the default paths will be all that is 
+required. The user will require full permissions in the directory containing the 
+INI file, the Working Directory and the network directory containing the shared 
 Plan.</p>
-<p class="MsoNormal">If installing on a ‘locked down’ PC the process is more
+<p class="MsoNormal">If installing on a ‘locked down’ PC the process is more 
 complicated – the instructions are</p>
-<p class="MsoNormal">Make a change to the domain policy so that each PC and
-user has elevated permissions when installing an MSI package. To do this edit
+<p class="MsoNormal">Make a change to the domain policy so that each PC and 
+user has elevated permissions when installing an MSI package. To do this edit 
 the group policy and change: -</p>
-<p class="MsoNormal"> -  Computer Configuration | Administrative
-Templates | Windows Components | Windows Installer<br /> -  Enable
+<p class="MsoNormal"> -  Computer Configuration | Administrative 
+Templates | Windows Components | Windows Installer<br /> -  Enable 
 "Always install with elevated permissions"</p>
 <p class="MsoNormal">      do the same for: -</p>
-<p class="MsoNormal"> -  User Configuration | Administrative Templates |
-Windows Components | Windows Installer<br /> -  Enable "Always install
+<p class="MsoNormal"> -  User Configuration | Administrative Templates | 
+Windows Components | Windows Installer<br /> -  Enable "Always install 
 with elevated permissions"</p>
-<p class="MsoNormal">Once this has been done reboot the PC and login.  They
-will now be able to install the software as a restricted user.  Once the
-software has been installed the Administrator can then undo the changes so that
+<p class="MsoNormal">Once this has been done reboot the PC and login.  They 
+will now be able to install the software as a restricted user.  Once the 
+software has been installed the Administrator can then undo the changes so that 
 they can't install anymore software.</p>
-<p class="MsoNormal">When installing on Terminal Services/Citrix you must ensure
-that all servers on the farm have the same version installed, that each user has
-a single PSA3.INI in a private location – usually $HOME or similar – and this
-MUST be retained from day to day. In addition the Working Directory = line in
-this file must point to a private location – usually under $HOME. If the install
-defaults are used the first user will work with limited functionality – no
-settings retained – but subsequent users will fail to open the plan receiving
+<p class="MsoNormal">When installing on Terminal Services/Citrix you must ensure 
+that all servers on the farm have the same version installed, that each user has 
+a single PSA3.INI in a private location – usually $HOME or similar – and this 
+MUST be retained from day to day. In addition the Working Directory = line in 
+this file must point to a private location – usually under $HOME. If the install 
+defaults are used the first user will work with limited functionality – no 
+settings retained – but subsequent users will fail to open the plan receiving 
 permanent ‘file in use’ type messages.</p>
-<p class="MsoNormal">Where there is more than one server in the farm the central
-database must  NOT reside on one of these servers – total confusion will
-result as multiple copies are likely to be created and no guarantee given as to
-which one is accessed at any time. It should be placed on a separate data
+<p class="MsoNormal">Where there is more than one server in the farm the central 
+database must  NOT reside on one of these servers – total confusion will 
+result as multiple copies are likely to be created and no guarantee given as to 
+which one is accessed at any time. It should be placed on a separate data 
 server</p></div></body></html>
