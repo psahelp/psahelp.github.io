@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<html><head><title>ordheader</title>
+<meta content="text/html; charset=Windows-1252" http-equiv="Content-Type" /><link rel="stylesheet" type="text/css" href="Theme/nav.css" /><link rel="stylesheet" type="text/css" href="Theme/lf.css" /><link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" /><link rel="stylesheet" type="text/css" href="LinksExt/NewPsa3.css" />
+<script type="text/javascript">
+//<![CDATA[
+
+
+
+var _needIndentation = true;
+
+
+
+
+//]]></script>
+
+<script language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2009.3.0.500" />
+<meta name="D2HTheme" content="(Default) v.28" />
+</head>
+<body style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px" relpart="">
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitMainThemeHandlers != "undefined")
+
+    d2hInitMainThemeHandlers();
+
+
+//]]></script>
+
+<div id="nsbanner" class="d2h_main_nsbanner" style="BORDER-TOP: #999999 1px solid; BORDER-BOTTOM: #999999 1px solid; POSITION: relative; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; LEFT: 0px; DISPLAY: none; PADDING-RIGHT: 0px; BACKGROUND-COLOR: transparent">
+<div id="TitleRow" class="d2h_main_titlerow" style="PADDING-BOTTOM: 4px; PADDING-TOP: 4px; PADDING-LEFT: 22px; DISPLAY: none; PADDING-RIGHT: 10px; WIDTH: 100%; BACKGROUND-COLOR: transparent">
+<div id="ienav" class="d2h_main_ienav" style="DISPLAY: none">
+<p class="d2h_main_linknav" align="left"><a id="D2HPrevious" class="D2HPreviousEnabled" href="opevent.htm"></a>  <a id="D2HNext" class="D2HNextEnabled" href="ordnotes.htm"></a></p></div></div></div>
+<div id="nstext" class="d2h_main_nstext" style="OVERFLOW: auto; PADDING-BOTTOM: 10px; PADDING-TOP: 5px; PADDING-LEFT: 22px; PADDING-RIGHT: 10px; BACKGROUND-COLOR: transparent" hasuserbackground="true" valign="bottom">
+<div id="d2h_breadcrumbs" class="d2h_breadcrumbs"><a class="d2h_breadcrumbsNormal" href="appendicesincludingtechnicalnotes.htm">Appendices including technical 
+notes</a><span class="d2h_breadcrumbsLinkSeparator"> &gt; </span><a class="d2h_breadcrumbsNormal" href="filelayouts.htm">File Layouts</a></div>
+<h3 style="MARGIN-LEFT: 36pt; TEXT-INDENT: -36pt; tab-stops: 83.8pt"><a name="_Toc504681638" id="_Toc504681638"></a>ordheader</h3>
+<p class="StyleCourierfixedCourierNew8pt">FIELD 
+NAME                    
+TYPE      LENGTH    DESCRIPTION</p>
+<p class="StyleCourierfixedCourierNew8pt"> </p>
+<p class="StyleCourierfixedCourierNew8pt">ordernumber                   
+Char      15        
+Radius production order - trailing @ indicates duplicate order reimported with 
+changed details</p>
+<p class="StyleCourierfixedCourierNew8pt">Description                   
+Char      40        
+Description</p>
+<p class="StyleCourierfixedCourierNew8pt">status                        
+Char      
+1         U - Unplanned, P - Planned, F 
+- Firm, C - Complete</p>
+<p class="StyleCourierfixedCourierNew8pt">customer                      
+Char      25        
+Customer name detail only</p>
+<p class="StyleCourierfixedCourierNew8pt">deliverydate                  
+Date/Time 8         Date portion only - 
+also referred to 'required have ready date'</p>
+<p class="StyleCourierfixedCourierNew8pt">tech1..nn                     
+Char      20   
+     20, 34 or 48 technical attributes entered in 
+estimating - now used in Komori link, capability group definition</p>
+<p class="StyleCourierfixedCourierNew8pt">scheddate                     
+Date/Time 8         Date portion of 
+completion of last task</p>
+<p class="StyleCourierfixedCourierNew8pt">promdate                      
+Date/Time 8         Date portion of 
+promised date</p>
+<p class="StyleCourierfixedCourierNew8pt">qty                           
+Long      
+4         Order quantity</p>
+<p class="StyleCourierfixedCourierNew8pt">colour                        
+Char      10        
+Display colour of task bars (1 magenta, 2 , 3 light blue, 4 , 5 red, 6 , 7 , 
+8)</p>
+<p class="StyleCourierfixedCourierNew8pt">sequence                      
+Long      
+4         Set in sequence Manager. When 
+autoscheduling multiple orders determines priority</p>
+<p class="StyleCourierfixedCourierNew8pt">txt                           
+Char      255       
+Comments - now 255 characters</p>
+<p class="StyleCourierfixedCourierNew8pt">type                          
+Char      
+1         Live, Tentative, 
+Undetermined</p>
+<p class="StyleCourierfixedCourierNew8pt">del_time                      
+Integer   2         Time 
+portion of delivery date - usually zero - held as minutes since midnight</p>
+<p class="StyleCourierfixedCourierNew8pt">sched_time                    
+Integer   2         Time 
+portion of completion of last task</p>
+<p class="StyleCourierfixedCourierNew8pt">prom_time                
+     Integer   
+2         Time portion of promised 
+date</p>
+<p class="StyleCourierfixedCourierNew8pt">assessed                      
+Char      
+1         Y if assessment schedule has 
+been run</p>
+<p class="StyleCourierfixedCourierNew8pt">tentative                     
+Char      
+1         Y if order is Tentative - do 
+not pass to SFDC</p>
+<p class="StyleCourierfixedCourierNew8pt">job_type         
+             Char      
+10        used to indicate order number of 
+group order to which this order belongs</p>
+<p class="StyleCourierfixedCourierNew8pt">updated                       
+Char      
+1         set to 1 indicates order has 
+changes to be passed back to Radius</p>
+<p class="StyleCourierfixedCourierNew8pt">pecas_orderno                 
+Char      15        
+redundant</p>
+<p class="StyleCourierfixedCourierNew8pt">DefOrd                        
+Yes/No    1         Only 
+one order can be default - used as template when importing orders without tasks 
+from Radius</p>
+<p class="StyleCourierfixedCourierNew8pt">TentativeDate                 
+Date/Time 8         Date that tentative 
+order was last scheduled</p>
+<p class="StyleCourierfixedCourierNew8pt">TentativeTime                 
+Date/Time 8         Time that tentative 
+order was last scheduled</p>
+<p class="StyleCourierfixedCourierNew8pt">Upstatus                      
+Long      
+4         update reference number</p>
+<p class="StyleCourierfixedCourierNew8pt">Report                        
+Yes/No    1         
+temporary flag used to indicate to Crystal report this order must be selected 
+for reporting</p>
+<p class="StyleCourierfixedCourierNew8pt">estimate                      
+Char      10        
+Estimate number from which order was created</p>
+<p class="StyleCourierfixedCourierNew8pt">mestimate                     
+Char      10        
+Master estimate number - Radius 1.35 and up</p>
+<p class="StyleCourierfixedCourierNew8pt">CHRDreason                    
+Char      200       
+Confirm Have Ready Date change reason</p>
+<p class="StyleCourierfixedCourierNew8pt">CHRDRdate                     
+Date/Time 8         Date that Confirm 
+Have Ready Date changed</p>
+<p class="StyleCourierfixedCourierNew8pt">security                      
+Integer   2         0 - None, 
+1 - Secret, 2 - Confidential</p>
+<p class="StyleCourierfixedCourierNew8pt">PressApp                      
+Integer   2         0 - None, 
+1 - Colour, 2 - Copy, 3 - Colour and Copy</p>
+<p class="StyleCourierfixedCourierNew8pt">OrderCat                      
+Integer   2         0 - None, 
+1 - New, 2 - Rework, 3 - Repeat</p>
+<p class="StyleCourierfixedCourierNew8pt">origkorder                    
+Char      30        
+original sales order from Radius I system - customer reference from Radius 
+II</p>
+<p class="StyleCourierfixedCourierNew8pt">InvCopy                       
+Yes/No    1         
+Invoice Working Copy - transferred from Radius I only - can be set manually in 
+PSA</p>
+<p class="StyleCourierfixedCourierNew8pt">ProForma                      
+Yes/No    1         Pro 
+Forma Invoice - transferred from Radius I only - can be set manually in PSA</p>
+<p class="StyleCourierfixedCourierNew8pt">ConsOrder                     
+Yes/No    1         
+Consignment Order - transferred from Radius I only - can be set manually in 
+PSA</p>
+<p class="StyleCourierfixedCourierNew8pt">IndPslip                      
+Yes/No    1         
+Individual Packing Slip - transferred from Radius I only - can be set manually 
+in PSA</p>
+<p class="StyleCourierfixedCourierNew8pt">FromPecas                     
+Date/Time 8         Date of most recent 
+order transfer from Radius system</p>
+<p class="StyleCourierfixedCourierNew8pt">PecasDeleted                  
+Yes/No    1         set 
+by PsaConnect to indicate that order appears to be deleted in Radius system - 
+filter available in order maintenance - check Radius status</p>
+<p class="StyleCourierfixedCourierNew8pt">blackink                      
+Yes/No    1         used 
+to set ink colour to black or white to contrast order colour - obsolete - ink 
+now determined automatically</p>
+<p class="StyleCourierfixedCourierNew8pt">repjobcode                    
+Char      15        
+transfer from Radius II - holds the jobcode that this order replaces. Treated as 
+for @ suffix orders</p>
+<p class="StyleCourierfixedCourierNew8pt">origDelDate                   
+Date/Time 8         original delivery 
+date if changed in PSA</p>
+<p class="StyleCourierfixedCourierNew8pt">CompletedDate                 
+Date/Time 8         date that order 
+achieves completed status - used in housekeeping to retain completed orders n 
+days</p>
+<p class="StyleCourierfixedCourierNew8pt">orderdate                     
+Date/Time 8         date order created - 
+Radius I only</p>
+<p class="StyleCourierfixedCourierNew8pt">ifvcr                         
+Date/Time 8         customer specific - 
+date initial firm version created</p>
+<p class="StyleCourierfixedCourierNew8pt">ifvby                         
+Char      20        
+customer specific - user who created initial firm version</p>
+<p class="StyleCourierfixedCourierNew8pt">ResRules                      
+Char      240       
+customer specific - list of rule codes used in initial firm version</p>
+<p class="StyleCourierfixedCourierNew8pt">ordercatdesc                  
+Char      30        
+Radius I customer specific plate-type Radius II pv_sorderitemtype.soitemtype</p>
+<p class="StyleCourierfixedCourierNew8pt">analcode1                     
+Char      30     
+   Radius I only - analysis code - some Radius II - account 
+executive</p>
+<p class="StyleCourierfixedCourierNew8pt">analcode2                     
+Char      30        
+Radius I only - analysis code</p>
+<p class="StyleCourierfixedCourierNew8pt">analcode3                     
+Char      30        
+Radius I only - analysis code</p>
+<p class="StyleCourierfixedCourierNew8pt">firstcalloff              
+    Date/Time 
+8         Radius I only - first 
+unfullfilled call off date for single item</p>
+<p class="StyleCourierfixedCourierNew8pt">ItemOnHand                    
+Double    8         
+customer specific - Radius I item quantity</p>
+<p class="StyleCourierfixedCourierNew8pt">Linked                        
+Char      
+1         Radius II only 1 - this order 
+is linked to a prepress order 2 - this order is linked to a production order</p>
+<p class="StyleCourierfixedCourierNew8pt">LinkStart                     
+Long      
+4         scheduled start of linked 
+order</p>
+<p class="StyleCourierfixedCourierNew8pt">LinkEnd                       
+Long      
+4         scheduled end of linked 
+order</p>
+<p class="StyleCourierfixedCourierNew8pt">LinkPlant  
+                   Char      
+8         plantcode of linked order</p>
+<p class="StyleCourierfixedCourierNew8pt">LinkOrder                     
+Char      15        
+jobcode of linked order</p>
+<p class="StyleCourierfixedCourierNew8pt">LinkStatus                    
+Char      
+1         status of linked order</p>
+<p class="StyleCourierfixedCourierNew8pt"> </p>
+<p class="StyleCourierfixedCourierNew8pt">INDEX                         
+PRIMARY   UNIQUE    FIELDS</p>
+<p class="StyleCourierfixedCourierNew8pt"> </p>
+<p class="StyleCourierfixedCourierNew8pt">ordernumber                   
+Y         
+Y         +ordernumber</p>
+<p class="StyleCourierfixedCourierNew8pt">Report                        
+N         
+N         +Report</p>
+<p class="StyleCourierfixedCourierNew8pt">Upstatus                      
+N         
+N         
++Upstatus</p></div></body></html>

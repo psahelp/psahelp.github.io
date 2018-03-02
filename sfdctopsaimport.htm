@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<html><head><title>SFDC to PSA - Import</title>
+<meta content="text/html; charset=Windows-1252" http-equiv="Content-Type" /><link rel="stylesheet" type="text/css" href="Theme/nav.css" /><link rel="stylesheet" type="text/css" href="Theme/lf.css" /><link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" /><link rel="stylesheet" type="text/css" href="LinksExt/NewPsa3.css" />
+<script type="text/javascript">
+//<![CDATA[
+
+
+
+var _needIndentation = true;
+
+
+
+
+//]]></script>
+
+<script language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2009.3.0.500" />
+<meta name="D2HTheme" content="(Default) v.28" />
+</head>
+<body style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px" relpart="">
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitMainThemeHandlers != "undefined")
+
+    d2hInitMainThemeHandlers();
+
+
+//]]></script>
+
+<div id="nsbanner" class="d2h_main_nsbanner" style="BORDER-TOP: #999999 1px solid; BORDER-BOTTOM: #999999 1px solid; POSITION: relative; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; LEFT: 0px; DISPLAY: none; PADDING-RIGHT: 0px; BACKGROUND-COLOR: transparent">
+<div id="TitleRow" class="d2h_main_titlerow" style="PADDING-BOTTOM: 4px; PADDING-TOP: 4px; PADDING-LEFT: 22px; DISPLAY: none; PADDING-RIGHT: 10px; WIDTH: 100%; BACKGROUND-COLOR: transparent">
+<div id="ienav" class="d2h_main_ienav" style="DISPLAY: none">
+<p class="d2h_main_linknav" align="left"><a id="D2HPrevious" class="D2HPreviousEnabled" href="psatosfdcexport.htm"></a>  <a id="D2HNext" class="D2HNextEnabled" href="dataexchangeradiusii.htm"></a></p></div></div></div>
+<div id="nstext" class="d2h_main_nstext" style="OVERFLOW: auto; PADDING-BOTTOM: 10px; PADDING-TOP: 5px; PADDING-LEFT: 22px; PADDING-RIGHT: 10px; BACKGROUND-COLOR: transparent" hasuserbackground="true" valign="bottom">
+<div id="d2h_breadcrumbs" class="d2h_breadcrumbs"><a class="d2h_breadcrumbsNormal" href="appendicesincludingtechnicalnotes.htm">Appendices including technical 
+notes</a></div>
+<h2 style="MARGIN-LEFT: 0pt"><a name="_Toc504681666" id="_Toc504681666"><span style="FONT-WEIGHT: normal">SFDC to PSA - Import</span></a><span style="FONT-WEIGHT: normal"></span></h2>
+<p class="MsoNormal"> </p>
+<p class="MsoNormal">Running task information can be passed back to the PSA 
+Database and is held in a separate table exclusively for running details.</p>
+<p class="MsoNormal"> </p>
+<p class="MsoNormal"><b>Task:</b></p>
+<p class="MsoNormal" style="TEXT-INDENT: -42.5pt">Task order 
+number.               
+        
+sfjobdet.kjobcode                     
+job.ordernumber</p>
+<p class="MsoNormal" style="TEXT-INDENT: -42.5pt">Task component 
+number.       
+        
+sfjobdet.kcompno      
+               
+job.component</p>
+<p class="MsoNormal" style="TEXT-INDENT: -42.5pt">Task 
+number.                
+        
+sfjobdet.kprocno               
+job.job</p>
+<p class="MsoNormal" style="TEXT-INDENT: -42.5pt">Task stop reason 
+code.           
+sfjobdet.statcode                      
+job.statcode</p>
+<p class="MsoNormal" style="TEXT-INDENT: -42.5pt">Task 
+status.                  
+        
+sfjobdet.kstatus                
+job.kstatus</p>
+<p class="MsoNormal" style="TEXT-INDENT: -42.5pt">Task run status - good, bad 
+etc.      
+sfjobdet.runstat                
+job.runstat</p>
+<p class="MsoNormal" style="TEXT-INDENT: -42.5pt">Task actual start 
+time.            
+        
+sfjobdet.starttime                     
+job.starttime</p>
+<p class="MsoNormal" style="TEXT-INDENT: -42.5pt">Task planned end 
+time.          
+sfjobdet.endtime                       
+job.endtime</p>
+<p class="MsoNormal" style="TEXT-INDENT: -42.5pt">Task calculated end 
+time.       
+        
+sfjobdet.calcend                        
+job.calcend</p>
+<p class="MsoNormal" style="TEXT-INDENT: -42.5pt">Task running 
+time.         
+        
+sfjobdet.elapsetime                   
+job.elapsetime</p>
+<p class="MsoNormal" style="TEXT-INDENT: -42.5pt">Task make ready 
+count.         
+sfjobdet.mrqty                         
+job.mrqty</p>
+<p class="MsoNormal" style="TEXT-INDENT: -49.6pt">Task good copy 
+count.             
+        
+sfjobdet.runqty                         
+job.runqty</p>
+<p class="MsoNormal" style="TEXT-INDENT: -49.6pt">Task bad copy 
+count.               
+        
+sfjobdet.badqty                        
+job.badqty</p>
+<p class="MsoNormal" style="TEXT-INDENT: -49.6pt">Task sort 
+quantity.           
+        
+sfjobdet.sortqty                        
+job.sortqty</p>
+<p class="MsoNormal" style="TEXT-INDENT: -49.6pt">Task input quantity.(not 
+used)           
+sfjobdet.inputqty                       
+        job.inputqty</p>
+<p class="MsoNormal" style="TEXT-INDENT: -49.6pt">Task output 
+quantity.(total)       
+        
+sfjobdet.outputqty                     
+        job.outputqty</p>
+<p class="MsoNormal" style="TEXT-INDENT: -49.6pt">Task make ready 
+adjustment.           
+sfjobdet.mradj                         
+job.mradj</p>
+<p class="MsoNormal" style="TEXT-INDENT: -49.6pt">Task run 
+adjustment.               
+        
+sfjobdet.runadj                         
+job.runadj</p>
+<p class="MsoNormal" style="TEXT-INDENT: -49.6pt">Task bad 
+adjustment.              
+        
+sfjobdet.badadj                        
+job.badadj</p>
+<p class="MsoNormal" style="TEXT-INDENT: -49.6pt">Task sort 
+adjustment.              
+        
+sfjobdet.sortadj                        
+job.sortadj</p>
+<p class="MsoNormal" style="TEXT-INDENT: -42.5pt">Task make ready 
+time.           
+sfjobdet.mrtime                        
+job.mrtime</p>
+<p class="MsoNormal" style="TEXT-INDENT: -42.5pt">Task time on good copy. 
+        
+sfjobdet.prodtime                      
+        job.prodtime</p>
+<p class="MsoNormal" style="TEXT-INDENT: -42.5pt">Task time on bad 
+copy.          
+sfjobdet.badtime                       
+        job.badtime</p>
+<p class="MsoNormal" style="TEXT-INDENT: -42.5pt">Task time in 
+sort.          
+        
+sfjobdet.sorttime                      
+        job.sorttime</p>
+<p class="MsoNormal" style="TEXT-INDENT: -42.5pt">Task total 
+stops.            
+        
+sfjobdet.stoptots               
+        job.stoptots</p>
+<p class="MsoNormal" style="TEXT-INDENT: -42.5pt">Task current 
+speed.               
+        
+sfjobdet.currspeed                    
+        job.currspeed</p>
+<p class="MsoNormal" style="TEXT-INDENT: -42.5pt">Task planned 
+speed.              
+        
+sfjobdet.jobspeed                     
+        job.jobspeed</p>
+<p class="MsoNormal" style="TEXT-INDENT: -42.5pt">Task status date 
+changed.       
+        
+sfjobdet.statdate                       
+        job.statdate</p>
+<p class="MsoNormal" style="TEXT-INDENT: -42.5pt">Task target 
+speed.         
+        
+sfjobdet.targetspeed                  
+job.targetspeed</p>
+<p class="MsoNormal" style="TEXT-INDENT: -42.5pt">Task work centre.(1.35 
+only)           
+sfjobdet.mach-id                       
+        job.machid</p>
+<p class="MsoNormal"> </p></div></body></html>
