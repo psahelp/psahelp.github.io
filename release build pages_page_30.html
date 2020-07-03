@@ -98,14 +98,14 @@
           }
           
           span {
-           
-          margin-top:2px; 
-          padding-left:15px; 
+          
+          margin-top:2px;
+          padding-left:15px;
           display:block;
           }
-  
-         
-         ui {
+
+
+          ui {
           font-family: Arial, Tahoma, Verdana,  Helvetica, sans-serif;
           font-weight:normal;
           font-size: 12px;
@@ -117,7 +117,33 @@
           border-right: 0px solid #ffffff;
 
           }
-         
+
+          ul ol {
+          font-family: Arial, Tahoma, Verdana,  Helvetica, sans-serif;
+          font-weight:normal;
+          font-size: 12px;
+          overflow: hidden;
+          vertical-align: top;
+          border-top: 1px solid #ffffff;
+          border-bottom:1px solid #f0f0f0;
+          border-left: 0px solid #ffffff;
+          border-right: 0px solid #ffffff;
+
+          }
+
+          li {
+          font-family: Arial, Tahoma, Verdana,  Helvetica, sans-serif;
+          font-weight:normal;
+          font-size: 12px;
+          overflow: hidden;
+          vertical-align: top;
+          border-top: 1px solid #ffffff;
+          border-bottom:1px solid #f0f0f0;
+          border-left: 0px solid #ffffff;
+          border-right: 0px solid #ffffff;
+
+          }
+
         </style></head><body><div><table style="width:99.99%;background-color:F0F0F0;border:0px"><caption style="background-color:F0F0F0;caption-side: top;color:black;font-weight: bold;">Group orders</caption></table><div style="background-color:FFFFF;padding:0px;overflow:auto;height:94%; width:99.99%"><table width="99.99%" style="font-size:10 pt" cellpadding="3" cellspacing="3"><tr style="text-align:left;"><th style="font-size:12;color:Black"></th></tr><tr style="text-align:left;"><td><span style="left;color:Black">This is work in progress – there are more detailed definitions elsewhere. It is not possible to add tasks to an existing group or change the order number and/or description 
 </span></td></tr></table><table width="99.99%" style="font-size:10 pt" cellpadding="3" cellspacing="3"><tr style="text-align:left;"><th style="font-size:13;color:Black">This function works at two levels</th></tr><tr style="text-align:left;"><td><span style="left;color:Black"></span></td></tr></table><ol type="A"><li>a system to enable multiple tasks on a work center to be combined and manipulated as a single task</li><li>a function to group similar orders (say multiple near identical orders for the same customer) and keep together all the relevant tasks through the plant (plate making, press, finishing).
 </li></ol><table width="99.99%" style="font-size:10 pt" cellpadding="3" cellspacing="3"><tr style="text-align:left;"><th style="font-size:12;color:Black"></th></tr><tr style="text-align:left;"><td><span style="left;color:Black">The system is usable with some limitations but there are some desirable functions that are not yet available – these will be commented on later. If SFDC is in use I believe you will require the RRD version because this should recognise group tasks passed from PSA and treat them as grouped tasks created with SFDC. Only details of the underlying tasks ever get to costing so there should be no implications outside the PSA/SFDC area.

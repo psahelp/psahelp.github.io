@@ -98,14 +98,14 @@
           }
           
           span {
-           
-          margin-top:2px; 
-          padding-left:15px; 
+          
+          margin-top:2px;
+          padding-left:15px;
           display:block;
           }
-  
-         
-         ui {
+
+
+          ui {
           font-family: Arial, Tahoma, Verdana,  Helvetica, sans-serif;
           font-weight:normal;
           font-size: 12px;
@@ -117,7 +117,33 @@
           border-right: 0px solid #ffffff;
 
           }
-         
+
+          ul ol {
+          font-family: Arial, Tahoma, Verdana,  Helvetica, sans-serif;
+          font-weight:normal;
+          font-size: 12px;
+          overflow: hidden;
+          vertical-align: top;
+          border-top: 1px solid #ffffff;
+          border-bottom:1px solid #f0f0f0;
+          border-left: 0px solid #ffffff;
+          border-right: 0px solid #ffffff;
+
+          }
+
+          li {
+          font-family: Arial, Tahoma, Verdana,  Helvetica, sans-serif;
+          font-weight:normal;
+          font-size: 12px;
+          overflow: hidden;
+          vertical-align: top;
+          border-top: 1px solid #ffffff;
+          border-bottom:1px solid #f0f0f0;
+          border-left: 0px solid #ffffff;
+          border-right: 0px solid #ffffff;
+
+          }
+
         </style></head><body><div><table style="width:99.99%;background-color:F0F0F0;border:0px"><caption style="background-color:F0F0F0;caption-side: top;color:black;font-weight: bold;">Autosync mode</caption></table><div style="background-color:FFFFF;padding:0px;overflow:auto;height:94%; width:99.99%"><table width="99.99%" style="font-size:10 pt" cellpadding="3" cellspacing="3"><tr style="text-align:left;"><th style="font-size:12;color:Black"></th></tr><tr style="text-align:left;"><td><span style="left;color:Black">Auto sync mode is for read only and limited update users.
 The general rule is that this mode should be used by any user who will not be scheduling orders or changing configuration table details that potentially affect hundreds or thousands of records.
 </span></td></tr></table><table width="99.99%" style="font-size:10 pt" cellpadding="3" cellspacing="3"><tr style="text-align:left;"><th style="font-size:12;color:Black"></th></tr><tr style="text-align:left;"><td><span style="left;color:Black">On a technical level it works by taking only one local copy (saving time and space) and resynchronises all changes with the main database approximately every two minutes. It achieves the same effect as taking a second local copy by storing a before image of all records prior to change within the single local copy.

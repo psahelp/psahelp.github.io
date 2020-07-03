@@ -98,14 +98,14 @@
           }
           
           span {
-           
-          margin-top:2px; 
-          padding-left:15px; 
+          
+          margin-top:2px;
+          padding-left:15px;
           display:block;
           }
-  
-         
-         ui {
+
+
+          ui {
           font-family: Arial, Tahoma, Verdana,  Helvetica, sans-serif;
           font-weight:normal;
           font-size: 12px;
@@ -117,7 +117,33 @@
           border-right: 0px solid #ffffff;
 
           }
-         
+
+          ul ol {
+          font-family: Arial, Tahoma, Verdana,  Helvetica, sans-serif;
+          font-weight:normal;
+          font-size: 12px;
+          overflow: hidden;
+          vertical-align: top;
+          border-top: 1px solid #ffffff;
+          border-bottom:1px solid #f0f0f0;
+          border-left: 0px solid #ffffff;
+          border-right: 0px solid #ffffff;
+
+          }
+
+          li {
+          font-family: Arial, Tahoma, Verdana,  Helvetica, sans-serif;
+          font-weight:normal;
+          font-size: 12px;
+          overflow: hidden;
+          vertical-align: top;
+          border-top: 1px solid #ffffff;
+          border-bottom:1px solid #f0f0f0;
+          border-left: 0px solid #ffffff;
+          border-right: 0px solid #ffffff;
+
+          }
+
         </style></head><body><div><table style="width:99.99%;background-color:F0F0F0;border:0px"><caption style="background-color:F0F0F0;caption-side: top;color:black;font-weight: bold;">Overview and historic notes - including major terms and relationships</caption></table><div style="background-color:FFFFF;padding:0px;overflow:auto;height:94%; width:99.99%"><table width="99.99%" style="font-size:10 pt" cellpadding="3" cellspacing="3"><tr style="text-align:left;"><th style="font-size:14;color:#004000">PSA3 in the organisation</th></tr><tr style="text-align:left;"><td><span style="left;color:Black">PSA takes data from the Job Costing area of Radius II. It then passes scheduling information to the SFDC system and receives progress updates from SFDC to update the planning board with actual running and completion detail.
 In order to maintain the independence of PSA, Radius and SFDC versions these transfers are performed automatically by PsaConnect
 </span></td></tr></table><div style="background-color:FFFFF;padding:5px;"><img src="..\images\image9_0.jpg" height="420" width="533" /></div><table width="99.99%" style="font-size:10 pt" cellpadding="3" cellspacing="3"><tr style="text-align:left;"><th style="font-size:12;color:Black"></th></tr><tr style="text-align:left;"><td><span style="left;color:Black">For non Radius users the usual method is for the user to populate an Access or SQL Server database that corresponds in format to the Production Control area of Radius 1.40. PsaConnect is then used to transfer data to and from PSA via an ODBC link. This has the advantage that the PSA database is completely independent from the source data and can be upgraded without affecting the source data.
