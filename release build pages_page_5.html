@@ -1,0 +1,138 @@
+﻿<html><head><title>Overview and historic notes - including major terms and relationships</title><style>
+
+
+          table {
+          font-family: Arial, Tahoma, Verdana,  Helvetica, sans-serif;
+          font-size: 15px;
+          border-collapse: collapse;
+          -moz-border-radius:3px;
+          -webkit-border-radius:3px;
+          border-radius:3px;
+
+          -moz-box-shadow: 0 1px 2px #d1d1d1;
+          -webkit-box-shadow: 0 1px 2px #d1d1d1;
+          box-shadow: 0 1px 2px #d1d1d1;
+
+          }
+          table, th, td {
+          border: 0px solid gray;
+          table-layout: fixed;
+          vertical-align: top;
+          }
+          th {
+          font-family: Arial, Tahoma, Verdana,  Helvetica, sans-serif;
+          background-color: #F8FFFD;
+          color: black;
+          font-weight:bold;
+          font-size: 12px;
+          -moz-border-radius-topright:3px;
+          -webkit-border-top-right-radius:3px;
+          border-top-right-radius:3px;
+          }
+
+          td {
+          font-family: Arial, Tahoma, Verdana,  Helvetica, sans-serif;
+          font-weight:normal;
+          font-size: 12px;
+          overflow: hidden;
+          vertical-align: top;
+          border-top: 1px solid #ffffff;
+          border-bottom:1px solid #f0f0f0;
+          border-left: 0px solid #ffffff;
+          border-right: 0px solid #ffffff;
+
+          }
+          tr
+          {
+          overflow: hidden;
+          -moz-border-radius-bottomleft:3px;
+          -webkit-border-bottom-left-radius:3px;
+          border-bottom-left-radius:3px;
+          border-bottom:0pt solid gray;
+          }
+
+          caption {
+          font-family: Arial, Tahoma, Verdana,  Helvetica, sans-serif;
+          font-weight:normal;
+          font-size: 13px;
+          overflow: hidden;
+          vertical-align: top;
+          border-top: 1px solid black;
+          border-bottom:1px solid black;
+          border-left: 1px solid #e0e0e0;
+          }
+
+          .toprightcorner{
+          position:absolute;
+          top:0;
+          right:0;
+          font-size: 10px;
+          margin-top: 10px;
+          margin-right: 10px;
+
+          }
+
+          .topleftcorner{
+          position:absolute;
+          top:0;
+          left:0;
+          font-size: 10px;
+          margin-top: 10px;
+          margin-left: 10px;
+          background: transparent;
+          border: 0;
+          border-style: none;
+          border-color: transparent;
+          outline: none;
+          outline-offset: 0;
+          box-shadow: none;
+          color: black;
+          }
+
+          tr.border_bottom td{
+          border-bottom:2pt solid blue;
+          }
+
+          tr.border_bottom th{
+          border-bottom:2pt solid blue;
+          }
+          
+          span {
+          
+          margin-top:2px;
+          padding-left:15px;
+          display:block;
+          }
+
+
+          ul {
+          font-family: Arial, Tahoma, Verdana,  Helvetica, sans-serif;
+          font-weight:normal;
+          font-size: 12px;
+          overflow: hidden;
+          vertical-align: top;
+          border-top: 1px solid #ffffff;
+          border-bottom:1px solid #f0f0f0;
+          border-left: 0px solid #ffffff;
+          border-right: 0px solid #ffffff;
+
+          }
+
+          ol li {
+          font-family: Arial, Tahoma, Verdana,  Helvetica, sans-serif;
+          font-weight:normal;
+          font-size: 12px;
+          overflow: hidden;
+          vertical-align: top;
+          border-top: 1px solid #ffffff;
+          border-bottom:1px solid #f0f0f0;
+          border-left: 0px solid #ffffff;
+          border-right: 0px solid #ffffff;
+
+          }
+
+        </style></head><body><div><table style="width:99.99%;background-color:F0F0F0;border:0px"><caption style="background-color:F0F0F0;caption-side: top;color:black;font-weight: bold;">Overview and historic notes - including major terms and relationships</caption></table><div style="background-color:FFFFF;padding:0px;overflow:auto;height:94%; width:99.99%"><table width="99.99%" style="font-size:10 pt" cellpadding="3" cellspacing="3"><tr style="text-align:left;"><th style="font-size:14;color:#004000">PSA3 in the organisation</th></tr><tr style="text-align:left;"><td><span style="left;color:Black">PSA takes data from the Job Costing area of Radius II. It then passes scheduling information to the SFDC system and receives progress updates from SFDC to update the planning board with actual running and completion detail.
+In order to maintain the independence of PSA, Radius and SFDC versions these transfers are performed automatically by PsaConnect
+</span></td></tr></table><div style="background-color:FFFFF;padding:5px;"><img src="..\images\image9_0.jpg" height="420" width="533" /></div><table width="99.99%" style="font-size:10 pt" cellpadding="3" cellspacing="3"><tr style="text-align:left;"><th style="font-size:12;color:Black"></th></tr><tr style="text-align:left;"><td><span style="left;color:Black">For non Radius users the usual method is for the user to populate an Access or SQL Server database that corresponds in format to the Production Control area of Radius 1.40. PsaConnect is then used to transfer data to and from PSA via an ODBC link. This has the advantage that the PSA database is completely independent from the source data and can be upgraded without affecting the source data.
+Apart from passing data to SFDC for production PSA also creates a daily log of updates in an Audit file. This currently lists the table, key details, time and user changing records but could be enhanced to provide a full change audit.
+</span></td></tr></table></div></div></body></html>

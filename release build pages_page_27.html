@@ -1,0 +1,140 @@
+﻿<html><head><title>Imported Duplicate Orders</title><style>
+
+
+          table {
+          font-family: Arial, Tahoma, Verdana,  Helvetica, sans-serif;
+          font-size: 15px;
+          border-collapse: collapse;
+          -moz-border-radius:3px;
+          -webkit-border-radius:3px;
+          border-radius:3px;
+
+          -moz-box-shadow: 0 1px 2px #d1d1d1;
+          -webkit-box-shadow: 0 1px 2px #d1d1d1;
+          box-shadow: 0 1px 2px #d1d1d1;
+
+          }
+          table, th, td {
+          border: 0px solid gray;
+          table-layout: fixed;
+          vertical-align: top;
+          }
+          th {
+          font-family: Arial, Tahoma, Verdana,  Helvetica, sans-serif;
+          background-color: #F8FFFD;
+          color: black;
+          font-weight:bold;
+          font-size: 12px;
+          -moz-border-radius-topright:3px;
+          -webkit-border-top-right-radius:3px;
+          border-top-right-radius:3px;
+          }
+
+          td {
+          font-family: Arial, Tahoma, Verdana,  Helvetica, sans-serif;
+          font-weight:normal;
+          font-size: 12px;
+          overflow: hidden;
+          vertical-align: top;
+          border-top: 1px solid #ffffff;
+          border-bottom:1px solid #f0f0f0;
+          border-left: 0px solid #ffffff;
+          border-right: 0px solid #ffffff;
+
+          }
+          tr
+          {
+          overflow: hidden;
+          -moz-border-radius-bottomleft:3px;
+          -webkit-border-bottom-left-radius:3px;
+          border-bottom-left-radius:3px;
+          border-bottom:0pt solid gray;
+          }
+
+          caption {
+          font-family: Arial, Tahoma, Verdana,  Helvetica, sans-serif;
+          font-weight:normal;
+          font-size: 13px;
+          overflow: hidden;
+          vertical-align: top;
+          border-top: 1px solid black;
+          border-bottom:1px solid black;
+          border-left: 1px solid #e0e0e0;
+          }
+
+          .toprightcorner{
+          position:absolute;
+          top:0;
+          right:0;
+          font-size: 10px;
+          margin-top: 10px;
+          margin-right: 10px;
+
+          }
+
+          .topleftcorner{
+          position:absolute;
+          top:0;
+          left:0;
+          font-size: 10px;
+          margin-top: 10px;
+          margin-left: 10px;
+          background: transparent;
+          border: 0;
+          border-style: none;
+          border-color: transparent;
+          outline: none;
+          outline-offset: 0;
+          box-shadow: none;
+          color: black;
+          }
+
+          tr.border_bottom td{
+          border-bottom:2pt solid blue;
+          }
+
+          tr.border_bottom th{
+          border-bottom:2pt solid blue;
+          }
+          
+          span {
+          
+          margin-top:2px;
+          padding-left:15px;
+          display:block;
+          }
+
+
+          ul {
+          font-family: Arial, Tahoma, Verdana,  Helvetica, sans-serif;
+          font-weight:normal;
+          font-size: 12px;
+          overflow: hidden;
+          vertical-align: top;
+          border-top: 1px solid #ffffff;
+          border-bottom:1px solid #f0f0f0;
+          border-left: 0px solid #ffffff;
+          border-right: 0px solid #ffffff;
+
+          }
+
+          ol li {
+          font-family: Arial, Tahoma, Verdana,  Helvetica, sans-serif;
+          font-weight:normal;
+          font-size: 12px;
+          overflow: hidden;
+          vertical-align: top;
+          border-top: 1px solid #ffffff;
+          border-bottom:1px solid #f0f0f0;
+          border-left: 0px solid #ffffff;
+          border-right: 0px solid #ffffff;
+
+          }
+
+        </style></head><body><div><table style="width:99.99%;background-color:F0F0F0;border:0px"><caption style="background-color:F0F0F0;caption-side: top;color:black;font-weight: bold;">Imported Duplicate Orders</caption></table><div style="background-color:FFFFF;padding:0px;overflow:auto;height:94%; width:99.99%"><table width="99.99%" style="font-size:10 pt" cellpadding="3" cellspacing="3"><tr style="text-align:left;"><th style="font-size:12;color:Black"></th></tr><tr style="text-align:left;"><td><span style="left;color:Black">The PsaConnect system that transfers order details from Radius to the Scheduling Database can be used to re-import orders which may have already been imported, planned and scheduled. Any orders of this type will be given a terminator character ‘@’. When attempting to plan orders of this kind the system will automatically detect any differences between the newly imported order and the existing order, the screen below will automatically load and provide details of differences.
+</span></td></tr></table><table width="99.99%" style="font-size:10 pt" cellpadding="3" cellspacing="3"><tr style="text-align:left;"><th style="font-size:13;color:Black">Four options are then open to the planner:</th></tr><tr style="text-align:left;"><td><span style="left;color:Black"></span></td></tr></table><ol type="1"><li>Delete New Order, the newly imported order can be deleted using the ‘Delete’ button, this should be considered if the new order has no significant differences to the existing order.
+</li><li>Replace Existing Order, if the new order does have significant changes then it would be sensible to replace the existing order with the newly imported order, this can be done using the ‘Replace’ button, the new order can then be planned in the usual way.
+</li><li> Merge with existing Order. Where the new order has the same tasks on the same work centres then a third option is available. This merges the new order details with the old order schedule times. If task lengths have changed there may be overlaps that will have to be resolved.</li><li>Use the 'Match Up' facility. This opens a new window that matches tasks and components where possible leaving extra or missing tasks unmatched. The user can then select or deselect matched pairs by clicking appropriate rows in the left and right tables. On completion the 'Schedule' button is pressed and the scheduled time slots from the old order on the right are used to schedule the replacement on the left. Any unmatched tasks are 'infinite scheduled' onto the planning board at the earliest time. This is likely to result in overlapping tasks but the new order has not lost its position in the schedule queue.
+This method will work both for changed orders from Radius (with trailing '@') and Live orders replacing tentative placeholders where the order numbers are completely different. The ‘Retain unmatched tasks’ box allows you to retain any new tasks that have been added to the original order. This is quite a specialized function so the checked state is not remembered and it always defaults to unchecked
+
+</li></ol></div></div></body></html>

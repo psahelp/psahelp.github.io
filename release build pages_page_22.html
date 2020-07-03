@@ -1,0 +1,143 @@
+﻿<html><head><title>Autosync mode</title><style>
+
+
+          table {
+          font-family: Arial, Tahoma, Verdana,  Helvetica, sans-serif;
+          font-size: 15px;
+          border-collapse: collapse;
+          -moz-border-radius:3px;
+          -webkit-border-radius:3px;
+          border-radius:3px;
+
+          -moz-box-shadow: 0 1px 2px #d1d1d1;
+          -webkit-box-shadow: 0 1px 2px #d1d1d1;
+          box-shadow: 0 1px 2px #d1d1d1;
+
+          }
+          table, th, td {
+          border: 0px solid gray;
+          table-layout: fixed;
+          vertical-align: top;
+          }
+          th {
+          font-family: Arial, Tahoma, Verdana,  Helvetica, sans-serif;
+          background-color: #F8FFFD;
+          color: black;
+          font-weight:bold;
+          font-size: 12px;
+          -moz-border-radius-topright:3px;
+          -webkit-border-top-right-radius:3px;
+          border-top-right-radius:3px;
+          }
+
+          td {
+          font-family: Arial, Tahoma, Verdana,  Helvetica, sans-serif;
+          font-weight:normal;
+          font-size: 12px;
+          overflow: hidden;
+          vertical-align: top;
+          border-top: 1px solid #ffffff;
+          border-bottom:1px solid #f0f0f0;
+          border-left: 0px solid #ffffff;
+          border-right: 0px solid #ffffff;
+
+          }
+          tr
+          {
+          overflow: hidden;
+          -moz-border-radius-bottomleft:3px;
+          -webkit-border-bottom-left-radius:3px;
+          border-bottom-left-radius:3px;
+          border-bottom:0pt solid gray;
+          }
+
+          caption {
+          font-family: Arial, Tahoma, Verdana,  Helvetica, sans-serif;
+          font-weight:normal;
+          font-size: 13px;
+          overflow: hidden;
+          vertical-align: top;
+          border-top: 1px solid black;
+          border-bottom:1px solid black;
+          border-left: 1px solid #e0e0e0;
+          }
+
+          .toprightcorner{
+          position:absolute;
+          top:0;
+          right:0;
+          font-size: 10px;
+          margin-top: 10px;
+          margin-right: 10px;
+
+          }
+
+          .topleftcorner{
+          position:absolute;
+          top:0;
+          left:0;
+          font-size: 10px;
+          margin-top: 10px;
+          margin-left: 10px;
+          background: transparent;
+          border: 0;
+          border-style: none;
+          border-color: transparent;
+          outline: none;
+          outline-offset: 0;
+          box-shadow: none;
+          color: black;
+          }
+
+          tr.border_bottom td{
+          border-bottom:2pt solid blue;
+          }
+
+          tr.border_bottom th{
+          border-bottom:2pt solid blue;
+          }
+          
+          span {
+          
+          margin-top:2px;
+          padding-left:15px;
+          display:block;
+          }
+
+
+          ul {
+          font-family: Arial, Tahoma, Verdana,  Helvetica, sans-serif;
+          font-weight:normal;
+          font-size: 12px;
+          overflow: hidden;
+          vertical-align: top;
+          border-top: 1px solid #ffffff;
+          border-bottom:1px solid #f0f0f0;
+          border-left: 0px solid #ffffff;
+          border-right: 0px solid #ffffff;
+
+          }
+
+          ol li {
+          font-family: Arial, Tahoma, Verdana,  Helvetica, sans-serif;
+          font-weight:normal;
+          font-size: 12px;
+          overflow: hidden;
+          vertical-align: top;
+          border-top: 1px solid #ffffff;
+          border-bottom:1px solid #f0f0f0;
+          border-left: 0px solid #ffffff;
+          border-right: 0px solid #ffffff;
+
+          }
+
+        </style></head><body><div><table style="width:99.99%;background-color:F0F0F0;border:0px"><caption style="background-color:F0F0F0;caption-side: top;color:black;font-weight: bold;">Autosync mode</caption></table><div style="background-color:FFFFF;padding:0px;overflow:auto;height:94%; width:99.99%"><table width="99.99%" style="font-size:10 pt" cellpadding="3" cellspacing="3"><tr style="text-align:left;"><th style="font-size:12;color:Black"></th></tr><tr style="text-align:left;"><td><span style="left;color:Black">Auto sync mode is for read only and limited update users.
+The general rule is that this mode should be used by any user who will not be scheduling orders or changing configuration table details that potentially affect hundreds or thousands of records.
+</span></td></tr></table><table width="99.99%" style="font-size:10 pt" cellpadding="3" cellspacing="3"><tr style="text-align:left;"><th style="font-size:12;color:Black"></th></tr><tr style="text-align:left;"><td><span style="left;color:Black">On a technical level it works by taking only one local copy (saving time and space) and resynchronises all changes with the main database approximately every two minutes. It achieves the same effect as taking a second local copy by storing a before image of all records prior to change within the single local copy.
+The update process works in exactly the same way – comparing the current data field by field with the before image to determine which fields have been changed and applying these to the central schedule.
+</span></td></tr></table><table width="99.99%" style="font-size:10 pt" cellpadding="3" cellspacing="3"><tr style="text-align:left;"><th style="font-size:12;color:Black"></th></tr><tr style="text-align:left;"><td><span style="left;color:Black">However the reload is completely different. There is no longer a full copy of the database - all changes applied by other users since the last synchronisation are copied from the central schedule to the local copy. Typically this will be just a handful of tasks or orders again saving time and space.
+Every 24 hours a full copy is performed to take advantage of any major housekeeping clear outs and database compaction that has occurred.
+As a result no changes have to be saved and no reloads are required – in fact the update menu options no longer appear. Only change details are passed keeping network traffic to a minimum. Any changes made by the user take a maximum of 4 minutes to reach all other auto sync users.
+Users can be limited to either mode of operation if required. Within the user maintenance screen the allowed modes can be defined and if both modes are allowed a default can be selected.
+</span></td></tr></table><table width="99.99%" style="font-size:10 pt" cellpadding="3" cellspacing="3"><tr style="text-align:left;"><th style="font-size:12;color:Black"></th></tr><tr style="text-align:left;"><td><span style="left;color:Black">To switch between modes click the Mode indicator at the bottom right of the main menu screen – it is recommended that mode switching is done before a schedule is opened.
+</span></td></tr></table></div></div></body></html>

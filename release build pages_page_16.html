@@ -1,0 +1,138 @@
+﻿<html><head><title>Converting the database</title><style>
+
+
+          table {
+          font-family: Arial, Tahoma, Verdana,  Helvetica, sans-serif;
+          font-size: 15px;
+          border-collapse: collapse;
+          -moz-border-radius:3px;
+          -webkit-border-radius:3px;
+          border-radius:3px;
+
+          -moz-box-shadow: 0 1px 2px #d1d1d1;
+          -webkit-box-shadow: 0 1px 2px #d1d1d1;
+          box-shadow: 0 1px 2px #d1d1d1;
+
+          }
+          table, th, td {
+          border: 0px solid gray;
+          table-layout: fixed;
+          vertical-align: top;
+          }
+          th {
+          font-family: Arial, Tahoma, Verdana,  Helvetica, sans-serif;
+          background-color: #F8FFFD;
+          color: black;
+          font-weight:bold;
+          font-size: 12px;
+          -moz-border-radius-topright:3px;
+          -webkit-border-top-right-radius:3px;
+          border-top-right-radius:3px;
+          }
+
+          td {
+          font-family: Arial, Tahoma, Verdana,  Helvetica, sans-serif;
+          font-weight:normal;
+          font-size: 12px;
+          overflow: hidden;
+          vertical-align: top;
+          border-top: 1px solid #ffffff;
+          border-bottom:1px solid #f0f0f0;
+          border-left: 0px solid #ffffff;
+          border-right: 0px solid #ffffff;
+
+          }
+          tr
+          {
+          overflow: hidden;
+          -moz-border-radius-bottomleft:3px;
+          -webkit-border-bottom-left-radius:3px;
+          border-bottom-left-radius:3px;
+          border-bottom:0pt solid gray;
+          }
+
+          caption {
+          font-family: Arial, Tahoma, Verdana,  Helvetica, sans-serif;
+          font-weight:normal;
+          font-size: 13px;
+          overflow: hidden;
+          vertical-align: top;
+          border-top: 1px solid black;
+          border-bottom:1px solid black;
+          border-left: 1px solid #e0e0e0;
+          }
+
+          .toprightcorner{
+          position:absolute;
+          top:0;
+          right:0;
+          font-size: 10px;
+          margin-top: 10px;
+          margin-right: 10px;
+
+          }
+
+          .topleftcorner{
+          position:absolute;
+          top:0;
+          left:0;
+          font-size: 10px;
+          margin-top: 10px;
+          margin-left: 10px;
+          background: transparent;
+          border: 0;
+          border-style: none;
+          border-color: transparent;
+          outline: none;
+          outline-offset: 0;
+          box-shadow: none;
+          color: black;
+          }
+
+          tr.border_bottom td{
+          border-bottom:2pt solid blue;
+          }
+
+          tr.border_bottom th{
+          border-bottom:2pt solid blue;
+          }
+          
+          span {
+          
+          margin-top:2px;
+          padding-left:15px;
+          display:block;
+          }
+
+
+          ul {
+          font-family: Arial, Tahoma, Verdana,  Helvetica, sans-serif;
+          font-weight:normal;
+          font-size: 12px;
+          overflow: hidden;
+          vertical-align: top;
+          border-top: 1px solid #ffffff;
+          border-bottom:1px solid #f0f0f0;
+          border-left: 0px solid #ffffff;
+          border-right: 0px solid #ffffff;
+
+          }
+
+          ol li {
+          font-family: Arial, Tahoma, Verdana,  Helvetica, sans-serif;
+          font-weight:normal;
+          font-size: 12px;
+          overflow: hidden;
+          vertical-align: top;
+          border-top: 1px solid #ffffff;
+          border-bottom:1px solid #f0f0f0;
+          border-left: 0px solid #ffffff;
+          border-right: 0px solid #ffffff;
+
+          }
+
+        </style></head><body><div><table style="width:99.99%;background-color:F0F0F0;border:0px"><caption style="background-color:F0F0F0;caption-side: top;color:black;font-weight: bold;">Converting the database</caption></table><div style="background-color:FFFFF;padding:0px;overflow:auto;height:94%; width:99.99%"><table width="99.99%" style="font-size:10 pt" cellpadding="3" cellspacing="3"><tr style="text-align:left;"><th style="font-size:12;color:Black"></th></tr><tr style="text-align:left;"><td><span style="left;color:Black">You need to run program PSA_Convertor (from the PSA3 install directory) – this requires</span></td></tr></table><div style="background-color:FFFFF;padding:5px;"><img src="..\images\image9_4.jpg" height="420" width="535" /></div><ul style="list-style-type:disc"><li>A database to convert – browse to your current PSH database</li><li>Path for housekeeping files on new database – this can be the path of the PSH file or the physical location of the SQL database created above – the adt files will be stored here</li><li>The server – ANDREWS-E5510\SQLEXPRESS from the example above</li><li>   The name of the target database – GPI from the example above
+</li><li>If using ‘Windows Authentication’ the user and password can be left blank</li></ul><table width="99.99%" style="font-size:10 pt" cellpadding="3" cellspacing="3"><tr style="text-align:left;"><th style="font-size:12;color:Black"></th></tr><tr style="text-align:left;"><td><span style="left;color:Black">Now press ‘Load Plant’ – progress will be reported at the bottom of the screen. The longest step will be ‘Load the data’ when the progress bar will indicate progress.
+If converting a second or subsequent database you will get the prompt ‘Tables exist replace Y/N?’ to which you should respond No so that data from the second plant is added to the first.
+</span></td></tr></table><table width="99.99%" style="font-size:10 pt" cellpadding="3" cellspacing="3"><tr style="text-align:left;"><th style="font-size:12;color:Black"></th></tr><tr style="text-align:left;"><td><span style="left;color:Black">At the end of this process the original PSH database remains unchanged so can continue to be used by PSA2.
+</span></td></tr></table></div></div></body></html>

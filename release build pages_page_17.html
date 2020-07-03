@@ -1,0 +1,139 @@
+﻿<html><head><title>Using PSA3 for the first time</title><style>
+
+
+          table {
+          font-family: Arial, Tahoma, Verdana,  Helvetica, sans-serif;
+          font-size: 15px;
+          border-collapse: collapse;
+          -moz-border-radius:3px;
+          -webkit-border-radius:3px;
+          border-radius:3px;
+
+          -moz-box-shadow: 0 1px 2px #d1d1d1;
+          -webkit-box-shadow: 0 1px 2px #d1d1d1;
+          box-shadow: 0 1px 2px #d1d1d1;
+
+          }
+          table, th, td {
+          border: 0px solid gray;
+          table-layout: fixed;
+          vertical-align: top;
+          }
+          th {
+          font-family: Arial, Tahoma, Verdana,  Helvetica, sans-serif;
+          background-color: #F8FFFD;
+          color: black;
+          font-weight:bold;
+          font-size: 12px;
+          -moz-border-radius-topright:3px;
+          -webkit-border-top-right-radius:3px;
+          border-top-right-radius:3px;
+          }
+
+          td {
+          font-family: Arial, Tahoma, Verdana,  Helvetica, sans-serif;
+          font-weight:normal;
+          font-size: 12px;
+          overflow: hidden;
+          vertical-align: top;
+          border-top: 1px solid #ffffff;
+          border-bottom:1px solid #f0f0f0;
+          border-left: 0px solid #ffffff;
+          border-right: 0px solid #ffffff;
+
+          }
+          tr
+          {
+          overflow: hidden;
+          -moz-border-radius-bottomleft:3px;
+          -webkit-border-bottom-left-radius:3px;
+          border-bottom-left-radius:3px;
+          border-bottom:0pt solid gray;
+          }
+
+          caption {
+          font-family: Arial, Tahoma, Verdana,  Helvetica, sans-serif;
+          font-weight:normal;
+          font-size: 13px;
+          overflow: hidden;
+          vertical-align: top;
+          border-top: 1px solid black;
+          border-bottom:1px solid black;
+          border-left: 1px solid #e0e0e0;
+          }
+
+          .toprightcorner{
+          position:absolute;
+          top:0;
+          right:0;
+          font-size: 10px;
+          margin-top: 10px;
+          margin-right: 10px;
+
+          }
+
+          .topleftcorner{
+          position:absolute;
+          top:0;
+          left:0;
+          font-size: 10px;
+          margin-top: 10px;
+          margin-left: 10px;
+          background: transparent;
+          border: 0;
+          border-style: none;
+          border-color: transparent;
+          outline: none;
+          outline-offset: 0;
+          box-shadow: none;
+          color: black;
+          }
+
+          tr.border_bottom td{
+          border-bottom:2pt solid blue;
+          }
+
+          tr.border_bottom th{
+          border-bottom:2pt solid blue;
+          }
+          
+          span {
+          
+          margin-top:2px;
+          padding-left:15px;
+          display:block;
+          }
+
+
+          ul {
+          font-family: Arial, Tahoma, Verdana,  Helvetica, sans-serif;
+          font-weight:normal;
+          font-size: 12px;
+          overflow: hidden;
+          vertical-align: top;
+          border-top: 1px solid #ffffff;
+          border-bottom:1px solid #f0f0f0;
+          border-left: 0px solid #ffffff;
+          border-right: 0px solid #ffffff;
+
+          }
+
+          ol li {
+          font-family: Arial, Tahoma, Verdana,  Helvetica, sans-serif;
+          font-weight:normal;
+          font-size: 12px;
+          overflow: hidden;
+          vertical-align: top;
+          border-top: 1px solid #ffffff;
+          border-bottom:1px solid #f0f0f0;
+          border-left: 0px solid #ffffff;
+          border-right: 0px solid #ffffff;
+
+          }
+
+        </style></head><body><div><table style="width:99.99%;background-color:F0F0F0;border:0px"><caption style="background-color:F0F0F0;caption-side: top;color:black;font-weight: bold;">Using PSA3 for the first time</caption></table><div style="background-color:FFFFF;padding:0px;overflow:auto;height:94%; width:99.99%"><table width="99.99%" style="font-size:10 pt" cellpadding="3" cellspacing="3"><tr style="text-align:left;"><th style="font-size:12;color:Black"></th></tr><tr style="text-align:left;"><td><span style="left;color:Black">PSA3 can be installed into the same directory as PSA2. There are no shared files
+</span></td></tr></table><table width="99.99%" style="font-size:10 pt" cellpadding="3" cellspacing="3"><tr style="text-align:left;"><th style="font-size:12;color:Black"></th></tr><tr style="text-align:left;"><td><span style="left;color:Black">Go to the Windows directory and copy PSA2.ini and name it PSA3.ini. Enough parameters are common to make this the best possible starting point. 
+</span></td></tr></table><table width="99.99%" style="font-size:10 pt" cellpadding="3" cellspacing="3"><tr style="text-align:left;"><th style="font-size:12;color:Black"></th></tr><tr style="text-align:left;"><td><span style="left;color:Black">Now start PSA3.exe – double click or create a desktop icon.
+</span></td></tr></table><table width="99.99%" style="font-size:10 pt" cellpadding="3" cellspacing="3"><tr style="text-align:left;"><th style="font-size:12;color:Black"></th></tr><tr style="text-align:left;"><td><span style="left;color:Black">The logon screen will require full logon details for the SQL database. If user names and passwords are required they will be stored in an encrypted format so that repeat entry in not needed. The user and PSA password remain the same and will have been converted. Enter PSA_SQL as the database and complete the Company and Plant fields. At the moment PSA3 remains single company/plant but the central SQL database can hold multiple company and plant data. As a local database does not exist PSA will create one from psa3_std.psh and run a full data load – possibly followed by housekeeping processes. 
+</span></td></tr></table><table width="99.99%" style="font-size:10 pt" cellpadding="3" cellspacing="3"><tr style="text-align:left;"><th style="font-size:12;color:Black"></th></tr><tr style="text-align:left;"><td><span style="left;color:Black">As a local database does not exist PSA will create one from psa3_std.psh and run a full data load – possibly followed by housekeeping processes. 
+</span></td></tr></table></div></div></body></html>

@@ -1,0 +1,136 @@
+﻿<html><head><title>Creating a new report</title><style>
+
+
+          table {
+          font-family: Arial, Tahoma, Verdana,  Helvetica, sans-serif;
+          font-size: 15px;
+          border-collapse: collapse;
+          -moz-border-radius:3px;
+          -webkit-border-radius:3px;
+          border-radius:3px;
+
+          -moz-box-shadow: 0 1px 2px #d1d1d1;
+          -webkit-box-shadow: 0 1px 2px #d1d1d1;
+          box-shadow: 0 1px 2px #d1d1d1;
+
+          }
+          table, th, td {
+          border: 0px solid gray;
+          table-layout: fixed;
+          vertical-align: top;
+          }
+          th {
+          font-family: Arial, Tahoma, Verdana,  Helvetica, sans-serif;
+          background-color: #F8FFFD;
+          color: black;
+          font-weight:bold;
+          font-size: 12px;
+          -moz-border-radius-topright:3px;
+          -webkit-border-top-right-radius:3px;
+          border-top-right-radius:3px;
+          }
+
+          td {
+          font-family: Arial, Tahoma, Verdana,  Helvetica, sans-serif;
+          font-weight:normal;
+          font-size: 12px;
+          overflow: hidden;
+          vertical-align: top;
+          border-top: 1px solid #ffffff;
+          border-bottom:1px solid #f0f0f0;
+          border-left: 0px solid #ffffff;
+          border-right: 0px solid #ffffff;
+
+          }
+          tr
+          {
+          overflow: hidden;
+          -moz-border-radius-bottomleft:3px;
+          -webkit-border-bottom-left-radius:3px;
+          border-bottom-left-radius:3px;
+          border-bottom:0pt solid gray;
+          }
+
+          caption {
+          font-family: Arial, Tahoma, Verdana,  Helvetica, sans-serif;
+          font-weight:normal;
+          font-size: 13px;
+          overflow: hidden;
+          vertical-align: top;
+          border-top: 1px solid black;
+          border-bottom:1px solid black;
+          border-left: 1px solid #e0e0e0;
+          }
+
+          .toprightcorner{
+          position:absolute;
+          top:0;
+          right:0;
+          font-size: 10px;
+          margin-top: 10px;
+          margin-right: 10px;
+
+          }
+
+          .topleftcorner{
+          position:absolute;
+          top:0;
+          left:0;
+          font-size: 10px;
+          margin-top: 10px;
+          margin-left: 10px;
+          background: transparent;
+          border: 0;
+          border-style: none;
+          border-color: transparent;
+          outline: none;
+          outline-offset: 0;
+          box-shadow: none;
+          color: black;
+          }
+
+          tr.border_bottom td{
+          border-bottom:2pt solid blue;
+          }
+
+          tr.border_bottom th{
+          border-bottom:2pt solid blue;
+          }
+          
+          span {
+          
+          margin-top:2px;
+          padding-left:15px;
+          display:block;
+          }
+
+
+          ul {
+          font-family: Arial, Tahoma, Verdana,  Helvetica, sans-serif;
+          font-weight:normal;
+          font-size: 12px;
+          overflow: hidden;
+          vertical-align: top;
+          border-top: 1px solid #ffffff;
+          border-bottom:1px solid #f0f0f0;
+          border-left: 0px solid #ffffff;
+          border-right: 0px solid #ffffff;
+
+          }
+
+          ol li {
+          font-family: Arial, Tahoma, Verdana,  Helvetica, sans-serif;
+          font-weight:normal;
+          font-size: 12px;
+          overflow: hidden;
+          vertical-align: top;
+          border-top: 1px solid #ffffff;
+          border-bottom:1px solid #f0f0f0;
+          border-left: 0px solid #ffffff;
+          border-right: 0px solid #ffffff;
+
+          }
+
+        </style></head><body><div><table style="width:99.99%;background-color:F0F0F0;border:0px"><caption style="background-color:F0F0F0;caption-side: top;color:black;font-weight: bold;">Creating a new report</caption></table><div style="background-color:FFFFF;padding:0px;overflow:auto;height:94%; width:99.99%"><table width="99.99%" style="font-size:10 pt" cellpadding="3" cellspacing="3"><tr style="text-align:left;"><th style="font-size:13;color:Black">A few rules to follow here</th></tr><tr style="text-align:left;"><td><span style="left;color:Black"></span></td></tr></table><ul style="list-style-type:disc"><li>Always create reports using an Access/DAO link to the ‘sched2.mdb’ file in your working directory.
+Linking to the central .PSH database requires an ODBC link (slow) and is almost certain to cause sharing issues as Crystal is notorious for not releasing resources</li></ul><div style="background-color:FFFFF;padding:5px;"><img src="..\images\image9_25.png" height="420" width="535" /></div><ul style="list-style-type:disc"><li>Select the tables required create the links</li></ul><div style="background-color:FFFFF;padding:5px;"><img src="..\images\image9_26.png" height="420" width="535" /></div><ul style="list-style-type:disc"><li> For historic reasons there are a few strange names in the PSA system – to maintain compatibility these won’t be changing. A few to note are – the table ‘job’ contains task level information – work centres are in the field ‘resource’ in job and set up details are in table resource</li><li>The technical attributes are held in 20 character fields named tech1 to tech20 at both task and header level. On old Radius systems there was an ‘attribute’ area of estimating – if in use these are copied to the header fields within PSA. If attribute import is used then it is always the task level attributes that are populated (table job). At the end of the import process if all the tasks have only one value for the same attribute then this will be copied to the header for improved visibility. </li></ul><ul style="list-style-type:none"><li>From release 332 up to 48 technical attributes may be used by reducing the number of resources.
+</li></ul><ul style="list-style-type:disc"><li>Resources are applied at task, component or header level. They are held against all tasks (again in the job table). Where the resource applies at header level every task will have the same value – so any resource can be retrieved from the current task.</li><li>The fields resav1 to resav30 hold Y/N to indicate if the resource is available or not. If NOT available the fields resavdate1 to resavdate30 hold the ‘expected’ date. Note that when there is an expected date this date may fall prior to ‘now’ and the resource is ‘overdue’. It may fall between ‘now’ and the task start date in which case it is ‘pending’ or it may fall after the task start date making it ‘too late’ and action is required.</li><li>When the resource is marked available the date this happens is entered into the field resavreq1 to resavreq30 as the ‘achieved’ date.</li></ul></div></div></body></html>
