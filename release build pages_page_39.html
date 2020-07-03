@@ -98,14 +98,14 @@
           }
           
           span {
-          
-          margin-top:2px;
-          padding-left:15px;
+           
+          margin-top:2px; 
+          padding-left:15px; 
           display:block;
           }
-
-
-          ul {
+  
+         
+         ui {
           font-family: Arial, Tahoma, Verdana,  Helvetica, sans-serif;
           font-weight:normal;
           font-size: 12px;
@@ -117,19 +117,6 @@
           border-right: 0px solid #ffffff;
 
           }
-
-          ol li {
-          font-family: Arial, Tahoma, Verdana,  Helvetica, sans-serif;
-          font-weight:normal;
-          font-size: 12px;
-          overflow: hidden;
-          vertical-align: top;
-          border-top: 1px solid #ffffff;
-          border-bottom:1px solid #f0f0f0;
-          border-left: 0px solid #ffffff;
-          border-right: 0px solid #ffffff;
-
-          }
-
+         
         </style></head><body><div><table style="width:99.99%;background-color:F0F0F0;border:0px"><caption style="background-color:F0F0F0;caption-side: top;color:black;font-weight: bold;">Special Reports</caption></table><div style="background-color:FFFFF;padding:0px;overflow:auto;height:94%; width:99.99%"><table width="99.99%" style="font-size:10 pt" cellpadding="3" cellspacing="3"><tr style="text-align:left;"><th style="font-size:13;color:Black">There are two further custom report s that can be set up.</th></tr><tr style="text-align:left;"><td><span style="left;color:Black"></span></td></tr></table><ul style="list-style-type:disc"><li>When a task completes PSA can run a ‘completion report’ that acts as a snapshot of details at the moment of completion. The report to run should be defined under work centre maintenance in the ‘Completion Report’ box. If desired this report can be written direct to disk in the background rather than printed. The directory is defined under Configuration/System on the Parameter tab and the file name to be used can contain these variables - %O – order number, %C – component number, %T – task number, %W – work centre, YYYY – year of completion, MM – month of completion, DD – day of completion. The extension should be set to doc, xls or pdf for word, excel or pdf format outputs. Therefore a typical file name might be %O_%T_YYYYMMDD.pdf.
 </li><li>The dynamic work list can also output a printed version of the screen. This expects a report named ‘dworklist.rpt’ prefixed ‘A4_’ or Lt_’ for A4 or Letter format. If such a custom report exists a print button becomes available. Contact Radius support for details of fields available to this report</li></ul></div></div></body></html>
