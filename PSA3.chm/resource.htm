@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<html><head><title>resource</title>
+<meta content="text/html; charset=Windows-1252" http-equiv="Content-Type" /><link rel="stylesheet" type="text/css" href="Theme/nav.css" /><link rel="stylesheet" type="text/css" href="Theme/lf.css" /><link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" /><link rel="stylesheet" type="text/css" href="LinksExt/NewPsa3.css" />
+<script type="text/javascript">
+//<![CDATA[
+
+
+
+var _needIndentation = true;
+
+
+
+
+//]]></script>
+
+<script language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2009.3.0.500" />
+<meta name="D2HTheme" content="(Default) v.28" />
+</head>
+<body style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px" relpart="">
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitMainThemeHandlers != "undefined")
+
+    d2hInitMainThemeHandlers();
+
+
+//]]></script>
+
+<div id="nsbanner" class="d2h_main_nsbanner" style="BORDER-TOP: #999999 1px solid; BORDER-BOTTOM: #999999 1px solid; POSITION: relative; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; LEFT: 0px; DISPLAY: none; PADDING-RIGHT: 0px; BACKGROUND-COLOR: transparent">
+<div id="TitleRow" class="d2h_main_titlerow" style="PADDING-BOTTOM: 4px; PADDING-TOP: 4px; PADDING-LEFT: 22px; DISPLAY: none; PADDING-RIGHT: 10px; WIDTH: 100%; BACKGROUND-COLOR: transparent">
+<div id="ienav" class="d2h_main_ienav" style="DISPLAY: none">
+<p class="d2h_main_linknav" align="left"><a id="D2HPrevious" class="D2HPreviousEnabled" href="processtype.htm"></a>  <a id="D2HNext" class="D2HNextEnabled" href="resrpt.htm"></a></p></div></div></div>
+<div id="nstext" class="d2h_main_nstext" style="OVERFLOW: auto; PADDING-BOTTOM: 10px; PADDING-TOP: 5px; PADDING-LEFT: 22px; PADDING-RIGHT: 10px; BACKGROUND-COLOR: transparent" hasuserbackground="true" valign="bottom">
+<div id="d2h_breadcrumbs" class="d2h_breadcrumbs"><a class="d2h_breadcrumbsNormal" href="appendicesincludingtechnicalnotes.htm">Appendices including technical 
+notes</a><span class="d2h_breadcrumbsLinkSeparator"> &gt; </span><a class="d2h_breadcrumbsNormal" href="filelayouts.htm">File Layouts</a></div>
+<h3 style="MARGIN-LEFT: 36pt; TEXT-INDENT: -36pt; tab-stops: 83.8pt"><a name="_Toc504681645" id="_Toc504681645"></a>resource</h3>
+<p class="StyleCourierfixedCourierNew8pt">FIELD 
+NAME                    
+TYPE      LENGTH    DESCRIPTION</p>
+<p class="StyleCourierfixedCourierNew8pt"> </p>
+<p class="StyleCourierfixedCourierNew8pt">resource                      
+Char      12      
+  work centre name</p>
+<p class="StyleCourierfixedCourierNew8pt">description                   
+Char      30        
+long description</p>
+<p class="StyleCourierfixedCourierNew8pt">processtype                   
+Char      
+6         process type</p>
+<p class="StyleCourierfixedCourierNew8pt">capability                    
+Char      
+6         capability group - 
+optional</p>
+<p class="StyleCourierfixedCourierNew8pt">proSequence                  
+ Integer   2         
+process sequence</p>
+<p class="StyleCourierfixedCourierNew8pt">mr_time                       
+Integer   2         
+redundant</p>
+<p class="StyleCourierfixedCourierNew8pt">defspeed                      
+Double    8         
+default speed - used for new tasks and task moves between work centres</p>
+<p class="StyleCourierfixedCourierNew8pt">def_mr                        
+Long   
+   4         default make 
+ready time</p>
+<p class="StyleCourierfixedCourierNew8pt">def_suffix                    
+Char      
+5         redundant</p>
+<p class="StyleCourierfixedCourierNew8pt">Short_Des                     
+Char      20        
+short description</p>
+<p class="StyleCourierfixedCourierNew8pt">DefMVtime                     
+Long      
+4         default move time</p>
+<p class="StyleCourierfixedCourierNew8pt">Upstatus               
+       Long      
+4         update reference number</p>
+<p class="StyleCourierfixedCourierNew8pt">KMS                           
+Integer   2         used when 
+linking output to Komori work centres</p>
+<p class="StyleCourierfixedCourierNew8pt">EFactor                       
+Integer   2         efficiency 
+factor - default 100</p>
+<p class="StyleCourierfixedCourierNew8pt">WarnOnOvers              
+     Yes/No    
+1         if true completing task with 
+completed quantity exceeding required quantity by overslimit will trigger 
+warning</p>
+<p class="StyleCourierfixedCourierNew8pt">OversLimit                    
+Integer   2         held as 
+percentage</p>
+<p class="StyleCourierfixedCourierNew8pt">usepacking                    
+Yes/No    1         when 
+linked to Radius I systems packing materials will be linked to tasks on this 
+work centre rather than the first task of the component</p>
+<p class="StyleCourierfixedCourierNew8pt">UseInfinite                   
+Yes/No    1         all 
+scheduling on this work centre assumes infinite capacity - use for outwork 
+processes</p>
+<p class="StyleCourierfixedCourierNew8pt">defParallel                   
+Yes/No    1         if 
+true new tasks will be set to parallel style</p>
+<p class="StyleCourierfixedCourierNew8pt">defwaittime                   
+Long      
+4         default wait time</p>
+<p class="StyleCourierfixedCourierNew8pt">orderdeleteignoretasks        
+Yes/No    1         not 
+in current use</p>
+<p class="StyleCourierfixedCourierNew8pt">CustomWorkList                
+Char      20        
+name of custom Work To List report to be used for this work centre</p>
+<p class="StyleCourierfixedCourierNew8pt">analcode1                     
+Char      30        
+reserved for future use</p>
+<p class="StyleCourierfixedCourierNew8pt">analcode2                     
+Char      30        
+reserved for future use</p>
+<p class="StyleCourierfixedCourierNew8pt">v_ptype                       
+Char      10        
+Radius process type (A100, P200 etc) - not always loaded</p>
+<p class="StyleCourierfixedCourierNew8pt">to_sfdc                       
+Yes/No    1         
+reserved for future use</p>
+<p class="StyleCourierfixedCourierNew8pt">freezeactive                  
+Yes/No    1         turns 
+on dynamic firm line for tasks on this work centre</p>
+<p class="StyleCourierfixedCourierNew8pt">freezemoving                  
+Yes/No    1         if 
+true the dynamic firm line will stay x minutes ahead of 'now'</p>
+<p class="StyleCourierfixedCourierNew8pt">freezetime                    
+Long      
+4         records firm line position</p>
+<p class="StyleCourierfixedCourierNew8pt">Generic              
+         Yes/No    
+1         if true this work centre is 
+generic and an attempt will be made to transfer tasks to a non generic work 
+centre in the same capability group</p>
+<p class="StyleCourierfixedCourierNew8pt">CostRate                      
+Double    8         used 
+in determining best work centre during transfers from generic</p>
+<p class="StyleCourierfixedCourierNew8pt">digits                        
+Integer   2</p>
+<p class="StyleCourierfixedCourierNew8pt">counter                       
+Long      4</p>
+<p class="StyleCourierfixedCourierNew8pt"> </p>
+<p class="StyleCourierfixedCourierNew8pt">INDEX                         
+PRIMARY   UNIQUE    FIELDS</p>
+<p class="StyleCourierfixedCourierNew8pt"> </p>
+<p class="StyleCourierfixedCourierNew8pt">resource                      
+Y         
+Y         +resource</p>
+<p class="StyleCourierfixedCourierNew8pt">Upstatus               
+       N         
+N         
++Upstatus</p></div></body></html>

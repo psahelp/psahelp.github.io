@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<html><head><title>Auto Merge and Replace</title>
+<meta content="text/html; charset=Windows-1252" http-equiv="Content-Type" /><link rel="stylesheet" type="text/css" href="Theme/nav.css" /><link rel="stylesheet" type="text/css" href="Theme/lf.css" /><link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" /><link rel="stylesheet" type="text/css" href="LinksExt/NewPsa3.css" />
+<script type="text/javascript">
+//<![CDATA[
+
+
+
+var _needIndentation = true;
+
+
+
+
+//]]></script>
+
+<script language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2009.3.0.500" />
+<meta name="D2HTheme" content="(Default) v.28" />
+</head>
+<body style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px" relpart="">
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitMainThemeHandlers != "undefined")
+
+    d2hInitMainThemeHandlers();
+
+
+//]]></script>
+
+<div id="nsbanner" class="d2h_main_nsbanner" style="BORDER-TOP: #999999 1px solid; BORDER-BOTTOM: #999999 1px solid; POSITION: relative; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; LEFT: 0px; DISPLAY: none; PADDING-RIGHT: 0px; BACKGROUND-COLOR: transparent">
+<div id="TitleRow" class="d2h_main_titlerow" style="PADDING-BOTTOM: 4px; PADDING-TOP: 4px; PADDING-LEFT: 22px; DISPLAY: none; PADDING-RIGHT: 10px; WIDTH: 100%; BACKGROUND-COLOR: transparent">
+<div id="ienav" class="d2h_main_ienav" style="DISPLAY: none">
+<p class="d2h_main_linknav" align="left"><a id="D2HPrevious" class="D2HPreviousEnabled" href="materials.htm"></a>  <a id="D2HNext" class="D2HNextEnabled" href="usermaintenance.htm"></a></p></div></div></div>
+<div id="nstext" class="d2h_main_nstext" style="OVERFLOW: auto; PADDING-BOTTOM: 10px; PADDING-TOP: 5px; PADDING-LEFT: 22px; PADDING-RIGHT: 10px; BACKGROUND-COLOR: transparent" hasuserbackground="true" valign="bottom">
+<div id="d2h_breadcrumbs" class="d2h_breadcrumbs"><span class="d2h_breadcrumbsContentsOnly">Screen by screen descriptions</span><span class="d2h_breadcrumbsLinkSeparator"> &gt; </span><a class="d2h_breadcrumbsNormal" href="systemconfiguration.htm">System Configuration</a></div>
+<h3 style="MARGIN-LEFT: 36pt; TEXT-INDENT: -36pt; tab-stops: 83.8pt"><a name="_Toc504681534" id="_Toc504681534"></a>Auto Merge and Replace</h3>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Calibri',sans-serif"><img src="ImagesExt/image9_47.jpg" alt="" /></span>When orders are changed in Radius they are 
+re-imported to PSA as ‘replacement’ orders with a ‘@’ suffix added to the order 
+number. These are always unplanned. During the ‘plan’ step a difference check 
+routine displays the changes to the user and various options to merge or replace 
+are offered. If there are many small updates to an order this process can be 
+annoying so a user definable degree of automation is defined here.</p>
+<p class="MsoNormal">‘Automatically schedule new orders imported as planned’ – 
+PsaConnect allows new orders to have a planned status when imported – this 
+option allows such orders to be scheduled in the background using the default 
+scheduling settings – use with care</p>
+<p class="MsoNormal">‘Use advanced work centre replacement before merging’ – this 
+option must be treated with great care – when a replacement order is received it 
+will determine what happened to the original order and attempt to repeat on the 
+replacement using capability groups and process type to assign tasks to the work 
+centres used by the original order. It will then match-up and schedule in the 
+background. It is very unlikely that any orders will fail the process.</p>
+<p class="MsoNormal">‘Allow automatic merging’ – with this checked replacement 
+orders go through a difference check that creates a list of differences. If 
+there are no differences or those differences have been marked in the list below 
+as ‘trivial’ then the replacement order will be merged with the time slots and 
+work centres of the original order and the original order will cease to exist. 
+This may generate some gaps or overlaps if task quantity changes have reduced or 
+extended run times.</p>
+<p class="MsoNormal">‘Allow automatic replacing’ – similar to automatic merging. 
+If automatic merging has failed then the same list of differences is compared 
+with those in the list below. This now contains differences like ‘extra tasks’ 
+or ‘added items’ that would always prevent merging. If those differences have 
+been marked in the list below as ‘trivial’ then the original order will be 
+replaced and will cease to exist. This leaves the replacement order unscheduled 
+and therefore should again be used with care.</p></div></body></html>

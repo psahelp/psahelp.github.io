@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<html><head><title>PSA to SFDC - Export</title>
+<meta content="text/html; charset=Windows-1252" http-equiv="Content-Type" /><link rel="stylesheet" type="text/css" href="Theme/nav.css" /><link rel="stylesheet" type="text/css" href="Theme/lf.css" /><link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" /><link rel="stylesheet" type="text/css" href="LinksExt/NewPsa3.css" />
+<script type="text/javascript">
+//<![CDATA[
+
+
+
+var _needIndentation = true;
+
+
+
+
+//]]></script>
+
+<script language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2009.3.0.500" />
+<meta name="D2HTheme" content="(Default) v.28" />
+</head>
+<body style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px" relpart="">
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitMainThemeHandlers != "undefined")
+
+    d2hInitMainThemeHandlers();
+
+
+//]]></script>
+
+<div id="nsbanner" class="d2h_main_nsbanner" style="BORDER-TOP: #999999 1px solid; BORDER-BOTTOM: #999999 1px solid; POSITION: relative; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; LEFT: 0px; DISPLAY: none; PADDING-RIGHT: 0px; BACKGROUND-COLOR: transparent">
+<div id="TitleRow" class="d2h_main_titlerow" style="PADDING-BOTTOM: 4px; PADDING-TOP: 4px; PADDING-LEFT: 22px; DISPLAY: none; PADDING-RIGHT: 10px; WIDTH: 100%; BACKGROUND-COLOR: transparent">
+<div id="ienav" class="d2h_main_ienav" style="DISPLAY: none">
+<p class="d2h_main_linknav" align="left"><a id="D2HPrevious" class="D2HPreviousEnabled" href="orderupdateexport.htm"></a>  <a id="D2HNext" class="D2HNextEnabled" href="sfdctopsaimport.htm"></a></p></div></div></div>
+<div id="nstext" class="d2h_main_nstext" style="OVERFLOW: auto; PADDING-BOTTOM: 10px; PADDING-TOP: 5px; PADDING-LEFT: 22px; PADDING-RIGHT: 10px; BACKGROUND-COLOR: transparent" hasuserbackground="true" valign="bottom">
+<div id="d2h_breadcrumbs" class="d2h_breadcrumbs"><a class="d2h_breadcrumbsNormal" href="appendicesincludingtechnicalnotes.htm">Appendices including technical 
+notes</a></div>
+<h2 style="MARGIN-LEFT: 0pt"><a name="_Toc504681665" id="_Toc504681665"><span style="FONT-WEIGHT: normal">PSA to SFDC - Export</span></a><span style="FONT-WEIGHT: normal"></span></h2>
+<p class="MsoNormal"> </p>
+<p class="MsoNormal">Task information can be passed to the Shop Floor Data 
+Collection Database. This becomes a task available to be run within SFDC.</p>
+<p class="MsoNormal"> </p>
+<p class="MsoNormal"><b>Task:</b></p>
+<p class="MsoNormal" style="TEXT-INDENT: -42.5pt">The field sfplan.changeflag is 
+set to 'N' or 'M' for 'new' and 'modify'</p>
+<p class="MsoNormal" style="TEXT-INDENT: -42.5pt">Task order 
+number.               
+job.ordernumber                       
+        sfplan.kjobcode</p>
+<p class="MsoNormal" style="TEXT-INDENT: -42.5pt">Task component 
+number.       
+job.component                          
+sfplan.kcompno</p>
+<p class="MsoNormal" style="TEXT-INDENT: -42.5pt">Task task 
+number.         
+job.job                                    
+sfplan.kprocno</p>
+<p class="MsoNormal" style="TEXT-INDENT: -42.5pt">Component description.  
+component.description                       
+sfplan.description</p>
+<p class="MsoNormal" style="TEXT-INDENT: -42.5pt">Order 
+description.          
+ordheader.description                 
+sfplan.kjobsn</p>
+<p class="MsoNormal" style="TEXT-INDENT: -42.5pt">Order 
+customer.            
+ordheader.customer                  
+sfplan.customer</p>
+<p class="MsoNormal" style="TEXT-INDENT: -42.5pt">Task 
+description.            
+job.description                          
+sfplan.taskdesc</p>
+<p class="MsoNormal" style="TEXT-INDENT: -42.5pt">Task 
+workcentre.           
+Job.resource                            
+sfplan.mach-id</p>
+<p class="MsoNormal" style="TEXT-INDENT: -42.5pt">Task 
+runstatus.                     
+Job.runstatus (normally set to 'X')       
+sfplan.runstat</p>
+<p class="MsoNormal" style="TEXT-INDENT: -42.5pt">Task 
+status.                  
+Job.status                        
+        sfplan.kstatus</p>
+<p class="MsoNormal" style="TEXT-INDENT: -42.5pt">Task latest start 
+time.            
+Job.lateststrt                            
+        sfplan.lateststart </p>
+<p class="MsoNormal" style="TEXT-INDENT: -42.5pt">Task planned start time. 
+Job.strtime                       
+        sfplan.kstarttime</p>
+<p class="MsoNormal" style="TEXT-INDENT: -42.5pt">Task planned end 
+time.   
+Job.edtime                       
+        sfplan.schedend</p>
+<p class="MsoNormal" style="TEXT-INDENT: -42.5pt">Task 
+quantity.                       
+Job.quantity                             
+        sfplan.quantity</p>
+<p class="MsoNormal" style="TEXT-INDENT: -42.5pt">Task make ready 
+quantity.      
+Job.mrqty                        
+        sfplan.mrquantity</p>
+<p class="MsoNormal" style="TEXT-INDENT: -42.5pt">Task make ready 
+time.   
+Job.mrlength                            
+sfplan.mrtime</p>
+<p class="MsoNormal" style="TEXT-INDENT: -42.5pt">Task form 
+number.        
+Job.form                          
+        sfplan.formno</p>
+<p class="MsoNormal" style="TEXT-INDENT: -42.5pt">Task step 
+number.         
+Job.stepnum                             
+sfplan.kstepno</p>
+<p class="MsoNormal" style="TEXT-INDENT: -42.5pt">Task number 
+up.           
+Job.numup                       
+        sfplan.noup</p>
+<p class="MsoNormal" style="TEXT-INDENT: -42.5pt">Task run 
+speed.             
+Job.speed (or a calculated value) sfplan.schedspeed</p>
+<p class="MsoNormal" style="TEXT-INDENT: -42.5pt">Task waste percentage.  
+Job.wasteperc                          
+sfplan.wastepercent</p>
+<p class="MsoNormal" style="TEXT-INDENT: 36pt">The waste percentage transfer is 
+conditional on Radius version</p>
+<p class="MsoNormal"> </p></div></body></html>

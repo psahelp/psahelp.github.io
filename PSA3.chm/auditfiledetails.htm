@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<html><head><title>Audit file details</title>
+<meta content="text/html; charset=Windows-1252" http-equiv="Content-Type" /><link rel="stylesheet" type="text/css" href="Theme/nav.css" /><link rel="stylesheet" type="text/css" href="Theme/lf.css" /><link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" /><link rel="stylesheet" type="text/css" href="LinksExt/NewPsa3.css" />
+<script type="text/javascript">
+//<![CDATA[
+
+
+
+var _needIndentation = true;
+
+
+
+
+//]]></script>
+
+<script language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2009.3.0.500" />
+<meta name="D2HTheme" content="(Default) v.28" />
+</head>
+<body style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px" relpart="">
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitMainThemeHandlers != "undefined")
+
+    d2hInitMainThemeHandlers();
+
+
+//]]></script>
+
+<div id="nsbanner" class="d2h_main_nsbanner" style="BORDER-TOP: #999999 1px solid; BORDER-BOTTOM: #999999 1px solid; POSITION: relative; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; LEFT: 0px; DISPLAY: none; PADDING-RIGHT: 0px; BACKGROUND-COLOR: transparent">
+<div id="TitleRow" class="d2h_main_titlerow" style="PADDING-BOTTOM: 4px; PADDING-TOP: 4px; PADDING-LEFT: 22px; DISPLAY: none; PADDING-RIGHT: 10px; WIDTH: 100%; BACKGROUND-COLOR: transparent">
+<div id="ienav" class="d2h_main_ienav" style="DISPLAY: none">
+<p class="d2h_main_linknav" align="left"><a id="D2HPrevious" class="D2HPreviousEnabled" href="utilisationreport.htm"></a>  <a id="D2HNext" class="D2HNextEnabled" href="updatesrejectedmessage.htm"></a></p></div></div></div>
+<div id="nstext" class="d2h_main_nstext" style="OVERFLOW: auto; PADDING-BOTTOM: 10px; PADDING-TOP: 5px; PADDING-LEFT: 22px; PADDING-RIGHT: 10px; BACKGROUND-COLOR: transparent" hasuserbackground="true" valign="bottom">
+<div id="d2h_breadcrumbs" class="d2h_breadcrumbs"><a class="d2h_breadcrumbsNormal" href="appendicesincludingtechnicalnotes.htm">Appendices including technical 
+notes</a></div>
+<h2 style="MARGIN-LEFT: 28.9pt; TEXT-INDENT: -28.9pt; tab-stops: 78.45pt"><a name="_Toc504681653" id="_Toc504681653"></a>Audit file details</h2>
+<p class="MsoNormal">The Audit file started life as a simple log of PsaConnect 
+activity that was kept for 7 days. With the arrival of PSA3 and auto-sync users 
+it became essential to track who was updating which records and when.</p>
+<p class="MsoNormal">The solution was the creation in PSA of the .adt audit file. 
+PsaConnect now writes its log to the same file as it is updating the same 
+database and records.</p>
+<p class="MsoNormal">If the SQL database is called Live then the audit files will 
+have the format Live_&lt;company&gt;_&lt;plantcode&gt;_yymmdd.adt where yymmdd 
+is the current date. IA new file is created each day. Old files are retained for 
+a user definable number of days up to 9999. We recommend around 30 days – this 
+gives time to investigate later.</p>
+<p class="MsoNormal">All new records are written to the end of the file – 
+therefore this is a chronological log – even if the reported times do not match 
+– this is due to the update time being reported from the internal clock of each 
+updating PC. Therefore synchronizing all PCs with an internet clock can reduce 
+some confusion.</p>
+<p class="MsoNormal">There are several types of record in the file. All fields in 
+each record are divided by colon characters<br />All the records start with the 
+same 3 fields <br />2017_03_21 14_29_11   - this is date and 
+time<br />312                         
+- the version of the program (PSA or 
+PsaConnect<br />XX                           
+- record type</p>
+<p class="MsoNormal">There are 10 main types<br />QQ – queuing control <br />TD – 
+Trickle Down – see also XX below<br />PM – Program Message<br />TP – transfers to 
+Radius by PsaConnect<br />TS – transfers to SFDC by PsaConnect<br />FP – transfers 
+from Radius to PSA<br />FS – transfers from SFDC to PSA<br />CN – PsaConnect 
+synchronizing data form local to SQL db<br />IN – information records<br />ER – 
+error lines</p>
+<p class="MsoNormal">There are also lines containing extra detail indicated by XX= 
+see TD below for further detail</p>
+<p class="MsoNormal"><b>QQ - Queuing Control</b></p>
+<p class="MsoNormal">A typical record looks like</p>
+<p class="MsoNormal">J:,|,|,|,|,|,|,|,48,|0:True:TM1:48:4:0:Bill B:628900227"</p>
+<p class="MsoNormal">J – is the record type – J=Join queue and test for 
+permission, T= Test queue for permission, P=processing, D=Delete queue 
+entry<br />At logon each user is allocated a number – in this case 48 that is used 
+until they log off.<br />,|,|,|,|,|,|,|,48,|0 are the queue details divided into 9 
+sections – the first 4 are populated by users waiting for access in 4 separate 
+categories – the second 4 are populated by users connected to the SQL db in 4 
+categories – the last is a number incremented by waiting users and reset to zero 
+by the updating user – if it reaches a set value waiting users will assume the 
+updating user is no longer processing and reset the queue<br />True – value 
+returned – J and T can both return True – OK to proceed with update – P and D 
+always return False<br />TM1 – tells us where it was called from<br />48 – the users 
+allocated number<br />4 – the queuing category – 1= PSA What-If with updates, 2 = 
+PsaConnect, 3 = AutoSync users with updates, 4 = all PSA users just wanting to 
+read latest data<br />0 – an estimate of the number of users waiting<br />Bill B – 
+the user name<br />628900227 – the version being held by this user</p>
+<p class="MsoNormal"> </p>
+<p class="MsoNormal">Sync events usually consist of a sequence of J, P and D 
+lines<br />On the D line there are a final 4 numbers – the number of reads, adds, 
+changes and deletes.</p>
+<p class="MsoNormal"><b>TD – Trickle Down</b> <br />Format of these records 
+is<br />Tammy:Job:105538.1.1150.68257:C:XX=P:2034:7050:9065571:False:C:False:True_:9064591:WI"<br />Tammy 
+– user name<br />Job – the table being updated<br />105538.1.1150.68257 – the 
+jobcode, component, task number and internal record number of the record being 
+updated – the primary key is always given here<br />C – update type – A = Add, C = 
+Change, D = Delete<br />XX=P:2034:7050:9065571:False:C:False:True_:9064591 – 
+updates to the job (task) table may have an addition section headed XX= followed 
+by old values for status,work center, speed, start time and 4 other fields – 
+followed by new values for these fields if changed – this is typical in that 
+only the start time has changed<br />WI – Indicating a What-If user – can also be 
+AS - Autosync<br />In this case the start time has been changed from 9065571 to 
+9064591</p>
+<p class="MsoNormal"><b>PM – Program 
+Message</b><br />PM:628900237:628900236:25:Start Update Materials  
+17248"<br />Mostly from PsaConnect – start or end of various sections enabling 
+times to be checked<br />Almost all end with a number – 17248 in this case – that 
+is the number of seconds since last user action on keyboard<br /><br /><b>TP – 
+transfers to Radius by 
+PsaConnect</b><br />TP:628900269:628900268:25:job:106118.1.1250:C"<br />long numbers 
+are version being written and version held<br />job – table from which data is 
+transferred – start time, status etc<br />106118.1.1250 – primary key of record 
+being transferred<br />C – change<br /><br /><b>TS – transfers to SFDC by 
+PsaConnect<br /></b>TS:628900269:628900268:25:job:106863.1.1150.9064287.9064287.2034.7163:A"<br />long 
+numbers are version being written and version held<br />job – table from which 
+data is transferred – start time, status etc<br />6863.1.1150.9064287 – primary 
+key and internal record number of record being transferred<br />2034 – work centre 
+<br />A – add – first write of this record – can also be C - change<br /><br /><b>FP – 
+transfers from Radius to 
+PSA</b><br />FP:628900270:628900269:25:ordheader:107162.U.4:A"<br />long numbers are 
+version being written and version held<br />ordheader – table being imported 
+to<br />107162 – job code – primary key<br />U – status Unplanned – can also be P – 
+Planned<br />4 – allocated colour<br />there may also be ‘last user code’ from 
+Radius here<br />A – Add – can also be C - Change</p>
+<p class="MsoNormal"><br /><b>FS – transfers from SFDC to 
+PSA</b><br />FS:628900237:628900236:25:job:106300.1.1150:0:C"<br />long numbers are 
+version being written and version held<br />job:106300.1.1150 – table and primary 
+key being imported<br />0 – task is complete or held – 1 – task is still 
+running</p>
+<p class="MsoNormal"><b>SH – Store Hash<br /></b>SH:628900270:628900269:25:Store 
+Hash 3:106802|1|1150:3505971589"<br />these records store details of records that 
+will be updated at a later time<br />Details include the record locator and hash 
+total so that changes between the current time and the update being applied are 
+detected</p>
+<p class="MsoNormal"><b>AU – Apply Updates</b></p>
+<p class="MsoNormal">AU:628900270:628900269:25:Apply Update 
+3:105996|1|1250:3505972470"<br />Matches the SH lines – hash total are checked 
+before updating.</p>
+<p class="MsoNormal"><br /><b>CN – PsaConnect synchronizing data from local to SQL 
+db</b><br />CN:628900237:628900236:Con8_224:Job:105295.1.1150.67092:C::STRTIME:9057032:9057037<br />This 
+is basically the same as Trickle Down performed by PSA users – it shows the 
+table, primary key, update type (A, C, D) – for table job (task) changes in 
+start time and status are logged</p>
+<p class="MsoNormal"><b>IN – information 
+records</b><br />IN:628900237:628900236:25:Order complete in Radius 106012 LU=KF 
+JS=20 PS=9 PC=True<br />Records unusual events such as merging and deletes in PSA 
+– this case shows a job not being imported from Radius despite the extract flag 
+being set – LU is the last user from Radius, JS is the job status (20=WIP), PS 
+is the production status (4=planned, 9=complete in PSA, 99=early delete in PSA, 
+PC is Production Complete flag in Radius<br /><br /><b>ER – error lines</b></p>
+<p class="MsoNormal">These are here to help us resolve issues – their position in 
+the log is often critical</p>
+<p class="MsoNormal">ER:Sue:AS:3704:Operation is not allowed….:Menu/Timer1 
+0"<br />Sue – user name<br />AS – autosync – can also be WI<br />3704 – the error 
+number – see section below<br />Operation is not allowed…. – the error 
+message<br />These are almost always followed by a ‘LastSQL’ 
+line<br />ER:LastSQL:select * from parameter with (updlock) where compnum = 100 
+and plantcode = '10' and pname = 'QQQ'<br />This is likely to point directly to 
+the cause of the error or a record containing bad data that leads to the 
+error</p>
+<p class="MsoNormal">Following any error the adt file is a vital part </p>
+<p class="MsoNormal"><b>Update Records</b></p>
+<p class="MsoNormal">For this reason sending the ADT file to Radius for analysis 
+will probably result in a faster resolution of the problem.</p>
+<p class="MsoNormal">For supervisor users of PSA there is a further useful Utility 
+currently only available from the main menu screen called ‘View Audit Logs’. 
+This opens a further screen where the logs for a single day or range of days may 
+be viewed. There is a physical display limit of 350,000 lines. However a 
+powerful filter option can be used by specifying an order number, user code or 
+similar to concentrate on the area of interest.</p>
+<p class="MsoNormal">The whole selection of highlighted lines may be saved for 
+sending to EFI.</p></div></body></html>

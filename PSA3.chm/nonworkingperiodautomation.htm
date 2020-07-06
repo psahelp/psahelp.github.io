@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<html><head><title>Non-working period automation</title>
+<meta content="text/html; charset=Windows-1252" http-equiv="Content-Type" /><link rel="stylesheet" type="text/css" href="Theme/nav.css" /><link rel="stylesheet" type="text/css" href="Theme/lf.css" /><link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" /><link rel="stylesheet" type="text/css" href="LinksExt/NewPsa3.css" />
+<script type="text/javascript">
+//<![CDATA[
+
+
+
+var _needIndentation = true;
+
+
+
+
+//]]></script>
+
+<script language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2009.3.0.500" />
+<meta name="D2HTheme" content="(Default) v.28" />
+</head>
+<body style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px" relpart="">
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitMainThemeHandlers != "undefined")
+
+    d2hInitMainThemeHandlers();
+
+
+//]]></script>
+
+<div id="nsbanner" class="d2h_main_nsbanner" style="BORDER-TOP: #999999 1px solid; BORDER-BOTTOM: #999999 1px solid; POSITION: relative; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; LEFT: 0px; DISPLAY: none; PADDING-RIGHT: 0px; BACKGROUND-COLOR: transparent">
+<div id="TitleRow" class="d2h_main_titlerow" style="PADDING-BOTTOM: 4px; PADDING-TOP: 4px; PADDING-LEFT: 22px; DISPLAY: none; PADDING-RIGHT: 10px; WIDTH: 100%; BACKGROUND-COLOR: transparent">
+<div id="ienav" class="d2h_main_ienav" style="DISPLAY: none">
+<p class="d2h_main_linknav" align="left"><a id="D2HPrevious" class="D2HPreviousEnabled" href="housekeeping.htm"></a>  <a id="D2HNext" class="D2HNextEnabled" href="fileoptions.htm"></a></p></div></div></div>
+<div id="nstext" class="d2h_main_nstext" style="OVERFLOW: auto; PADDING-BOTTOM: 10px; PADDING-TOP: 5px; PADDING-LEFT: 22px; PADDING-RIGHT: 10px; BACKGROUND-COLOR: transparent" hasuserbackground="true" valign="bottom">
+<div id="d2h_breadcrumbs" class="d2h_breadcrumbs"><a class="d2h_breadcrumbsNormal" href="housekeeping.htm">Housekeeping</a></div>
+<h2 style="MARGIN-LEFT: 28.9pt; TEXT-INDENT: -28.9pt; tab-stops: 78.45pt"><a name="_Toc63438051" id="_Toc63438051"></a>Non-working period automation</h2>
+<p class="MsoNormal">Non working periods can now be defined in terms of a shift 
+pattern (variable repeat period) and will be automatically be laid down a user 
+definable distance into the future and will be cleared up a fixed number of days 
+after the effective date has passed. It is therefore only necessary to handle 
+exception to the standard pattern.</p>
+<p class="MsoNormal">Note that the process involves defining work centre 
+availability rather than non availability. The information entered is converted 
+into standard non working periods for display on the planning board. A sample 
+pattern is described here.</p>
+<p class="MsoNormal" style="MARGIN-LEFT: 50.2pt; TEXT-INDENT: -18pt; tab-stops: 50.2pt"><span style="FONT-FAMILY: Symbol">·      </span>From the main 
+menu select Configuration/Tables then the Availability tab</p>
+<p class="MsoNormal" style="MARGIN-LEFT: 50.2pt; TEXT-INDENT: -18pt; tab-stops: 50.2pt"><span style="FONT-FAMILY: Symbol">·      </span>Select ‘New’ 
+– bottom left and enter a code and description – say ‘Pattern1’ and ‘Two shift, 
+five day’</p>
+<p class="MsoNormal" style="MARGIN-LEFT: 50.2pt; TEXT-INDENT: -18pt; tab-stops: 50.2pt"><span style="FONT-FAMILY: Symbol">·      </span>Enter the 
+Next Start Date (normally a Monday), Repeat period (normally 7 days but up to 28 
+days acceptable) and Days to Apply (This is variable but should be a week or two 
+more than the most distant order scheduled – typically 60 to 90 days). Do not 
+extend further than necessary – there will be some impact on database size and 
+performance if too many periods are defined.</p>
+<p class="MsoNormal" style="MARGIN-LEFT: 50.2pt; TEXT-INDENT: -18pt; tab-stops: 50.2pt"><span style="FONT-FAMILY: Symbol">·      </span>Select from 
+the list on the right the work centres that this pattern will apply to. Once 
+several patterns have been laid down the filter buttons at the bottom of this 
+list can be used to help choosing affected work centres.</p>
+<p class="MsoNormal" style="MARGIN-LEFT: 50.2pt; TEXT-INDENT: -18pt; tab-stops: 50.2pt"><span style="FONT-FAMILY: Symbol">·      </span>Now press the 
+‘New’ button above the time strip. This will create a new ‘availability period’ 
+for day 1 (Monday in this case) starting at 8:00 hrs and ending at 16:00 
+hrs.</p>
+<p class="MsoNormal" style="MARGIN-LEFT: 50.2pt; TEXT-INDENT: -18pt; tab-stops: 50.2pt"><span style="FONT-FAMILY: Symbol">·      </span>Using the 
+left mouse button the edges of this block may be dragged to the required time or 
+date. In this example drag the left side to 6:00 hrs, the right edge to 22:00 
+hrs and the bottom to day 4. The start and end time are shown during the drag 
+process.</p>
+<p class="MsoNormal" style="MARGIN-LEFT: 50.2pt; TEXT-INDENT: -18pt; tab-stops: 50.2pt"><span style="FONT-FAMILY: Symbol">·      </span>Repeat the 
+last two steps this time dragging the entire block to day 5 and setting the 
+start and end times to 7:00 hrs and 20:00 hrs. There are button above to help 
+with fine adjustments of the start and end times</p>
+<p class="MsoNormal" style="MARGIN-LEFT: 50.2pt; TEXT-INDENT: -18pt; tab-stops: 50.2pt"><span style="FONT-FAMILY: Symbol">·      </span>Press ‘Apply’ 
+– this will save the definition and then run the housekeeping process to apply 
+the changes and update these to the live schedule. The Next Start date will have 
+advanced.</p>
+<p class="MsoNormal"><img alt="pntrs014" src="ImagesExt/image9_27.jpg" /></p></div></body></html>

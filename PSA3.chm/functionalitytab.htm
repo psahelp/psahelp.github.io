@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<html><head><title>Functionality tab</title>
+<meta content="text/html; charset=Windows-1252" http-equiv="Content-Type" /><link rel="stylesheet" type="text/css" href="Theme/nav.css" /><link rel="stylesheet" type="text/css" href="Theme/lf.css" /><link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" /><link rel="stylesheet" type="text/css" href="LinksExt/NewPsa3.css" />
+<script type="text/javascript">
+//<![CDATA[
+
+
+
+var _needIndentation = true;
+
+
+
+
+//]]></script>
+
+<script language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2009.3.0.500" />
+<meta name="D2HTheme" content="(Default) v.28" />
+</head>
+<body style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px" relpart="">
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitMainThemeHandlers != "undefined")
+
+    d2hInitMainThemeHandlers();
+
+
+//]]></script>
+
+<div id="nsbanner" class="d2h_main_nsbanner" style="BORDER-TOP: #999999 1px solid; BORDER-BOTTOM: #999999 1px solid; POSITION: relative; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; LEFT: 0px; DISPLAY: none; PADDING-RIGHT: 0px; BACKGROUND-COLOR: transparent">
+<div id="TitleRow" class="d2h_main_titlerow" style="PADDING-BOTTOM: 4px; PADDING-TOP: 4px; PADDING-LEFT: 22px; DISPLAY: none; PADDING-RIGHT: 10px; WIDTH: 100%; BACKGROUND-COLOR: transparent">
+<div id="ienav" class="d2h_main_ienav" style="DISPLAY: none">
+<p class="d2h_main_linknav" align="left"><a id="D2HPrevious" class="D2HPreviousEnabled" href="filepathstabhousekeepingarea.htm"></a>  <a id="D2HNext" class="D2HNextEnabled" href="parameterstabcompanydetailsarea.htm"></a></p></div></div></div>
+<div id="nstext" class="d2h_main_nstext" style="OVERFLOW: auto; PADDING-BOTTOM: 10px; PADDING-TOP: 5px; PADDING-LEFT: 22px; PADDING-RIGHT: 10px; BACKGROUND-COLOR: transparent" hasuserbackground="true" valign="bottom">
+<div id="d2h_breadcrumbs" class="d2h_breadcrumbs"><span class="d2h_breadcrumbsContentsOnly">Screen by screen descriptions</span><span class="d2h_breadcrumbsLinkSeparator"> &gt; </span><a class="d2h_breadcrumbsNormal" href="systemconfiguration.htm">System Configuration</a></div>
+<h3 style="MARGIN-LEFT: 36pt; TEXT-INDENT: -36pt; tab-stops: 83.8pt"><a name="_Toc504681522" id="_Toc504681522"></a>Functionality tab</h3>
+<p class="MsoNormal">Program functional preferences can be set in this screen.</p>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Calibri',sans-serif"><img src="ImagesExt/image9_33.jpg" alt="" /></span></p>
+<p class="MsoNormal">‘Use extended notes format’ – leave unchecked – specific to a 
+single user</p>
+<p class="MsoNormal">‘Task Description default to Order Description’ – If Checked, 
+task descriptions will default to the Order Description when adding new tasks in 
+the ‘Order Maintenance Screen, otherwise task descriptions will default to the 
+work centre name.</p>
+<p class="MsoNormal">‘Task Over Run at 0.05 Mins’ – If Checked, task remaining run 
+time will set to 0 hours and 5 minutes if a quantity completed is greater than 
+the planned quantity in the Planning Board Task Maintenance Screen.</p>
+<p class="MsoNormal">‘Request Promise Date reason’ - If Checked then a reason will 
+be expected to be entered when a change is made to the Promised Date</p>
+<p class="MsoNormal"><span style="FONT-SIZE: 8pt"> ‘</span>Warn all overlaps 
+when using dragdrop’ – this previously only warned if an overlap was being 
+created or increased – there was no warning when the overlap was decreasing. 
+With this option set any overlap will generate a warning.</p>
+<p class="MsoNormal">‘When using dragdrop always shunt right’ – with this option 
+unset (the current default) dragging a task to the right on a work centre the 
+tasks jumped over are shunted left to maintain a group of contiguous tasks. With 
+the option set it will still shunt right leaving a gap where it has been dragged 
+from</p>
+<p class="MsoNormal"> ‘Perform capability group test when dragging and 
+dropping’ – normally checked – when a dragged task is dropped on a different 
+work centre selecting this option turns on a check that the work centre is 
+‘capable’ – without this option any work centre of the same process type will be 
+deemed capable.</p>
+<p class="MsoNormal">‘Warn on change of capability group’  is there to handle 
+situations where capability groups don’t fully cover the details. For example 
+sheet fed presses all have a process type in Radius of P100. However we might 
+set up 2 capability groups, one for large format and one for small format both 
+with limitations based on numbers of colours and UV capability. This option is 
+designed to pick up a task moved from one group to another or from one group to 
+no group that would not break any other rules.</p>
+<p class="MsoNormal">Import and display inventory and ship reqs from all plants 
+for each item – by default only plant specific details are shown – this is used 
+particularly where stock is stored at other plants</p>
+<p class="MsoNormal">‘Default start of manual task updates to end of previous 
+completed task’ – normally unchecked – applies only to system being updated 
+manually within PSA3</p>
+<p class="MsoNormal">‘When changing resources use achieved date as last change of 
+status – normally unchecked – the achieved date is for information only and 
+indicates when the status changed to Y. Setting this option makes the achieved 
+date report the last change of status instead.</p>
+<p class="MsoNormal">‘Do not allow change of Live /Tentative status – normally 
+unchecked but this may change. Decide who is responsible for converting orders 
+from Tentative to Live. If this lies in the Radius area then check this 
+option.</p>
+<p class="MsoNormal">Request confirmation when scheduling a group of orders – 
+normally unchecked – does what it says – confirmation is always requested for a 
+full schedule of all selected orders</p>
+<p class="MsoNormal">‘Allow change of number up in task maintenance’ – normally 
+unchecked – this is a specialised function where business forms are being 
+produced. By changing the roll width the number up can be changed dynamically – 
+for most situations this is not possible.</p>
+<p class="MsoNormal">Utilisation for Auto-Sync users – auto-sync users do not have 
+access to Schedule Control and therefore cannot see Utilisation details – this 
+option gives them access to Utilisation from the Reports/Utilisation menu</p>
+<p class="MsoNormal">‘Offer to adjust or split tasks….’ – normally unchecked. 
+However if PSA3 is being used to record run status and quantities then this 
+option may be useful – especially if a limited number of cartons is glued for 
+call off. Completing the current task and creating a split, non-started, task 
+for the remainder is a sensible way to schedule.</p>
+<p class="MsoNormal">‘Allow time sheet entry’ – this password protected option 
+turns on SFDC Lite. Do not use without reference to Radius.</p>
+<p class="MsoNormal">Link tasks by item code – where we have separate print and 
+following tasks for each item this effectively creates separate jobs for each 
+item</p>
+<p class="MsoNormal">‘Allow task and order grouping’ – normally unchecked - as 
+discussed above this is work in progress and should normally only be used on an 
+experimental basis</p>
+<p class="MsoNormal">‘Add multiple parts for business forms orders’ – normally 
+unchecked but should be turned on if using business forms. This enables 
+attributes to be defined for each part of a business form and the attributes to 
+be seen by clicking the task on the planning board</p>
+<p class="MsoNormal">Add item technical attributes – with this selected up to 40 
+attributes can be added at item level – can’t be displayed on Dynamic Work list 
+or task card but can be shown under Order Maintenance and item pop up</p>
+<p class="MsoNormal">‘Prevent delete of orders imported from Radius’ – does just 
+what it says so probably best to check this option to avoid mistakes. If it 
+causes problems it can be changed, fix the problem and restore the flag.</p>
+<p class="MsoNormal">‘Retain task description during merge process’ – applies to 
+description only. All your important task details such as resources, notes, 
+scheduled work centres etc are always retained during merges.</p>
+<p class="MsoNormal">‘Display planning board task behind non working period’ – 
+normally unchecked. The default is that tasks will stretch over non working 
+periods. Some users believe this implies possible overtime working – it doesn’t. 
+However checking this option will make stretched task appear to run behind non 
+working periods. For clarity the text on the task still appears in front of the 
+non working period.</p>
+<p class="MsoNormal">‘Ask for confirmation of all shunt button operations’ – does 
+just what it says – if you believe that confirmation of each shunt operation 
+helps prevent mistakes then check it – don’t forget that each shunt operation 
+can be ‘undone’.</p>
+<p class="MsoNormal">‘Disable promised date entry’ – normally unchecked. This 
+requires a policy decision over who controls the promise date. If the scheduler 
+can confirm and set a ‘promise’ date with a customer then leave it unchecked. If 
+policy determines that a customer rep or equivalent must liaise with the 
+customer and a replacement order with changed delivery date be raised then it is 
+correct to check this option.</p>
+<p class="MsoNormal">‘Enable DigiID spotlight function’ – normally unchecked as 
+this is specific to a single customer. Checking it in error won’t help or hinder 
+processing as the operative data will be missing.</p>
+<p class="MsoNormal">Use alternate option to split tasks with items – reverts to 
+the old split method allowing split by quantity only – no printchange 
+splitting</p>
+<p class="MsoNormal">Show non-working period comments on card – makes visible 
+comments that can be added to individual non working periods</p>
+<p class="MsoNormal">Remove replacement orders when original is deleted – usually 
+only arise as replaces are imported at the same time original is completed</p>
+<p class="MsoNormal">Display long task duration as hh:mm only – the default shows 
+dd:hh:mm</p>
+<p class="MsoNormal">Confirm task completion requests – normally unchecked</p>
+<p class="MsoNormal">Linked order processing – normally unchecked – In most cases 
+of linked orders the link is to an order in another plant. This can take several 
+minutes before both end of the link are fully updated. Where the link is between 
+printing and finishing orders in the same plant turning this option on will 
+ensure that both ends of the link are updated between every PSA3 update.</p>
+<p class="MsoNormal">Convert finishing route to separate components’ – normally 
+unchecked – applies to Radius II only and commercial jobs only where the 
+finishing route contains many steps and the structure supplied from Radius 
+contains a very long finishing component route. By breaking this into separate 
+components at task level a better structure can be defined. This will be 
+retained during a merge process.</p>
+<p class="MsoNormal">‘Use Key Date processing’ – normally unchecked – turns on the 
+Key Dates routines that replace resources – see earlier section before 
+committing to this option.</p>
+<p class="MsoNormal">‘Remove register from schedule control’ – normally checked - 
+the register was an original PSA feature retained for backward compatibility. 
+Other than for bulk planning of many orders at take on it is not required and it 
+is recommended that all new users check this option and ignore its 
+existence.</p>
+<p class="MsoNormal">No task access for Inquiry only users – does what it says</p>
+<p class="MsoNormal">Never reject updates – there was a period when many updates 
+were being rejected due to changes from other users – this allowed the updates 
+to proceed. Subsequent changes make this unnecessary – recommend unchecked</p>
+<p class="MsoNormal">Do not calculate remaining time for non aligned tasks – 
+customer specific – we always recommend that data from SFDC is aligned so this 
+is not relevant</p>
+<p class="MsoNormal">Reset resources to default on merge or replace – normally 
+resource changes are retained during merge – this changes that behaviour and 
+resets them allowing for the resource checks to be 
+repeated</p></div></body></html>

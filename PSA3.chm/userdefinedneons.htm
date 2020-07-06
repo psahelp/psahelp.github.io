@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<html><head><title>User Defined Neons</title>
+<meta content="text/html; charset=Windows-1252" http-equiv="Content-Type" /><link rel="stylesheet" type="text/css" href="Theme/nav.css" /><link rel="stylesheet" type="text/css" href="Theme/lf.css" /><link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" /><link rel="stylesheet" type="text/css" href="LinksExt/NewPsa3.css" />
+<script type="text/javascript">
+//<![CDATA[
+
+
+
+var _needIndentation = true;
+
+
+
+
+//]]></script>
+
+<script language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2009.3.0.500" />
+<meta name="D2HTheme" content="(Default) v.28" />
+</head>
+<body style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px" relpart="">
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitMainThemeHandlers != "undefined")
+
+    d2hInitMainThemeHandlers();
+
+
+//]]></script>
+
+<div id="nsbanner" class="d2h_main_nsbanner" style="BORDER-TOP: #999999 1px solid; BORDER-BOTTOM: #999999 1px solid; POSITION: relative; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; LEFT: 0px; DISPLAY: none; PADDING-RIGHT: 0px; BACKGROUND-COLOR: transparent">
+<div id="TitleRow" class="d2h_main_titlerow" style="PADDING-BOTTOM: 4px; PADDING-TOP: 4px; PADDING-LEFT: 22px; DISPLAY: none; PADDING-RIGHT: 10px; WIDTH: 100%; BACKGROUND-COLOR: transparent">
+<div id="ienav" class="d2h_main_ienav" style="DISPLAY: none">
+<p class="d2h_main_linknav" align="left"><a id="D2HPrevious" class="D2HPreviousEnabled" href="timesheets.htm"></a>  <a id="D2HNext" class="D2HNextEnabled" href="planningboardpreferences.htm"></a></p></div></div></div>
+<div id="nstext" class="d2h_main_nstext" style="OVERFLOW: auto; PADDING-BOTTOM: 10px; PADDING-TOP: 5px; PADDING-LEFT: 22px; PADDING-RIGHT: 10px; BACKGROUND-COLOR: transparent" hasuserbackground="true" valign="bottom">
+<div id="d2h_breadcrumbs" class="d2h_breadcrumbs"><span class="d2h_breadcrumbsContentsOnly">Screen by screen descriptions</span><span class="d2h_breadcrumbsLinkSeparator"> &gt; </span><a class="d2h_breadcrumbsNormal" href="staticdatamaintenancetables.htm">Static Data Maintenance - 
+Tables</a></div>
+<h3 style="MARGIN-LEFT: 36pt; TEXT-INDENT: -36pt; tab-stops: 83.8pt"><a name="_Toc504681550" id="_Toc504681550"></a>User Defined Neons</h3>
+<p class="MsoNormal">User defined neons may be created – limited only by space 
+providing a feature that is both simple to use and powerful.</p>
+<p class="MsoNormal">In essence a user defined neon is created at the bottom left 
+of the planning board with a number of simple rules behind it that control both 
+how the tasks on the visible planning board are coloured and a legend to explain 
+the colours. From release 356 these may also be added to Dynamic Work to 
+List.</p>
+<p class="MsoNormal"><img src="ImagesExt/image9_59.png" alt="" /></p>
+<p class="MsoNormal">To set up a sample neon follow these notes – setting your own 
+up after that should be straightforward.</p>
+<p class="MsoNormal">On the User Neon tab enter a 2 character code for the first 
+neon – say ‘CC’ – for customer. Enter a more detailed description to appear on 
+the Tool Tip Text – say ‘Top 5 customer orders’, then set the Active column to 
+Y.</p>
+<p class="MsoNormal">Click below Field in the lower grid – select customer name, 
+in the Test column select ‘=’, in the value column select your top customer – if 
+the planning board is open during this process all the values currently 
+displayed on the planning board for customer will be in the drop down but you 
+can still add other values including wild cards – see table below. Then in the 
+colour column select any of 16 million available colours. The legend column has 
+been added and values you enter here will be used in the Dynamic Work to List if 
+this neon is selected. Repeat for other customers in your list. In the legend 
+area the first five values will appear – you can change the legend if the test 
+value does not make the meaning clear. Apply the change and update the plan. 
+After closing and re-opening the planning board this new neon becomes 
+available.<br />If setting a neon against a resource there are 6 possible values 
+that you may want to check – these are<br />A - not applicable - the resource does 
+not apply to tasks of this process type<br />Y – available<br />N - not available - 
+no date set<br />P - Pending - a future date has been set that is before the 
+scheduled start<br />O - Overdue - a date has been set that is now in the 
+past<br />T - Too late - a date has been set that is after the scheduled start</p>
+<p class="MsoNormal">When a User Neon is clicked the planning board is coloured by 
+testing each rule until a condition is satisfied. So it is possible to set up 
+complex conditions by careful choice of rules. For example rule 1 is Order Type 
+&lt;&gt; L (Live) colour white. Rule 2 is order quantity &lt; 100000 colour 
+yellow and rule 3 is order quantity &gt;= 100000. This will highlight only 
+tentative orders and divide them into less and greater than 100,000.</p>
+<p class="MsoNormal"> </p>
+<table class="MsoNormalTable" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-COLLAPSE: collapse; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; WIDTH: 396.9pt" cellspacing="0" cellpadding="0" width="529" border="1">
+  <tbody>
+  <tr style="HEIGHT: 12.75pt">
+    <td style="BORDER-TOP: windowtext 1pt solid; HEIGHT: 12.75pt; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 106.3pt" valign="bottom" width="142" nowrap="">
+      <p class="MsoNormal">Kind of match</p></td>
+    <td style="BORDER-TOP: windowtext 1pt solid; HEIGHT: 12.75pt; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 77.95pt" valign="bottom" width="104" nowrap="">
+      <p class="MsoNormal">Pattern </p></td>
+    <td style="BORDER-TOP: windowtext 1pt solid; HEIGHT: 12.75pt; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 106.35pt" valign="bottom" width="142" nowrap="">
+      <p class="MsoNormal">Match (returns True)</p></td>
+    <td style="BORDER-TOP: windowtext 1pt solid; HEIGHT: 12.75pt; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 106.3pt" valign="bottom" width="142" nowrap="">
+      <p class="MsoNormal">No match (returns False)</p></td></tr>
+  <tr style="HEIGHT: 12.75pt">
+    <td style="BORDER-TOP: medium none; HEIGHT: 12.75pt; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 106.3pt" valign="bottom" width="142" nowrap="">
+      <p class="MsoNormal">Multiple characters</p></td>
+    <td style="BORDER-TOP: medium none; HEIGHT: 12.75pt; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 77.95pt" valign="bottom" width="104" nowrap="">
+      <p class="MsoNormal">a*a</p></td>
+    <td style="BORDER-TOP: medium none; HEIGHT: 12.75pt; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 106.35pt" valign="bottom" width="142" nowrap="">
+      <p class="MsoNormal">aa, aBa, aBBBa</p></td>
+    <td style="BORDER-TOP: medium none; HEIGHT: 12.75pt; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 106.3pt" valign="bottom" width="142" nowrap="">
+      <p class="MsoNormal">aBC</p></td></tr>
+  <tr style="HEIGHT: 12.75pt">
+    <td style="BORDER-TOP: medium none; HEIGHT: 12.75pt; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 106.3pt" valign="bottom" width="142" nowrap=""></td>
+    <td style="BORDER-TOP: medium none; HEIGHT: 12.75pt; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 77.95pt" valign="bottom" width="104" nowrap="">
+      <p class="MsoNormal">*ab*</p></td>
+    <td style="BORDER-TOP: medium none; HEIGHT: 12.75pt; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 106.35pt" valign="bottom" width="142" nowrap="">
+      <p class="MsoNormal">abc, AABB, Xab</p></td>
+    <td style="BORDER-TOP: medium none; HEIGHT: 12.75pt; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 106.3pt" valign="bottom" width="142" nowrap="">
+      <p class="MsoNormal">aZb, bac</p></td></tr>
+  <tr style="HEIGHT: 12.75pt">
+    <td style="BORDER-TOP: medium none; HEIGHT: 12.75pt; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 106.3pt" valign="bottom" width="142" nowrap="">
+      <p class="MsoNormal">Special character</p></td>
+    <td style="BORDER-TOP: medium none; HEIGHT: 12.75pt; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 77.95pt" valign="bottom" width="104" nowrap="">
+      <p class="MsoNormal">a[*]a</p></td>
+    <td style="BORDER-TOP: medium none; HEIGHT: 12.75pt; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 106.35pt" valign="bottom" width="142" nowrap="">
+      <p class="MsoNormal">a*a</p></td>
+    <td style="BORDER-TOP: medium none; HEIGHT: 12.75pt; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 106.3pt" valign="bottom" width="142" nowrap="">
+      <p class="MsoNormal">aaa</p></td></tr>
+  <tr style="HEIGHT: 12.75pt">
+    <td style="BORDER-TOP: medium none; HEIGHT: 12.75pt; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 106.3pt" valign="bottom" width="142" nowrap="">
+      <p class="MsoNormal">Multiple characters</p></td>
+    <td style="BORDER-TOP: medium none; HEIGHT: 12.75pt; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 77.95pt" valign="bottom" width="104" nowrap="">
+      <p class="MsoNormal">ab*</p></td>
+    <td style="BORDER-TOP: medium none; HEIGHT: 12.75pt; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 106.35pt" valign="bottom" width="142" nowrap="">
+      <p class="MsoNormal">abcdefg, abc</p></td>
+    <td style="BORDER-TOP: medium none; HEIGHT: 12.75pt; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 106.3pt" valign="bottom" width="142" nowrap="">
+      <p class="MsoNormal">cab, aab</p></td></tr>
+  <tr style="HEIGHT: 12.75pt">
+    <td style="BORDER-TOP: medium none; HEIGHT: 12.75pt; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 106.3pt" valign="bottom" width="142" nowrap="">
+      <p class="MsoNormal">Single character</p></td>
+    <td style="BORDER-TOP: medium none; HEIGHT: 12.75pt; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 77.95pt" valign="bottom" width="104" nowrap="">
+      <p class="MsoNormal">a?a</p></td>
+    <td style="BORDER-TOP: medium none; HEIGHT: 12.75pt; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 106.35pt" valign="bottom" width="142" nowrap="">
+      <p class="MsoNormal">aaa, a3a, aBa</p></td>
+    <td style="BORDER-TOP: medium none; HEIGHT: 12.75pt; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 106.3pt" valign="bottom" width="142" nowrap="">
+      <p class="MsoNormal">aBBBa</p></td></tr>
+  <tr style="HEIGHT: 12.75pt">
+    <td style="BORDER-TOP: medium none; HEIGHT: 12.75pt; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 106.3pt" valign="bottom" width="142" nowrap="">
+      <p class="MsoNormal">Single digit</p></td>
+    <td style="BORDER-TOP: medium none; HEIGHT: 12.75pt; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 77.95pt" valign="bottom" width="104" nowrap="">
+      <p class="MsoNormal">a#a</p></td>
+    <td style="BORDER-TOP: medium none; HEIGHT: 12.75pt; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 106.35pt" valign="bottom" width="142" nowrap="">
+      <p class="MsoNormal">a0a, a1a, a2a</p></td>
+    <td style="BORDER-TOP: medium none; HEIGHT: 12.75pt; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 106.3pt" valign="bottom" width="142" nowrap="">
+      <p class="MsoNormal">aaa, a10a</p></td></tr>
+  <tr style="HEIGHT: 12.75pt">
+    <td style="BORDER-TOP: medium none; HEIGHT: 12.75pt; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 106.3pt" valign="bottom" width="142" nowrap="">
+      <p class="MsoNormal">Range of characters </p></td>
+    <td style="BORDER-TOP: medium none; HEIGHT: 12.75pt; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 77.95pt" valign="bottom" width="104" nowrap="">
+      <p class="MsoNormal">[a-z]</p></td>
+    <td style="BORDER-TOP: medium none; HEIGHT: 12.75pt; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 106.35pt" valign="bottom" width="142" nowrap="">
+      <p class="MsoNormal">f, p, j</p></td>
+    <td style="BORDER-TOP: medium none; HEIGHT: 12.75pt; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 106.3pt" valign="bottom" width="142" nowrap="">
+      <p class="MsoNormal">2, &amp;</p></td></tr>
+  <tr style="HEIGHT: 12.75pt">
+    <td style="BORDER-TOP: medium none; HEIGHT: 12.75pt; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 106.3pt" valign="bottom" width="142" nowrap="">
+      <p class="MsoNormal">List of characters   </p></td>
+    <td style="BORDER-TOP: medium none; HEIGHT: 12.75pt; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 77.95pt" valign="bottom" width="104" nowrap="">
+      <p class="MsoNormal"> [a, d, m]</p></td>
+    <td style="BORDER-TOP: medium none; HEIGHT: 12.75pt; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 106.35pt" valign="bottom" width="142" nowrap="">
+      <p class="MsoNormal">a, m</p></td>
+    <td style="BORDER-TOP: medium none; HEIGHT: 12.75pt; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 106.3pt" valign="bottom" width="142" nowrap="">
+      <p class="MsoNormal">b, z</p></td></tr>
+  <tr style="HEIGHT: 12.75pt">
+    <td style="BORDER-TOP: medium none; HEIGHT: 12.75pt; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 106.3pt" valign="bottom" width="142" nowrap="">
+      <p class="MsoNormal">Outside a range</p></td>
+    <td style="BORDER-TOP: medium none; HEIGHT: 12.75pt; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 77.95pt" valign="bottom" width="104" nowrap="">
+      <p class="MsoNormal">[!a-z]</p></td>
+    <td style="BORDER-TOP: medium none; HEIGHT: 12.75pt; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 106.35pt" valign="bottom" width="142" nowrap="">
+      <p class="MsoNormal">9, &amp;, %</p></td>
+    <td style="BORDER-TOP: medium none; HEIGHT: 12.75pt; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 106.3pt" valign="bottom" width="142" nowrap="">
+      <p class="MsoNormal">b, a</p></td></tr>
+  <tr style="HEIGHT: 12.75pt">
+    <td style="BORDER-TOP: medium none; HEIGHT: 12.75pt; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 106.3pt" valign="bottom" width="142" nowrap="">
+      <p class="MsoNormal">Not a digit</p></td>
+    <td style="BORDER-TOP: medium none; HEIGHT: 12.75pt; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 77.95pt" valign="bottom" width="104" nowrap="">
+      <p class="MsoNormal">[!0-9]</p></td>
+    <td style="BORDER-TOP: medium none; HEIGHT: 12.75pt; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 106.35pt" valign="bottom" width="142" nowrap="">
+      <p class="MsoNormal">A, a, &amp;, ~</p></td>
+    <td style="BORDER-TOP: medium none; HEIGHT: 12.75pt; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 106.3pt" valign="bottom" width="142" nowrap="">
+      <p class="MsoNormal">0, 1, 9</p></td></tr>
+  <tr style="HEIGHT: 12.75pt">
+    <td style="BORDER-TOP: medium none; HEIGHT: 12.75pt; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 106.3pt" valign="bottom" width="142" nowrap="">
+      <p class="MsoNormal">Combined</p></td>
+    <td style="BORDER-TOP: medium none; HEIGHT: 12.75pt; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 77.95pt" valign="bottom" width="104" nowrap="">
+      <p class="MsoNormal">a[!b-m]#</p></td>
+    <td style="BORDER-TOP: medium none; HEIGHT: 12.75pt; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 106.35pt" valign="bottom" width="142" nowrap="">
+      <p class="MsoNormal">An9, az0, a99</p></td>
+    <td style="BORDER-TOP: medium none; HEIGHT: 12.75pt; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 106.3pt" valign="bottom" width="142" nowrap="">
+      <p class="MsoNormal">abc, aj0</p></td></tr></tbody></table>
+<p class="MsoNormal"> </p>
+<p class="MsoNormal">To select a neon for the Dynamic Work to List go to Planning 
+Board Preferences, Configure and then select the Defaults or a process specific 
+tab. The user defined neon will be at the end of the 
+list.</p></div></body></html>

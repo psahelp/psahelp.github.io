@@ -1,0 +1,497 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<html><head><title>job</title>
+<meta content="text/html; charset=Windows-1252" http-equiv="Content-Type" /><link rel="stylesheet" type="text/css" href="Theme/nav.css" /><link rel="stylesheet" type="text/css" href="Theme/lf.css" /><link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" /><link rel="stylesheet" type="text/css" href="LinksExt/NewPsa3.css" />
+<script type="text/javascript">
+//<![CDATA[
+
+
+
+var _needIndentation = true;
+
+
+
+
+//]]></script>
+
+<script language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2009.3.0.500" />
+<meta name="D2HTheme" content="(Default) v.28" />
+</head>
+<body style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px" relpart="">
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitMainThemeHandlers != "undefined")
+
+    d2hInitMainThemeHandlers();
+
+
+//]]></script>
+
+<div id="nsbanner" class="d2h_main_nsbanner" style="BORDER-TOP: #999999 1px solid; BORDER-BOTTOM: #999999 1px solid; POSITION: relative; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; LEFT: 0px; DISPLAY: none; PADDING-RIGHT: 0px; BACKGROUND-COLOR: transparent">
+<div id="TitleRow" class="d2h_main_titlerow" style="PADDING-BOTTOM: 4px; PADDING-TOP: 4px; PADDING-LEFT: 22px; DISPLAY: none; PADDING-RIGHT: 10px; WIDTH: 100%; BACKGROUND-COLOR: transparent">
+<div id="ienav" class="d2h_main_ienav" style="DISPLAY: none">
+<p class="d2h_main_linknav" align="left"><a id="D2HPrevious" class="D2HPreviousEnabled" href="eventcds.htm"></a>  <a id="D2HNext" class="D2HNextEnabled" href="jobitem.htm"></a></p></div></div></div>
+<div id="nstext" class="d2h_main_nstext" style="OVERFLOW: auto; PADDING-BOTTOM: 10px; PADDING-TOP: 5px; PADDING-LEFT: 22px; PADDING-RIGHT: 10px; BACKGROUND-COLOR: transparent" hasuserbackground="true" valign="bottom">
+<div id="d2h_breadcrumbs" class="d2h_breadcrumbs"><a class="d2h_breadcrumbsNormal" href="appendicesincludingtechnicalnotes.htm">Appendices including technical 
+notes</a><span class="d2h_breadcrumbsLinkSeparator"> &gt; </span><a class="d2h_breadcrumbsNormal" href="filelayouts.htm">File Layouts</a></div>
+<h3 style="MARGIN-LEFT: 36pt; TEXT-INDENT: -36pt; tab-stops: 83.8pt"><a name="_Toc504681632" id="_Toc504681632"></a>job</h3>
+<p class="StyleCourierfixedCourierNew8pt">FIELD 
+NAME                    
+TYPE      LENGTH    DESCRIPTION</p>
+<p class="StyleCourierfixedCourierNew8pt"> </p>
+<p class="StyleCourierfixedCourierNew8pt">job                           
+Long      
+4         task number</p>
+<p class="StyleCourierfixedCourierNew8pt">Description                   
+Char      30        
+task description</p>
+<p class="StyleCourierfixedCourierNew8pt">runlength                     
+Long      
+4         estimated length of prodution 
+run in minutes</p>
+<p class="StyleCourierfixedCourierNew8pt">mrlength                      
+Long      
+4         estimated make ready time in 
+minutes</p>
+<p class="StyleCourierfixedCourierNew8pt">resource                      
+Char      12        
+work centre</p>
+<p class="StyleCourierfixedCourierNew8pt">colour                        
+Char      10        
+colour for task ticket - redundant - uses value from ordheader</p>
+<p class="StyleCourierfixedCourierNew8pt">status                        
+Char      
+1         U - unplanned; P - planned; F 
+- firm; C - complete</p>
+<p class="StyleCourierfixedCourierNew8pt">customer                      
+Char      25        
+customer name - redundant - uses value from ordheader</p>
+<p class="StyleCourierfixedCourierNew8pt">ordernumber                   
+Char      15        
+Radius production order - trailing @ indicates duplicate order reimported with 
+changed details - special value 99999999 used for non working periods ans MAINT 
+for work centre maintenance tasks</p>
+<p class="StyleCourierfixedCourierNew8pt">quantity                      
+Long      
+4         planned production quantity 
+including run waste</p>
+<p class="StyleCourierfixedCourierNew8pt">orig_numup                    
+Integer   2         original 
+number up - only populated if the number up changes</p>
+<p class="StyleCourierfixedCourierNew8pt">fixed                         
+Char      
+1         Y - task is firm and should 
+not normally be moved</p>
+<p class="StyleCourierfixedCourierNew8pt">processtype                   
+Char      
+6         task process type - should 
+match work centre process type</p>
+<p class="StyleCourierfixedCourierNew8pt">component                     
+Integer   2         component 
+number</p>
+<p class="StyleCourierfixedCourierNew8pt">taskwaittime                  
+Long      
+4         wait time in minutes - used 
+for calculating earliest start of following task</p>
+<p class="StyleCourierfixedCourierNew8pt">taskmovetime                  
+Long      
+4         move time in minutes 
+(allowance for drying, transport etc) - used for calculating earliest start of 
+following task</p>
+<p class="StyleCourierfixedCourierNew8pt">tasklength                    
+Long      
+4         sum of mrlength and 
+runlength</p>
+<p class="StyleCourierfixedCourierNew8pt">displaylength                 
+Long      
+4         difference between strtime and 
+edtime - may differ from tasklength because of work centre efficiency and non 
+working periods</p>
+<p class="StyleCourierfixedCourierNew8pt">strtime                       
+Long      
+4         scheduled task start time 
+(held as minutes from 1/1/1995 - see also ptaskstartdt</p>
+<p class="StyleCourierfixedCourierNew8pt">edtime                        
+Long      
+4         scheduled task end time (held 
+as minutes from 1/1/1995 - see also ptaskenddt</p>
+<p class="StyleCourierfixedCourierNew8pt">origend                       
+Long      
+4         stores original mrlength when 
+this has been reduced to zero by the follow on process</p>
+<p class="StyleCourierfixedCourierNew8pt">record                        
+Long      
+4         unique alternative index used 
+for linking prior and following tasks</p>
+<p class="StyleCourierfixedCourierNew8pt">prosequence                   
+Integer   2         process 
+sequence copied from work centre</p>
+<p class="StyleCourierfixedCourierNew8pt">lateststrt                    
+Long      4  
+       calculated latest start date/time of 
+task to achieve delivery date - see also p_lateststrt</p>
+<p class="StyleCourierfixedCourierNew8pt">date_completed                
+Long      
+4         actual time task is 
+completed-held as minutes from 1/1/1995</p>
+<p class="StyleCourierfixedCourierNew8pt">job_type                      
+Char      10      
+  for grouped tasks only holds the order number of the group task - 
+see also multigroup</p>
+<p class="StyleCourierfixedCourierNew8pt">constrained                   
+Char      
+1         Y = the scheduled start time 
+has been affected by a resource constraint</p>
+<p class="StyleCourierfixedCourierNew8pt">actual_starttime              
+Long      4     
+    actual time task is started-held as minutes from 
+1/1/1995</p>
+<p class="StyleCourierfixedCourierNew8pt">runstatus                     
+Char      
+1         X - not started; M - make 
+ready; N - make ready stopped; P - make ready complete; S - run started; H - 
+stopped; C - Complete</p>
+<p class="StyleCourierfixedCourierNew8pt">last_stoptime                 
+Long      
+4         used in manual task update 
+only</p>
+<p class="StyleCourierfixedCourierNew8pt">mr_starttime                  
+Long      
+4         start of most recent make 
+ready event</p>
+<p class="StyleCourierfixedCourierNew8pt">stop_reason                   
+Char      20        
+last recorded stop reason - from SFDC</p>
+<p class="StyleCourierfixedCourierNew8pt">overlap_style                 
+Char      
+1         S - serial - following tasks 
+start after end of this task; P - parallel - following tasks can start some time 
+after the start of this task</p>
+<p class="StyleCourierfixedCourierNew8pt">start_violation               
+Char      
+1         Y = split task - original 
+definition obsolete</p>
+<p class="StyleCourierfixedCourierNew8pt">end_violation                 
+Char      
+1         obsolete</p>
+<p class="StyleCourierfixedCourierNew8pt">task_sequence                 
+Integer   2         normally 
+the same as task number (job) - establishes precedence of tasks of same 
+component on same work centre</p>
+<p class="StyleCourierfixedCourierNew8pt">quantity_completed            
+Long      
+4         quantity completed</p>
+<p class="StyleCourierfixedCourierNew8pt">mr_endtime                
+    Long      
+4         actual time make ready 
+completed</p>
+<p class="StyleCourierfixedCourierNew8pt">speed                         
+Double    8         speed 
+in units/hr</p>
+<p class="StyleCourierfixedCourierNew8pt">Upstatus                      
+Long      
+4         update reference number</p>
+<p class="StyleCourierfixedCourierNew8pt">delivery_date                 
+Date/Time 8         task delivery date 
+(date only) - only relevant if greater than ordheader delivery date/time</p>
+<p class="StyleCourierfixedCourierNew8pt">delivery_time                 
+Date/Time 8         task delivery time 
+(time portion) - only relevant if greater than ordheader delivery date/time</p>
+<p class="StyleCourierfixedCourierNew8pt">update_date               
+    Date/Time 
+8         date of last manual update</p>
+<p class="StyleCourierfixedCourierNew8pt">scheduling                    
+Yes/No    1         
+temporary flag used during scheduling process only</p>
+<p class="StyleCourierfixedCourierNew8pt">Updated                       
+Yes/No    1         
+date/time of last manual update</p>
+<p class="StyleCourierfixedCourierNew8pt">Text                  
+        Char      
+200       200 character comment for this task</p>
+<p class="StyleCourierfixedCourierNew8pt">UpdateSF                      
+Char      
+1         Y - pass changed details to 
+SFDC system</p>
+<p class="StyleCourierfixedCourierNew8pt">MultiGroup                    
+Integer   2         for 
+grouped tasks only holds the task number of the group task - see also 
+job_type</p>
+<p class="StyleCourierfixedCourierNew8pt">MultiTskNum                   
+Integer   2         normally 
+null - used to link duplex and triplex tasks that must be scheduled 
+simultaneously</p>
+<p class="StyleCourierfixedCourierNew8pt">actual_endtime                
+Long      
+4         actual time task is 
+completed-held as minutes from 1/1/1995</p>
+<p class="StyleCourierfixedCourierNew8pt">NumUp                         
+Long      
+4         number up</p>
+<p class="StyleCourierfixedCourierNew8pt">StepNum                       
+Long      
+4         step number used for link to 
+costing system - normally the same as job</p>
+<p class="StyleCourierfixedCourierNew8pt">form                          
+Long      4       
+  formno from pcwctask - appears redundant</p>
+<p class="StyleCourierfixedCourierNew8pt">MrQty                         
+Long      
+4         estimated quantity used in 
+make ready process</p>
+<p class="StyleCourierfixedCourierNew8pt">CapIgnore                     
+Yes/No    1         if 
+true then capability group scheduling is not used on this task</p>
+<p class="StyleCourierfixedCourierNew8pt">WastePerc                     
+Double    8         
+percentage of run waste</p>
+<p class="StyleCourierfixedCourierNew8pt">Report                        
+Yes/No    1         
+temporary flag used during report printing processes only</p>
+<p class="StyleCourierfixedCourierNew8pt">PrevTask                      
+Long      
+4         record number of previous task 
+- set during assessment and used in scheduling</p>
+<p class="StyleCourierfixedCourierNew8pt">NextTask                      
+Long      
+4         record number of following 
+task - set during assessment and used in scheduling</p>
+<p class="StyleCourierfixedCourierNew8pt">resav  
+                       Char      
+1         summary of all resources for 
+this task Y - available N - not available or pending - see resavdate</p>
+<p class="StyleCourierfixedCourierNew8pt">resavdate                     
+Date/Time 8         date last resource 
+is expected to ba available</p>
+<p class="StyleCourierfixedCourierNew8pt">retainwaste       
+            Integer   
+2         0 = waste removed 1= run waste 
+retain 2 = run &amp; m/r waste retain - Radius I systems only</p>
+<p class="StyleCourierfixedCourierNew8pt">Held                          
+Yes/No    1         set 
+to true if task is held- these tasks are not passed to sfdc</p>
+<p class="StyleCourierfixedCourierNew8pt">next_start           
+         Long      
+4         earliest start time of 
+following task allowing for serial/parallel style, wait time and move time</p>
+<p class="StyleCourierfixedCourierNew8pt">resavstring                   
+Char      30        
+30 character string - one for each resource - as resav</p>
+<p class="StyleCourierfixedCourierNew8pt">ptaskstartdt            
+      Date/Time 
+8         planned task start 
+date/time</p>
+<p class="StyleCourierfixedCourierNew8pt">ptaskenddt                    
+Date/Time 8         planned task end 
+date/time</p>
+<p class="StyleCourierfixedCourierNew8pt">ataskstartdt                  
+Date/Time 8         actual task start 
+date/time</p>
+<p class="StyleCourierfixedCourierNew8pt">ataskenddt                    
+Date/Time 8         actual task end 
+date/time</p>
+<p class="StyleCourierfixedCourierNew8pt">ptaskstartyw                  
+Long      
+4         planned task start held in 
+yyyyww format</p>
+<p class="StyleCourierfixedCourierNew8pt">ptaskendyw                    
+Long      
+4         planned task end held in 
+yyyyww format</p>
+<p class="StyleCourierfixedCourierNew8pt">ataskstartyw                  
+Long      4     
+    actual task start held in yyyyww format</p>
+<p class="StyleCourierfixedCourierNew8pt">ataskendyw                    
+Long      
+4         actual task end held in yyyyww 
+format</p>
+<p class="StyleCourierfixedCourierNew8pt">origwc                        
+Char      12        
+original work centre set after work centre has been changed</p>
+<p class="StyleCourierfixedCourierNew8pt">followon      
+                Yes/No    
+1         set to true if task has been 
+marked as followon and make ready time (mrlength) set to zero</p>
+<p class="StyleCourierfixedCourierNew8pt">matavail                      
+Char      
+1         summary of material status A = 
+no material N = not actioned P = ordered R = to be called off T = called off Y = 
+available Z = issued</p>
+<p class="StyleCourierfixedCourierNew8pt">p_lateststrt                  
+Long      
+4         calculated latest start 
+date/time of task to achieve promised date - see also lateststrt</p>
+<p class="StyleCourierfixedCourierNew8pt">DoAssess                      
+Yes/No    1         short 
+term flag mostly used by external processes (PsaConnect) used to indicate that 
+this task must be reassessed when next opened in PSA</p>
+<p class="StyleCourierfixedCourierNew8pt">kstatus                       
+Char      
+1         SFDC - planned status – X or 
+null – not started H - Held; S – Started; C - Complete (once status has been 
+aligned to complete then kstatus is set to @)</p>
+<p class="StyleCourierfixedCourierNew8pt"> </p>
+<p class="StyleCourierfixedCourierNew8pt">runstat                       
+Char      
+1         SFDC - running status - X - 
+Not Started; M - Make Ready; G - Good Copy; B - Bad Copy; S - Sort Copy; H - 
+Held; C - Complete</p>
+<p class="StyleCourierfixedCourierNew8pt">startinit 
+                    Long      
+4         SFDC - inital start time - 
+held as seconds since 01/01/1990</p>
+<p class="StyleCourierfixedCourierNew8pt">starttime                     
+Long      
+4         SFDC - start time of current 
+run - held as seconds since 01/01/1990</p>
+<p class="StyleCourierfixedCourierNew8pt">endtime                       
+Long    
+  4         SFDC - end time of 
+current run - held as seconds since 01/01/1990</p>
+<p class="StyleCourierfixedCourierNew8pt">elapsetime                    
+Long      
+4         SFDC - start time of current 
+run - seconds</p>
+<p class="StyleCourierfixedCourierNew8pt">mkrqty                        
+Long      
+4         SFDC - recorded make ready 
+quantity</p>
+<p class="StyleCourierfixedCourierNew8pt">runqty                        
+Long      
+4         SFDC - recorded run 
+quantity</p>
+<p class="StyleCourierfixedCourierNew8pt">badqty                        
+Long      
+4         SFDC - recorded bad 
+quantity</p>
+<p class="StyleCourierfixedCourierNew8pt">sortqty                       
+Long      
+4         SFDC - recorded sort 
+quantity</p>
+<p class="StyleCourierfixedCourierNew8pt">outputqty                     
+Long      
+4         SFDC - recorded total 
+throughput quantity</p>
+<p class="StyleCourierfixedCourierNew8pt">mrtime                        
+Long      
+4         SFDC - recorded make ready 
+time - seconds</p>
+<p class="StyleCourierfixedCourierNew8pt">prodtime                      
+Long      
+4         SFDC - recorded good 
+production time - seconds</p>
+<p class="StyleCourierfixedCourierNew8pt">badtime                       
+Long      
+4         SFDC - recorded bad production 
+time - seconds</p>
+<p class="StyleCourierfixedCourierNew8pt">sorttime                      
+Long      
+4         SFDC - recorded sort time - 
+seconds</p>
+<p class="StyleCourierfixedCourierNew8pt">stoptots                      
+Long      
+4         SFDC - total stops 
+recorded</p>
+<p class="StyleCourierfixedCourierNew8pt">jobspeed                      
+Long      
+4         SFDC - recent recorded running 
+speed - units/hour</p>
+<p class="StyleCourierfixedCourierNew8pt">targetspeed                   
+Long      
+4         SFDC - speed required to 
+achieved planned end time - units/hour</p>
+<p class="StyleCourierfixedCourierNew8pt">calcend                       
+Long      
+4         SFDC - calculated end time 
+based on current speed and quantity - ignores non working period - held as 
+seconds since 01/01/1990</p>
+<p class="StyleCourierfixedCourierNew8pt">machid             
+           Char      
+12        SFDC - work centre name</p>
+<p class="StyleCourierfixedCourierNew8pt">firsttran                     
+Date/Time 8         SFDC - date/time of 
+first transfer from SFDC</p>
+<p class="StyleCourierfixedCourierNew8pt">lasttran                      
+Date/Time 8         SFDC - date/time of 
+last transfer from SFDC</p>
+<p class="StyleCourierfixedCourierNew8pt">changeflag  
+                  Char      
+1         SFDC</p>
+<p class="StyleCourierfixedCourierNew8pt">aligned                       
+Yes/No    1         SFDC 
+- if true then planned start and end have been aligned with latest SFDC actual 
+running details</p>
+<p class="StyleCourierfixedCourierNew8pt">TreatAsPlanned                
+Yes/No    1         if 
+task has been held in SFDC and replanned in PSA it will be treated as planned 
+rather than held</p>
+<p class="StyleCourierfixedCourierNew8pt">tech1..nn                     
+Char      20        
+20, 34 or 48 technical attributes for this task - may be entered manually or 
+imported from user defined Radius source</p>
+<p class="StyleCourierfixedCourierNew8pt">resav1..nn                    
+Char      
+1         30, 25 or 20 user defined 
+resources - flag indicating available- Y or not available - N - this may be 
+associated with a date resavdate</p>
+<p class="StyleCourierfixedCourierNew8pt">resavdate1..nn                
+Date/Time 8         30, 25 or 20 user 
+defined resources - if not available this indicates expected date</p>
+<p class="StyleCourierfixedCourierNew8pt">resavreq1..nn                 
+Date/Time 8         30, 25 or 20 user 
+defined resources - if available this indicates achieved date</p>
+<p class="StyleCourierfixedCourierNew8pt">tsxfer                        
+Yes/No    1         if 
+true indicates running details to be passed to SFjobdet</p>
+<p class="StyleCourierfixedCourierNew8pt">tsdate                        
+Date/Time 8         if true indicates 
+date that running details were passed to SFjobdet</p>
+<p class="StyleCourierfixedCourierNew8pt">sfdate                        
+Date/Time 8         date of most recent 
+transfer to SFDC system</p>
+<p class="StyleCourierfixedCourierNew8pt">holdrsn                       
+Char      30        
+text giving reason that task is held</p>
+<p class="StyleCourierfixedCourierNew8pt">duplex                        
+Integer   2         number 
+linking this task to other(s) on the same component on a different work centre 
+that must run in true parallel</p>
+<p class="StyleCourierfixedCourierNew8pt"> </p>
+<p class="StyleCourierfixedCourierNew8pt">INDEX                         
+PRIMARY   UNIQUE    FIELDS</p>
+<p class="StyleCourierfixedCourierNew8pt"> </p>
+<p class="StyleCourierfixedCourierNew8pt">BShunt                        
+N         
+N         +resource;-edtime</p>
+<p class="StyleCourierfixedCourierNew8pt">FShunt                        
+N         
+N         +resource;+strtime</p>
+<p class="StyleCourierfixedCourierNew8pt">Held                          
+N         
+N         +Held</p>
+<p class="StyleCourierfixedCourierNew8pt">plan                          
+N         
+N         +strtime</p>
+<p class="StyleCourierfixedCourierNew8pt">record                        
+N         
+Y         +record</p>
+<p class="StyleCourierfixedCourierNew8pt">Report                        
+N         
+N         +Report</p>
+<p class="StyleCourierfixedCourierNew8pt">shift                    
+     N         
+N         
++ordernumber;+strtime;+edtime;+resource</p>
+<p class="StyleCourierfixedCourierNew8pt">task                          
+Y         
+Y         
++ordernumber;+component;+job</p>
+<p class="StyleCourierfixedCourierNew8pt">UpdateSF                      
+N         
+N         +UpdateSF</p>
+<p class="StyleCourierfixedCourierNew8pt">Upstatus                      
+N         
+N         
++Upstatus</p></div></body></html>
