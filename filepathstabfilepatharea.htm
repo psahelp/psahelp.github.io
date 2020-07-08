@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<html><head><title>File paths tab - file path area</title>
+<meta content="text/html; charset=Windows-1252" http-equiv="Content-Type" /><link rel="stylesheet" type="text/css" href="Theme/nav.css" /><link rel="stylesheet" type="text/css" href="Theme/lf.css" /><link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" /><link rel="stylesheet" type="text/css" href="LinksExt/NewPsa3.css" />
+<script type="text/javascript">
+//<![CDATA[
+
+
+
+var _needIndentation = true;
+
+
+
+
+//]]></script>
+
+<script language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2009.3.0.500" />
+<meta name="D2HTheme" content="(Default) v.28" />
+</head>
+<body style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px" relpart="">
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitMainThemeHandlers != "undefined")
+
+    d2hInitMainThemeHandlers();
+
+
+//]]></script>
+
+<div id="nsbanner" class="d2h_main_nsbanner" style="BORDER-TOP: #999999 1px solid; BORDER-BOTTOM: #999999 1px solid; POSITION: relative; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; LEFT: 0px; DISPLAY: none; PADDING-RIGHT: 0px; BACKGROUND-COLOR: transparent">
+<div id="TitleRow" class="d2h_main_titlerow" style="PADDING-BOTTOM: 4px; PADDING-TOP: 4px; PADDING-LEFT: 22px; DISPLAY: none; PADDING-RIGHT: 10px; WIDTH: 100%; BACKGROUND-COLOR: transparent">
+<div id="ienav" class="d2h_main_ienav" style="DISPLAY: none">
+<p class="d2h_main_linknav" align="left"><a id="D2HPrevious" class="D2HPreviousEnabled" href="systemconfiguration.htm"></a>  <a id="D2HNext" class="D2HNextEnabled" href="filepathstabhousekeepingarea.htm"></a></p></div></div></div>
+<div id="nstext" class="d2h_main_nstext" style="OVERFLOW: auto; PADDING-BOTTOM: 10px; PADDING-TOP: 5px; PADDING-LEFT: 22px; PADDING-RIGHT: 10px; BACKGROUND-COLOR: transparent" hasuserbackground="true" valign="bottom">
+<div id="d2h_breadcrumbs" class="d2h_breadcrumbs"><span class="d2h_breadcrumbsContentsOnly">Screen by screen descriptions</span><span class="d2h_breadcrumbsLinkSeparator"> &gt; </span><a class="d2h_breadcrumbsNormal" href="systemconfiguration.htm">System Configuration</a></div>
+<h3 style="MARGIN-LEFT: 36pt; TEXT-INDENT: -36pt; tab-stops: 83.8pt"><a name="_Toc504681520" id="_Toc504681520"></a>File paths tab – file path area</h3>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Calibri',sans-serif"><img src="ImagesExt/image9_31.png" alt="" /></span>The File Paths Screen allows the relevant 
+data file paths to be configured. All processing is conducted locally on each PC 
+or in a ‘local’ server area under Citrix or Remote Desktop Services. <br />The 
+‘Working Directory’ is normally the system installation directory and will 
+contain the local database with other reference files. When a scheduling 
+database is ‘Opened’ from the main file menu a local db is created and populated 
+from the central SQL db and named after the opened database, company and plant 
+enabling all processing to be carried out locally. A second copy of the ‘Live 
+Plan’ is also placed in your working directory and has a ‘chk’ prefix. This copy 
+has two purposes - to enable records deleted from your local plan to be 
+identified and at plan update to identify the field level changes to existing 
+records.<br />The ‘Reports Directory’ is the location of standard PSA3 reports in 
+A4 and Letter format (indicated by A4_ and Lt_ prefixes).<br />The ‘Custom Reports 
+Directory’ is the location of modified versions of the standard reports and all 
+other custom reports to be used by PSA3. It may be desired to centralise these 
+in a network location associated with the housekeeping folder.<br />The ‘CAD 
+Images Directory’ is specialised to one or two customers of PSA and has no 
+functionality for normal use<br />Use global settings for reports directories – 
+when checked all users see the same paths – recommended<br />Parallel readers – 
+speeds up distribution of new changes to users – recommended value is 3<br />‘Use 
+Windows Authentication’ – if this option is selected  and the same user 
+name is used to log on to Windows as to PSA3 then the user will not be required 
+to supply a password and logging on will be automatic. However you must still 
+set up a PSA3 user name and password as this defines the logon mode and runtime 
+options available. As with all applications using ‘Windows Authentication’ it is 
+essential to ensure that screen savers or some other locking mechanism prevents 
+abuse by other users of an ‘open’ screen.<br />Use SQL DB for queue control – used 
+to use a text file in the housekeeping directory – we now recommend setting this 
+option </p></div></body></html>

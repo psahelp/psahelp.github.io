@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<html><head><title>Backing up the schedule daily</title>
+<meta content="text/html; charset=Windows-1252" http-equiv="Content-Type" /><link rel="stylesheet" type="text/css" href="Theme/nav.css" /><link rel="stylesheet" type="text/css" href="Theme/lf.css" /><link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" /><link rel="stylesheet" type="text/css" href="LinksExt/NewPsa3.css" />
+<script type="text/javascript">
+//<![CDATA[
+
+
+
+var _needIndentation = true;
+
+
+
+
+//]]></script>
+
+<script language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2009.3.0.500" />
+<meta name="D2HTheme" content="(Default) v.28" />
+</head>
+<body style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px" relpart="">
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitMainThemeHandlers != "undefined")
+
+    d2hInitMainThemeHandlers();
+
+
+//]]></script>
+
+<div id="nsbanner" class="d2h_main_nsbanner" style="BORDER-TOP: #999999 1px solid; BORDER-BOTTOM: #999999 1px solid; POSITION: relative; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; LEFT: 0px; DISPLAY: none; PADDING-RIGHT: 0px; BACKGROUND-COLOR: transparent">
+<div id="TitleRow" class="d2h_main_titlerow" style="PADDING-BOTTOM: 4px; PADDING-TOP: 4px; PADDING-LEFT: 22px; DISPLAY: none; PADDING-RIGHT: 10px; WIDTH: 100%; BACKGROUND-COLOR: transparent">
+<div id="ienav" class="d2h_main_ienav" style="DISPLAY: none">
+<p class="d2h_main_linknav" align="left"><a id="D2HPrevious" class="D2HPreviousEnabled" href="psaloader.htm"></a>  <a id="D2HNext" class="D2HNextEnabled" href="waitandmovetimedefinition.htm"></a></p></div></div></div>
+<div id="nstext" class="d2h_main_nstext" style="OVERFLOW: auto; PADDING-BOTTOM: 10px; PADDING-TOP: 5px; PADDING-LEFT: 22px; PADDING-RIGHT: 10px; BACKGROUND-COLOR: transparent" hasuserbackground="true" valign="bottom">
+<div id="d2h_breadcrumbs" class="d2h_breadcrumbs"><a class="d2h_breadcrumbsNormal" href="appendicesincludingtechnicalnotes.htm">Appendices including technical 
+notes</a></div>
+<h2 style="MARGIN-LEFT: 28.9pt; TEXT-INDENT: -28.9pt; tab-stops: 78.45pt"><a name="_Toc504681679" id="_Toc504681679"></a>Backing up the schedule daily</h2>
+<p class="MsoNormal"> The “dailyplan.bat” (below) runs from the scheduled 
+task and calls the “copyplan.bat” file, the latter takes as a parameter the 
+three variables created in dailyplan (day, month and year) to generate the 
+filename.</p>
+<p class="MsoNormal">The only consideration is the date format used on the server 
+where this is going to be employed.  If it was to be used in the US for 
+example, the code would have to be modified so it picks up the positions of the 
+date characters differently.  Also the operating system can dictate 
+different date formats, for example on my XP laptop the system date is 
+“07/03/2008”, yet on the server we are using the script on it is “Fri 
+07/03/2008”.</p>
+<p class="MsoNormal">If you think you will need to use this in future on a server 
+outside the UK or where the operating system may be different than Win 2000, let 
+me know and I will explain how to change the code to handle this, as it is 
+pretty simple.</p>
+<p class="MsoNormal"><b>Dailyplan.bat</b><br />@For /F "tokens=2,3,4 delims=/ " %%A 
+in ('Date /t') do @(<br />        Set 
+Day=%%A<br />        Set 
+Month=%%B<br />        Set 
+Year=%%C<br />)<br />copyplan.bat %Day%%Month%%Year%</p>
+<p class="MsoNormal"><b>Copyplan.bat<br /></b>copy \\ukncap01\apps\psa\LIVE_PSA2.PSH 
+\\ukncap01\psh$\%1%.PSH</p></div></body></html>

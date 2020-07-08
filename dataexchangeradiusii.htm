@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<html><head><title>Data Exchange Radius II</title>
+<meta content="text/html; charset=Windows-1252" http-equiv="Content-Type" /><link rel="stylesheet" type="text/css" href="Theme/nav.css" /><link rel="stylesheet" type="text/css" href="Theme/lf.css" /><link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" /><link rel="stylesheet" type="text/css" href="LinksExt/NewPsa3.css" />
+<script type="text/javascript">
+//<![CDATA[
+
+
+
+var _needIndentation = true;
+
+
+
+
+//]]></script>
+
+<script language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2009.3.0.500" />
+<meta name="D2HTheme" content="(Default) v.28" />
+</head>
+<body style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px" relpart="">
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitMainThemeHandlers != "undefined")
+
+    d2hInitMainThemeHandlers();
+
+
+//]]></script>
+
+<div id="nsbanner" class="d2h_main_nsbanner" style="BORDER-TOP: #999999 1px solid; BORDER-BOTTOM: #999999 1px solid; POSITION: relative; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; LEFT: 0px; DISPLAY: none; PADDING-RIGHT: 0px; BACKGROUND-COLOR: transparent">
+<div id="TitleRow" class="d2h_main_titlerow" style="PADDING-BOTTOM: 4px; PADDING-TOP: 4px; PADDING-LEFT: 22px; DISPLAY: none; PADDING-RIGHT: 10px; WIDTH: 100%; BACKGROUND-COLOR: transparent">
+<div id="ienav" class="d2h_main_ienav" style="DISPLAY: none">
+<p class="d2h_main_linknav" align="left"><a id="D2HPrevious" class="D2HPreviousEnabled" href="sfdctopsaimport.htm"></a>  <a id="D2HNext" class="D2HNextEnabled" href="dataexchangesfdc.htm"></a></p></div></div></div>
+<div id="nstext" class="d2h_main_nstext" style="OVERFLOW: auto; PADDING-BOTTOM: 10px; PADDING-TOP: 5px; PADDING-LEFT: 22px; PADDING-RIGHT: 10px; BACKGROUND-COLOR: transparent" hasuserbackground="true" valign="bottom">
+<div id="d2h_breadcrumbs" class="d2h_breadcrumbs"><a class="d2h_breadcrumbsNormal" href="appendicesincludingtechnicalnotes.htm">Appendices including technical 
+notes</a></div>
+<h2 style="MARGIN-LEFT: 28.9pt; TEXT-INDENT: -28.9pt; tab-stops: 78.45pt"><a name="_Toc504681667" id="_Toc504681667"></a>Data Exchange Radius II</h2>
+<p class="MsoNormal"><b>Radius to PSA</b></p>
+<p class="MsoNormal">This is by far the largest section and is divided into many 
+sub routines for readability.</p>
+<p class="MsoNormal">Initialisation consists of creating several arrays in memory 
+for performance as they are used throughout the import process. These include 
+work centres, target database characteristics, approval statuses, required 
+technical attribute sources.</p>
+<p class="MsoNormal">It then selects a list of the jobs required to be imported – 
+either via pv_job.psaextracted = false or by a requested single job code.</p>
+<p class="MsoNormal">Where the job already exists in PSA and has been scheduled 
+the reconfirmed job will be imported using the same job number but with a suffix 
+of @. A later PSA process allows the original and replacements jobs to be merged 
+retaining as much as possible of the information (scheduled time, resources, 
+comments etc) added in PSA.</p>
+<p class="MsoNormal">An old function allows one job to replace another referenced 
+in the repjobcode field – these are handled in the same way as replacements 
+above.</p>
+<p class="MsoNormal">For each job returned it first checks whether this is a known 
+problem job (skipping if known) – otherwise it performs various status checks to 
+prevent old jobs being re-imported and if ok proceeds to import using these 
+steps.</p>
+<p class="MsoNormal">Items marked with bullet points are defined later in more 
+detail.</p>
+<p class="MsoNormal" style="MARGIN: 0pt 0pt 10pt 36pt; LINE-HEIGHT: 115%; TEXT-INDENT: -18pt; tab-stops: 36.0pt"><span style="FONT-FAMILY: Symbol">·      </span>Delete from 
+PSA if pre existing and unscheduled</p>
+<p class="MsoNormal" style="MARGIN: 0pt 0pt 10pt 36pt; LINE-HEIGHT: 115%; TEXT-INDENT: -18pt; tab-stops: 36.0pt"><span style="FONT-FAMILY: Symbol">·      </span>Import header 
+details</p>
+<p class="MsoNormal" style="MARGIN: 0pt 0pt 10pt 36pt; LINE-HEIGHT: 115%; TEXT-INDENT: -18pt; tab-stops: 36.0pt"><span style="FONT-FAMILY: Symbol">·      </span>Import 
+component details</p>
+<p class="MsoNormal" style="MARGIN: 0pt 0pt 10pt 36pt; LINE-HEIGHT: 115%; TEXT-INDENT: -18pt; tab-stops: 36.0pt"><span style="FONT-FAMILY: Symbol">·      </span>Import task 
+details</p>
+<p class="MsoNormal" style="MARGIN: 0pt 0pt 10pt 36pt; LINE-HEIGHT: 115%; TEXT-INDENT: -18pt; tab-stops: 36.0pt"><span style="FONT-FAMILY: Symbol">·      </span>Import item 
+details</p>
+<p class="MsoNormal" style="MARGIN: 0pt 0pt 10pt 36pt; LINE-HEIGHT: 115%; TEXT-INDENT: -18pt; tab-stops: 36.0pt"><span style="FONT-FAMILY: Symbol">·      </span>Split tasks 
+into separate sheets if required</p>
+<p class="MsoNormal" style="MARGIN: 0pt 0pt 10pt 36pt; LINE-HEIGHT: 115%; TEXT-INDENT: -18pt; tab-stops: 36.0pt"><span style="FONT-FAMILY: Symbol">·      </span>Import 
+technical attributes</p>
+<p class="MsoNormal" style="MARGIN: 0pt 0pt 10pt 36pt; LINE-HEIGHT: 115%; TEXT-INDENT: -18pt; tab-stops: 36.0pt"><span style="FONT-FAMILY: Symbol">·      </span>Import 
+tools</p>
+<p class="MsoNormal" style="MARGIN: 0pt 0pt 10pt 36pt; LINE-HEIGHT: 115%; TEXT-INDENT: -18pt; tab-stops: 36.0pt"><span style="FONT-FAMILY: Symbol">·      </span>Import 
+materials</p>
+<p class="MsoNormal" style="MARGIN: 0pt 0pt 10pt 36pt; LINE-HEIGHT: 115%; TEXT-INDENT: -18pt; tab-stops: 36.0pt"><span style="FONT-FAMILY: Symbol">·      </span>Import job 
+links to other jobs</p>
+<p class="MsoNormal" style="MARGIN: 0pt 0pt 10pt 36pt; LINE-HEIGHT: 115%; TEXT-INDENT: -18pt; tab-stops: 36.0pt"><span style="FONT-FAMILY: Symbol">·      </span>Validate the 
+resulting details</p>
+<p class="MsoNormal" style="MARGIN: 0pt 0pt 10pt 36pt; LINE-HEIGHT: 115%; TEXT-INDENT: -18pt; tab-stops: 36.0pt"><span style="FONT-FAMILY: Symbol">·      </span>If defined 
+import custom resources and attributes</p>
+<p class="MsoNormal" style="MARGIN: 0pt 0pt 10pt 36pt; LINE-HEIGHT: 115%; TEXT-INDENT: -18pt; tab-stops: 36.0pt"><span style="FONT-FAMILY: Symbol">·      </span>If RRD DPrint 
+job output xml request to DPrint system for update of page count details</p>
+<p class="MsoNormal">If the job import is successful pv_job.psaextracted is set to 
+true.</p>
+<p class="MsoNormal">It then concludes with a number of processes that are either 
+run at reduced frequency or are not job based.</p>
+<p class="MsoNormal">These include</p>
+<p class="MsoNormal" style="MARGIN: 0pt 0pt 10pt 36pt; LINE-HEIGHT: 115%; TEXT-INDENT: -18pt; tab-stops: 36.0pt"><span style="FONT-FAMILY: Symbol">·      </span>Refreshing 
+all technical attributes</p>
+<p class="MsoNormal" style="MARGIN: 0pt 0pt 10pt 36pt; LINE-HEIGHT: 115%; TEXT-INDENT: -18pt; tab-stops: 36.0pt"><span style="FONT-FAMILY: Symbol">·      </span>Checking for 
+jobs marked complete in Radius or deleted from Radius</p>
+<p class="MsoNormal" style="MARGIN: 0pt 0pt 10pt 36pt; LINE-HEIGHT: 115%; TEXT-INDENT: -18pt; tab-stops: 36.0pt"><span style="FONT-FAMILY: Symbol">·      </span>Updating 
+first call off dates and quantities from Radius to PSA so that priorities can be 
+set</p>
+<p class="MsoNormal" style="MARGIN: 0pt 0pt 10pt 36pt; LINE-HEIGHT: 115%; TEXT-INDENT: -18pt; tab-stops: 36.0pt"><span style="FONT-FAMILY: Symbol">·      </span>Checking for 
+materials changed in Radius but not flagged for update</p>
+<p class="MsoNormal" style="MARGIN: 0pt 0pt 10pt 36pt; LINE-HEIGHT: 115%; TEXT-INDENT: -18pt; tab-stops: 36.0pt"><span style="FONT-FAMILY: Symbol">·      </span>Updating all 
+changed material statuses – ordered, received, issued, replaced</p>
+<p class="MsoNormal" style="MARGIN: 0pt 0pt 10pt 36pt; LINE-HEIGHT: 115%; TEXT-INDENT: -18pt; tab-stops: 36.0pt"><span style="FONT-FAMILY: Symbol">·      </span>Updating 
+tooling library status changes – for tool availability against task planned 
+start</p>
+<p class="MsoNormal" style="MARGIN: 0pt 0pt 10pt 36pt; LINE-HEIGHT: 115%; TEXT-INDENT: -18pt; tab-stops: 36.0pt"><span style="FONT-FAMILY: Symbol">·      </span>Update linked 
+job statuses</p>
+<p class="MsoNormal" style="MARGIN-LEFT: 36pt; TEXT-INDENT: -18pt; tab-stops: 36.0pt"><span style="FONT-SIZE: 11pt; FONT-FAMILY: Symbol">·    </span><b>PSA 
+to Radius</b></p>
+<p class="MsoNormal" style="MARGIN-LEFT: 36pt; TEXT-INDENT: -18pt; tab-stops: 36.0pt"><span style="FONT-SIZE: 11pt; FONT-FAMILY: Symbol">·    </span>For PSA3 
+this is run either at a specified time interval or can be triggered ‘on demand’ 
+from within PSA.</p>
+<p class="MsoNormal" style="MARGIN-LEFT: 36pt; TEXT-INDENT: -18pt; tab-stops: 36.0pt"><span style="FONT-SIZE: 11pt; FONT-FAMILY: Symbol">·    </span>To 
+ensure a quick release of the PSA database it reads all the changes into a 
+series of arrays – one each for headers, tasks, materials and linked job 
+information. Once read the PSA database is released but the records are not 
+flagged as transferred at this time.</p>
+<p class="MsoNormal" style="MARGIN-LEFT: 36pt; TEXT-INDENT: -18pt; tab-stops: 36.0pt"><span style="FONT-SIZE: 11pt; FONT-FAMILY: Symbol">·    </span>HEADERS 
+- Updating headers transfers production status, prodcomplete date, promised date 
+together with scheduled start and end times. An option (not recommended) allows 
+update of reqhaveready date.</p>
+<p class="MsoNormal" style="MARGIN-LEFT: 36pt; TEXT-INDENT: -18pt; tab-stops: 36.0pt"><span style="FONT-SIZE: 11pt; FONT-FAMILY: Symbol">·    
+</span>Pv_jobline is updated with the expected completion of each item – these 
+may differ significantly</p>
+<p class="MsoNormal" style="MARGIN-LEFT: 36pt; TEXT-INDENT: -18pt; tab-stops: 36.0pt"><span style="FONT-SIZE: 11pt; FONT-FAMILY: Symbol">·    
+</span>Pv_sorderlinetask.taskdue is also updated</p>
+<p class="MsoNormal" style="MARGIN-LEFT: 36pt; TEXT-INDENT: -18pt; tab-stops: 36.0pt"><span style="FONT-SIZE: 11pt; FONT-FAMILY: Symbol">·    </span>TASKS - 
+For tasks pv_jobstep is updated with planned start and end times and work 
+centre. When a task is completed stepstatus is set to 1 – if the task is 
+restarted stepstatus is reset to 0. If the status is greater than 1 it is left 
+unchanged.</p>
+<p class="MsoNormal" style="MARGIN-LEFT: 36pt; TEXT-INDENT: -18pt; tab-stops: 36.0pt"><span style="FONT-SIZE: 11pt; FONT-FAMILY: Symbol">·    </span>The 
+tables pv_forecastprodreceipt and pv_issuereq are repopulated on a job by job 
+basis with daily forecasts of materials consumed and production completed on a 
+day by day basis for long running tasks. These take work centre efficiency and 
+down time into consideration.</p>
+<p class="MsoNormal" style="MARGIN-LEFT: 36pt; TEXT-INDENT: -18pt; tab-stops: 36.0pt"><span style="FONT-SIZE: 11pt; FONT-FAMILY: Symbol">·    </span>Where 
+links exist between tasks of jobs in different plants (Malnove et al.) the 
+pv_joblink table is updated with the status and dates/times of the changed 
+tasks.</p>
+<p class="MsoNormal" style="MARGIN-LEFT: 36pt; TEXT-INDENT: -18pt; tab-stops: 36.0pt"><span style="FONT-SIZE: 11pt; FONT-FAMILY: Symbol">·    
+</span>MATERIALS – pv_req is updated with the scheduled start of the consuming 
+task so that free stock planning users responsible for material orders/call offs 
+can prioritise work. These are adjusted by lead time (plant level for Zebra) so 
+that calculations remain correct.</p>
+<p class="MsoNormal"> </p>
+<p class="MsoNormal">List of fields transferred to Radius</p>
+<p class="MsoNormal"> </p>
+<p class="MsoNormal">pv_job.productionstatus mapped from 
+ordheader.status     U=1 P=4 F=5 C=9. If any task is running 
+it is set to 
+8                                                                                    
+if the order is deleted from PSA before completion it is set to 99</p>
+<p class="MsoNormal">pv_job.plannedstartdate is scheduled start of first task</p>
+<p class="MsoNormal">pv_job.plannedavaildate is scheduled end of last task</p>
+<p class="MsoNormal">pv_job.promiseddate is ordheader.promdate</p>
+<p class="MsoNormal">if option selected pv_job.reqhavereadydate is 
+ordheader.deliverydate</p>
+<p class="MsoNormal"> </p>
+<p class="MsoNormal">pv_jobline.plannedavaildate is scheduled end of last task 
+that produces this item</p>
+<p class="MsoNormal"> </p>
+<p class="MsoNormal">pv_jobstep.planstartdate is scheduled start of task</p>
+<p class="MsoNormal">pv_jobstep.planstarttime is scheduled start of task as 
+seconds after midnight</p>
+<p class="MsoNormal">pv_jobstep.planworkccode is scheduled work center - may 
+differ from estimated work center</p>
+<p class="MsoNormal">pv_jobstep.stepstatus - if task is complete and current 
+stepstatus is 0 then set to 1 - processed as complete</p>
+<p class="MsoNormal"> </p>
+<p class="MsoNormal">where there are links between jobs - usually in different 
+plants - various fields in pv_joblink are updated</p>
+<p class="MsoNormal">I believe this only applies to 2 customers</p>
+<p class="MsoNormal"> </p>
+<p class="MsoNormal">pv_req.havereadydate is scheduled start of task to which it 
+is linked</p>
+<p class="MsoNormal">pv_req.plannedstartdate is scheduled start of task to which 
+it is linked</p>
+<p class="MsoNormal">pv_req.plannedstarttime is scheduled start of task to which 
+it is linked as seconds after midnight</p>
+<p class="MsoNormal">if a leadtime is available for the material from the item 
+table pv_req.requireddate is pv_req.havereadydate - leadtime</p>
+<p class="MsoNormal"> </p></div></body></html>

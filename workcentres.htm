@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<html><head><title>Work Centres</title>
+<meta content="text/html; charset=Windows-1252" http-equiv="Content-Type" /><link rel="stylesheet" type="text/css" href="Theme/nav.css" /><link rel="stylesheet" type="text/css" href="Theme/lf.css" /><link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" /><link rel="stylesheet" type="text/css" href="LinksExt/NewPsa3.css" />
+<script type="text/javascript">
+//<![CDATA[
+
+
+
+var _needIndentation = true;
+
+
+
+
+//]]></script>
+
+<script language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2009.3.0.500" />
+<meta name="D2HTheme" content="(Default) v.28" />
+</head>
+<body style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px" relpart="">
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitMainThemeHandlers != "undefined")
+
+    d2hInitMainThemeHandlers();
+
+
+//]]></script>
+
+<div id="nsbanner" class="d2h_main_nsbanner" style="BORDER-TOP: #999999 1px solid; BORDER-BOTTOM: #999999 1px solid; POSITION: relative; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; LEFT: 0px; DISPLAY: none; PADDING-RIGHT: 0px; BACKGROUND-COLOR: transparent">
+<div id="TitleRow" class="d2h_main_titlerow" style="PADDING-BOTTOM: 4px; PADDING-TOP: 4px; PADDING-LEFT: 22px; DISPLAY: none; PADDING-RIGHT: 10px; WIDTH: 100%; BACKGROUND-COLOR: transparent">
+<div id="ienav" class="d2h_main_ienav" style="DISPLAY: none">
+<p class="d2h_main_linknav" align="left"><a id="D2HPrevious" class="D2HPreviousEnabled" href="makereadyreduction.htm"></a>  <a id="D2HNext" class="D2HNextEnabled" href="displaycodes.htm"></a></p></div></div></div>
+<div id="nstext" class="d2h_main_nstext" style="OVERFLOW: auto; PADDING-BOTTOM: 10px; PADDING-TOP: 5px; PADDING-LEFT: 22px; PADDING-RIGHT: 10px; BACKGROUND-COLOR: transparent" hasuserbackground="true" valign="bottom">
+<div id="d2h_breadcrumbs" class="d2h_breadcrumbs"><span class="d2h_breadcrumbsContentsOnly">Screen by screen descriptions</span><span class="d2h_breadcrumbsLinkSeparator"> &gt; </span><a class="d2h_breadcrumbsNormal" href="staticdatamaintenancetables.htm">Static Data Maintenance - 
+Tables</a></div>
+<h3 style="MARGIN-LEFT: 36pt; TEXT-INDENT: -36pt; tab-stops: 83.8pt"><a name="_Toc504681544" id="_Toc504681544"></a>Work Centres</h3>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Calibri',sans-serif"><img src="ImagesExt/image9_54.jpg" alt="" /></span>The Work Centre Maintenance screen has all 
+current work centres listed in grid top left. The grid sequence may be changed 
+by clicking in the desired column of the title row.</p>
+<p class="MsoNormal"><b>Short and Long Descriptions</b> are available for clarity 
+when selecting a work centre in various places within PSA3.</p>
+<p class="MsoNormal"><b>Suffix and KMS Number</b> – only required if the export to 
+Komori or Heidelberg options are turned on. For a Komori you should select a 
+numeric KMS number. For Heidelberg the suffix should be set to ‘H’</p>
+<p class="MsoNormal"><b>Process Type and default sequence - </b>Each work centre 
+should be assigned a process type and a default sequence; the default sequence 
+should reflect the process sequence number if defined. The process sequence 
+number for the selected process type will appear automatically when the process 
+type is selected.</p>
+<p class="MsoNormal"><b>Capability Group - </b>Work centres can be placed in a 
+capability groups if required. The actual machine capability can then be refined 
+by adding a number of conditions which must be satisfied before a task is 
+allocated to this work centre. For example if the Technical Attribute GSM must 
+have a value between 50 and 250 to be included in the refined capability group 
+then set up two conditions ‘GSM &gt;= 50’ and ‘GSM &lt;= 250’. Similarly by 
+selecting Colours &gt;= 4 a task with only 2 colours will not be scheduled onto 
+this work centre. If the tested Technical Attribute has no value then it will 
+pass the test. If both the Attribute and the test value are numeric then a 
+numeric test is performed.<br />The special condition Technical Attribute (n) not 
+like * should be used to ensure the condition is always failed. This will result 
+in scheduling moving the task to another work centre in the same capability 
+group.<br />To create a new ‘capability group’ simply type the new name into box 
+on this screen – the separate tab for defining them has been removed as it is no 
+longer required.<br />There are two other important uses. <br />Where estimating 
+uses generic work centres tasks will transfer to PSA with the generic work 
+centre. All tasks must be transferred from this work centre to a real work 
+centres.<br />If estimating shows as separate work centres what is really a number 
+of configurations of the same work centre then tasks will transfer with the 
+configuration. These should be marked as generic and a capability group set up 
+to enable PSA to transfer the task to the real work centre for correct 
+scheduling.<br />Both of these are resolved by putting the real work centre and 
+the generic or configuration variation into the same capability group.<br />This 
+will cause scheduling to always switch tasks to another work centre</p>
+<p class="MsoNormal"><b>Running speed, make ready and move time</b> - Defaults can 
+be added here. They will be picked up if a new task is added but the main 
+purpose is to determine the correct running speed of tasks as they are moved 
+between work centreswhen the ratio of the default speeds and times are used. So 
+if a task with estimated speed 8234 is moved from a work centre with default 
+speed 8500 to a work centre with speed 9500 they the task speed will be set to 
+8234 * 9500 / 8500 = 9203. Moving it back would restore the estimated 8234.</p>
+<p class="MsoNormal"><b>Efficiency Factor - </b>Where a work centre normally 
+achieves 85% productive time, and this is reflected in the costs, then 
+scheduling tasks without gaps would result in creep where the actual shop floor 
+performance falls behind the schedule. A work centre efficiency factor has been 
+added to allow more accurate scheduling in this situation.<br />The default is 
+100% so not entering a value will leave scheduling unchanged. On work centres 
+where the factor is set the plot of the task on the planning board is stretched 
+by 100/factor to allow for unscheduled stoppages. The reported speed and run 
+times are not changed so details entered in estimating still pass through to 
+SFDC.</p>
+<p class="MsoNormal"><b>Overs Warning - </b>A warning message has been introduced 
+to the Manual Task Update routine. If the quantity entered as complete exceeds 
+the task quantity plus an allowed percentage of overs a warning is 
+displayed.<br />The percentage that triggers this warning and whether it is in use 
+is set here.</p>
+<p class="MsoNormal"><b>Packing Material</b> - As Packing material is not 
+allocated to a specific task setting this flag allows PsaConnect to attach 
+packing materials to the first task on a work centre with this flag set rather 
+than using the first task on the component which is the default.</p>
+<p class="MsoNormal"><b>Infinite Schedule</b> - The Infinite Schedule flag should 
+be used for work centres that have Outwork type processes. Tasks scheduled on 
+this work centre will be scheduled to follow the previous task and may overlap 
+other tasks on the same work centre.</p>
+<p class="MsoNormal"><b>Freeze Active/Freeze Moving/Isolate Firm Zone – </b>these 
+define ways of separating the area after the time line on any work centre into 
+firm and free zones. With just Freeze active turned on a dragable firm line is 
+added to the planning board display and Dynamic Work To List. Tasks within the 
+firm area are passed to SFDC – those outside are retained in PSA or withdrawn 
+from SFDC if previously transferred. The line remains at the last point it is 
+dragged to and will eventually be ‘overtaken’ by the time line if not moved 
+regularly. </p>
+<p class="MsoNormal">Turning on ‘Freeze Moving’ has the effect that the firm line 
+will stay the same distance in front of the time line. This prevents it being 
+overtaken but has the effect that tasks outside the firm zone will fall inside 
+the firm zone, and so be passed to SFDC, without any action being taken.</p>
+<p class="MsoNormal">To overcome these limitations we have ‘Isolate Firm Zone’ 
+where a number of hours: minutes to define the zone should be entered. The size 
+should be the approximate number of hours work you want to maintain as available 
+for starting in SFDC. Tasks will always be scheduled outside this firm zone. 
+They can only get inside the firm zone if dragged on the planning board or moved 
+on the Dynamic Work To List. You can also adjust the size of the firm zone on 
+the Dynamic Work To List. The flag on the planning board will always be the 
+defined number of available hours, ignoring non working periods, ahead of the 
+time line. If you overload the firm zone by putting say 100 estimated hours into 
+an 80 hour zone this will push the flag back further to keep a clear distinction 
+between tasks inside and tasks outside the zone. There are no borderline cases – 
+every task is fully in or fully out of the zone.</p>
+<p class="MsoNormal"><b>New Name</b> – changing a work centre name with tasks, non 
+working periods, maintenance and display codes linked to it. This allows these 
+processes to be carried out when necessary. Set the new name here, apply and a 
+‘Name Change’ button will appear. This will apply the changes followed by a full 
+assessment check so it is best to set up all the name changes required before 
+pressing the ‘Name Change’ button.</p>
+<p class="MsoNormal"><b>Ignore if prior</b> – check this box if tasks on this work 
+centre should be ignored when displaying ‘prior task status’. The main use for 
+this is when additional tasks, essentially for costing purposes, have been added 
+between real tasks on real work centres</p>
+<p class="MsoNormal"><b>Custom WorkList</b> - Names a custom report to be used 
+rather than worklist.rpt when a work to list is requested for this work 
+centre.</p>
+<p class="MsoNormal"><b><span style="FONT-FAMILY: 'Arial Narrow',sans-serif">XFer 
+To SFDC</span></b><span style="FONT-FAMILY: 'Arial Narrow',sans-serif"> – there 
+are 4 options here – <br />     <b>‘Never ‘</b> - if the tasks 
+are not going to be processed in SFDC there is no point in sending 
+them<br /><b>     ‘Before scheduled’</b> – this is the exact 
+opposite – tasks will transfer to SFDC as soon as they appear in PSA – even 
+before they are scheduled – not often used<br /><b>     ‘When 
+scheduled’</b> – as described – when it is scheduled it will transfer to SFDC – 
+this probably means that tasks without resources or not in the correct sequence 
+will transfer<br /><b>     ‘When in Firm Zone’</b> – if using 
+the Firm Zone (Freeze Line) tasks will only transfer to SFDC when within the 
+zone – this allows SFDC to only see tasks that have been placed there, have 
+resources available and have been sequenced for most efficient production – 
+recommended</span><b> </b></p>
+<p class="MsoNormal"><b>Global Filter Codes </b>– these can be ignored at this 
+time – reserved for future use<b></b></p>
+<p class="MsoNormal"><b>Generic – </b>check this box if the work centre is 
+genuinely generic – that is used only for estimating purposes. PSA3 will always 
+attempt, using capability groups to move a work centre from a generic to a real 
+work centre. </p>
+<p class="MsoNormal">Generic work centres cannot be selected in a display code or 
+viewed on the planning board. If you wish to display ‘dummy’ work centres as a 
+style of scheduling see ‘First schedule to’ below.<b></b></p>
+<p class="MsoNormal"><b>Cost Rate – </b>when transferring a task from a generic to 
+a real work centre using capability groups rather than using a schedule date as 
+the criterion PSA3 will use the lowest cost rate – this allows some discretion 
+in which work centre task moved from generic are moved to.</p>
+<p class="MsoNormal"><b>No Tentative – </b>currently has no function and may be 
+ignored<b></b></p>
+<p class="MsoNormal"><b>Auto Complete – </b>Any task on this work centre will be 
+marked complete in PSA when a following task is also marked complete. The 
+checking process is iterative so marking all the work centres exception 
+finishing processes as auto complete and finishing the last task will complete 
+all the tasks of the order.<b></b></p>
+<p class="MsoNormal"><b>Completion Report -</b> Names a custom report to be used 
+when a task on this work centre is completed.<b></b></p>
+<p class="MsoNormal"><b>% MR Reduction – </b>when setting a task as follow-on the 
+make ready time of the follow on task will be reduced by this percentage. The 
+original version, and default, is 100% but perhaps 70% or 80% is more 
+realistic<b></b></p>
+<p class="MsoNormal"><b>Bypass PSA – </b>allows tasks on this work centre to 
+bypass PSA altogether. PsaConnect will pass them directly to SFDC where they 
+will appear on the WorkList unscheduled but available. They cannot be scheduled 
+as they are never visible in PSA<b></b></p>
+<p class="MsoNormal"><b>Default MR Assistants – </b>a recent addition to the 
+planning board makes total MR and Run assistants visible on the planning board. 
+If they have not been specifically estimated then a default value may be entered 
+here</p>
+<p class="MsoNormal"><b>Default Run Assistants – </b>a recent addition to the 
+planning board makes total MR and Run assistants visible on the planning board. 
+If they have not been specifically estimated then a default value may be entered 
+here<b></b></p>
+<p class="MsoNormal"><b>Counter Digits – </b>When working with SFDC Lite on work 
+centres that have ‘life time’ counters allows the number of digits to be 
+specified – this allows the user to enter actual counter value rather than good 
+copies.</p>
+<p class="MsoNormal"><b>Count - </b>When working with SFDC Lite on work centres 
+that have ‘life time’ counters allows the current counter value to be specified 
+– this allows the user to enter actual counter value rather than good 
+copies.<b></b></p>
+<p class="MsoNormal"><b>Display number wide –</b> for business forms only – 
+replaces number up with number wide</p>
+<p class="MsoNormal"><b>First Schedule To –</b> this represents an alternative 
+method of dividing up the planning board. Instead of separating each work centre 
+into firm and free zones – with the firm tasks going to SFDC – we take each 
+department and add a ‘dummy’ work centre that will appear on the plan and is 
+usually infinitely scheduled. All the other work centres in the department will 
+‘First Schedule To’ this work centre so that it acts as a store for unscheduled 
+task in the department. By ensuring that the ‘First Schedule To’ is a backward 
+schedule the tasks are as late as possible (allowing for contingency) as they 
+can be. The scheduler can then drag them to a work centre of his/her choice. 
+When dragging the original estimated work centre will always be highlighted in 
+green to clarify the process.</p>
+<p class="MsoNormal"><b>Delete Button</b> The Delete work centre button now allows 
+the work centre and all associated tasks, items, materials and non working 
+periods to be deleted. On completion of the delete a full Assessment Check is 
+run to relink remaining tasks and components.</p></div></body></html>

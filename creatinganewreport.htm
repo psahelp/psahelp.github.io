@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<html><head><title>Creating a new report</title>
+<meta content="text/html; charset=Windows-1252" http-equiv="Content-Type" /><link rel="stylesheet" type="text/css" href="Theme/nav.css" /><link rel="stylesheet" type="text/css" href="Theme/lf.css" /><link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" /><link rel="stylesheet" type="text/css" href="LinksExt/NewPsa3.css" />
+<script type="text/javascript">
+//<![CDATA[
+
+
+
+var _needIndentation = true;
+
+
+
+
+//]]></script>
+
+<script language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2009.3.0.500" />
+<meta name="D2HTheme" content="(Default) v.28" />
+</head>
+<body style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px" relpart="">
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitMainThemeHandlers != "undefined")
+
+    d2hInitMainThemeHandlers();
+
+
+//]]></script>
+
+<div id="nsbanner" class="d2h_main_nsbanner" style="BORDER-TOP: #999999 1px solid; BORDER-BOTTOM: #999999 1px solid; POSITION: relative; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; LEFT: 0px; DISPLAY: none; PADDING-RIGHT: 0px; BACKGROUND-COLOR: transparent">
+<div id="TitleRow" class="d2h_main_titlerow" style="PADDING-BOTTOM: 4px; PADDING-TOP: 4px; PADDING-LEFT: 22px; DISPLAY: none; PADDING-RIGHT: 10px; WIDTH: 100%; BACKGROUND-COLOR: transparent">
+<div id="ienav" class="d2h_main_ienav" style="DISPLAY: none">
+<p class="d2h_main_linknav" align="left"><a id="D2HPrevious" class="D2HPreviousEnabled" href="customreports1.htm"></a>  <a id="D2HNext" class="D2HNextEnabled" href="linkingtoradius.htm"></a></p></div></div></div>
+<div id="nstext" class="d2h_main_nstext" style="OVERFLOW: auto; PADDING-BOTTOM: 10px; PADDING-TOP: 5px; PADDING-LEFT: 22px; PADDING-RIGHT: 10px; BACKGROUND-COLOR: transparent" hasuserbackground="true" valign="bottom">
+<div id="d2h_breadcrumbs" class="d2h_breadcrumbs"><a class="d2h_breadcrumbsNormal" href="reports.htm">Reports</a></div>
+<h2 style="MARGIN-LEFT: 28.9pt; TEXT-INDENT: -28.9pt; tab-stops: 78.45pt"><a name="_Toc504681512" id="_Toc504681512"></a>Creating a new report</h2>
+<p class="MsoNormal">A few rules to follow here</p>
+<p class="MsoNormal" style="MARGIN-LEFT: 50.2pt; TEXT-INDENT: -18pt; tab-stops: 50.2pt"><span style="FONT-FAMILY: Symbol">·      </span>Always create 
+reports using an Access/DAO link to the ‘sched2.mdb’ file in your working 
+directory.<br />Linking to the central .PSH database requires an ODBC link (slow) 
+and is almost certain to cause sharing issues as Crystal is notorious for not 
+releasing resources<br /><img src="ImagesExt/image9_25.png" alt="" /></p>
+<p class="MsoNormal" style="MARGIN-LEFT: 50.2pt; TEXT-INDENT: -18pt; tab-stops: 50.2pt"><span style="FONT-FAMILY: Symbol">·      </span>Select the 
+tables required create the links<br /><img src="ImagesExt/image9_26.png" alt="" /></p>
+<p class="MsoNormal" style="MARGIN-LEFT: 50.2pt; TEXT-INDENT: -18pt; tab-stops: 50.2pt"><span style="FONT-FAMILY: Symbol">·      </span>For historic 
+reasons there are a few strange names in the PSA system – to maintain 
+compatibility these won’t be changing. A few to note are – the table ‘job’ 
+contains task level information – work centres are in the field ‘resource’ in 
+job and set up details are in table resource</p>
+<p class="MsoNormal" style="MARGIN-LEFT: 50.2pt; TEXT-INDENT: -18pt; tab-stops: 50.2pt"><span style="FONT-FAMILY: Symbol">·      </span>The technical 
+attributes are held in 20 character fields named tech1 to tech20 at both task 
+and header level. On old Radius systems there was an ‘attribute’ area of 
+estimating – if in use these are copied to the header fields within PSA. If 
+attribute import is used then it is always the task level attributes that are 
+populated (table job). At the end of the import process if all the tasks have 
+only one value for the same attribute then this will be copied to the header for 
+improved visibility.<br />From release 332 up to 48 technical attributes may be 
+used by reducing the number of resources.</p>
+<p class="MsoNormal" style="MARGIN-LEFT: 50.2pt; TEXT-INDENT: -18pt; tab-stops: 50.2pt"><span style="FONT-FAMILY: Symbol">·      </span>Resources are 
+applied at task, component or header level. They are held against all tasks 
+(again in the job table). Where the resource applies at header level every task 
+will have the same value – so any resource can be retrieved from the current 
+task.</p>
+<p class="MsoNormal" style="MARGIN-LEFT: 50.2pt; TEXT-INDENT: -18pt; tab-stops: 50.2pt"><span style="FONT-FAMILY: Symbol">·      </span>The fields 
+resav1 to resav30 hold Y/N to indicate if the resource is available or not. If 
+NOT available the fields resavdate1 to resavdate30 hold the ‘expected’ date. 
+Note that when there is an expected date this date may fall prior to ‘now’ and 
+the resource is ‘overdue’. It may fall between ‘now’ and the task start date in 
+which case it is ‘pending’ or it may fall after the task start date making it 
+‘too late’ and action is required.</p>
+<p class="MsoNormal" style="MARGIN-LEFT: 50.2pt; TEXT-INDENT: -18pt; tab-stops: 50.2pt"><span style="FONT-FAMILY: Symbol">·      </span>When the 
+resource is marked available the date this happens is entered into the field 
+resavreq1 to resavreq30 as the ‘achieved’ date.</p></div></body></html>

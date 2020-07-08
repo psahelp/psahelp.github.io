@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<html><head><title>Imported Duplicate Orders</title>
+<meta content="text/html; charset=Windows-1252" http-equiv="Content-Type" /><link rel="stylesheet" type="text/css" href="Theme/nav.css" /><link rel="stylesheet" type="text/css" href="Theme/lf.css" /><link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" /><link rel="stylesheet" type="text/css" href="LinksExt/NewPsa3.css" />
+<script type="text/javascript">
+//<![CDATA[
+
+
+
+var _needIndentation = true;
+
+
+
+
+//]]></script>
+
+<script language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2009.3.0.500" />
+<meta name="D2HTheme" content="(Default) v.28" />
+</head>
+<body style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px" relpart="">
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitMainThemeHandlers != "undefined")
+
+    d2hInitMainThemeHandlers();
+
+
+//]]></script>
+
+<div id="nsbanner" class="d2h_main_nsbanner" style="BORDER-TOP: #999999 1px solid; BORDER-BOTTOM: #999999 1px solid; POSITION: relative; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; LEFT: 0px; DISPLAY: none; PADDING-RIGHT: 0px; BACKGROUND-COLOR: transparent">
+<div id="TitleRow" class="d2h_main_titlerow" style="PADDING-BOTTOM: 4px; PADDING-TOP: 4px; PADDING-LEFT: 22px; DISPLAY: none; PADDING-RIGHT: 10px; WIDTH: 100%; BACKGROUND-COLOR: transparent">
+<div id="ienav" class="d2h_main_ienav" style="DISPLAY: none">
+<p class="d2h_main_linknav" align="left"><a id="D2HPrevious" class="D2HPreviousEnabled" href="unplannedtabactions.htm"></a>  <a id="D2HNext" class="D2HNextEnabled" href="tentativeorderreplacement.htm"></a></p></div></div></div>
+<div id="nstext" class="d2h_main_nstext" style="OVERFLOW: auto; PADDING-BOTTOM: 10px; PADDING-TOP: 5px; PADDING-LEFT: 22px; PADDING-RIGHT: 10px; BACKGROUND-COLOR: transparent" hasuserbackground="true" valign="bottom">
+<div id="d2h_breadcrumbs" class="d2h_breadcrumbs"><span class="d2h_breadcrumbsContentsOnly">Scheduling</span><span class="d2h_breadcrumbsLinkSeparator"> &gt; </span><a class="d2h_breadcrumbsNormal" href="unplannedtabactions.htm">Unplanned tab actions</a></div>
+<h3 style="MARGIN-LEFT: 36pt; TEXT-INDENT: -36pt; tab-stops: 83.8pt"><a name="_Toc448735598" id="_Toc448735598"></a>Imported Duplicate Orders</h3>
+<p class="MsoNormal">The PsaConnect system that transfers order details from 
+Radius to the Scheduling Database can be used to re-import orders which may have 
+already been imported, planned and scheduled. Any orders of this type will be 
+given a terminator character ‘@’. When attempting to plan orders of this kind 
+the system will automatically detect any differences between the newly imported 
+order and the existing order, the screen below will automatically load and 
+provide details of differences.</p>
+<p class="MsoNormal">Four options are then open to the planner:</p>
+<p class="MsoNormal" style="MARGIN-LEFT: 35.45pt; TEXT-INDENT: -21.25pt">1)   Delete New 
+Order, the newly imported order can be deleted using the ‘Delete’ button, this 
+should be considered if the new order has no significant differences to the 
+existing order.</p>
+<p class="MsoNormal" style="MARGIN-LEFT: 35.95pt; TEXT-INDENT: -21.75pt; tab-stops: 35.95pt">2)   
+Replace Existing Order, if the new order does have significant changes then it 
+would be sensible to replace the existing order with the newly imported order, 
+this can be done using the ‘Replace’ button, the new order can then be planned 
+in the usual way.</p>
+<p class="MsoNormal" style="MARGIN-LEFT: 35.95pt; TEXT-INDENT: -21.75pt; tab-stops: 35.95pt">3)   
+Use the 'Match Up' facility. This opens a new window that matches tasks and 
+components where possible leaving extra or missing tasks unmatched. The user can 
+then select or deselect matched pairs by clicking appropriate rows in the left 
+and right tables. On completion the 'Schedule' button is pressed and the 
+scheduled time slots from the old order on the right are used to schedule the 
+replacement on the left. Any unmatched tasks are 'infinite scheduled' onto the 
+planning board at the earliest time. This is likely to result in overlapping 
+tasks but the new order has not lost its position in the schedule queue.<br />This 
+method will work both for changed orders from Radius (with trailing '@') and 
+Live orders replacing tentative placeholders where the order numbers are 
+completely different.</p>
+<p class="MsoNormal" style="MARGIN-LEFT: 35.95pt">The ‘Retain unmatched tasks’ box 
+allows you to retain any new tasks that have been added to the original order. 
+This is quite a specialized function so the checked state is not remembered and 
+it always defaults to unchecked</p>
+<p class="MsoNormal" style="MARGIN-LEFT: 35.45pt; TEXT-INDENT: -35.45pt">4)       
+Merge with existing Order. Where the new order has the same tasks on the same 
+work centres then a third option is available. This merges the new order details 
+with the old order schedule times. If task lengths have changed there may be 
+overlaps that will have to be resolved.</p></div></body></html>
